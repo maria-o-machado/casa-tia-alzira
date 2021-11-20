@@ -1,0 +1,19 @@
+.activity-link{
+    display: flex;
+    justify-items: center;
+    margin:0;
+    text-decoration: none;
+
+    align-items: center;
+}
+p{
+    margin: 0;
+    margin-right: 10px;
+    font-family: "Alegreya Sans" ;
+    font-weight:600;
+
+
+}
+.arrow-link{
+    margin-top: 2px;
+}
