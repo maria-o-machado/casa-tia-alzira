@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Kadwa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alegreya Sans&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +8,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #2A2D34;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  color: #07504D;
+  font-family: 'Kadwa';
+  font-weight: bold;
+  font-size: 36px;
+  font-style: normal;
+  line-height: 72px;
+  text-align: start;
+}
+
+.description {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: start;
 }
