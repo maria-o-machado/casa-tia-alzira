@@ -1,0 +1,25 @@
+.box_reverse {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    align-items: center;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.box_text_reverse {
+    justify-self: end;
+    width: 507px;
+}
+
+.image_reverse {
+    width: 507px;
+    height: 611px;
+    object-fit: cover;
+    justify-self: start;
+    
+}
