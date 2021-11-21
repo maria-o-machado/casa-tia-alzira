@@ -1,5 +1,4 @@
-import LeftArrow from './LeftArrow.svg';
-import RightArrow from './RightArrow.svg';
+
 import "./Hero.css";
 import { Carousel } from 'react-responsive-carousel';
 import image from "./hero-background.png";
