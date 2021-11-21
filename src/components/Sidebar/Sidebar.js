@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+import logo from "./logo.svg";
 import fb from "./fb.svg";
 import insta from "./inst.svg";
 import { slide as Menu } from "react-burger-menu";
