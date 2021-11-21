@@ -1,0 +1,48 @@
+.card{
+    width: 1014px;
+height: 256px;
+background-color: #FCFCFC;
+border-radius: 8px;
+display: flex;
+flex-direction: row;
+overflow: hidden;
+margin-bottom: 20px;
+align-self: right;
+}
+
+.activity-image{
+    height:inherit;
+}
+
+.activity-content{
+    flex-direction: column;
+    padding:36px 68px;
+}
+
+h3{
+    
+font-family: "Kadwa";
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 48px;
+margin:0;
+
+/* verde */
+
+color: #07504D;
+}
+
+h4{
+    font-family: "Alegreya Sans";
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+
+}
+h4.text-content    {
+    color: #2A2D34;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}

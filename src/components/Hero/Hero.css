@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Chau+Philomene+One&display=swap');
+
+
+.HeroContainer{
+    position: relative;
+    
+    width: 100vw;
+    height: 100vh;
+   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  --div-left: 48px;
+
+}
+
+h1{
+    margin: 0;
+    color: #fff;
+    font-family: "Chau Philomene One";
+    font-weight: 400 ;
+    font-size: 80px;
+    line-height: 81px;
+    /* or 96% */
+
+    text-align: center;
+    letter-spacing: 0.025em;
+    z-index: 3;
+
+}
+#carousel-container{
+  position: relative;
+  height: 100vh;
+}
+
+
+.each-slide{
+  height: 100vh;
+}
+
+#title-container{
+  position: absolute;
+  width: 100vw;
+    height: 100vh;
+   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carousel.carousel-slider .control-arrow{
+  position: absolute;
+bottom:48px;
+height: fit-content;
+}
+
+#carousel-container .carousel.carousel-slider .control-arrow{
+  height: 60px;
+}
+#carousel-container .carousel .control-arrow{
+  bottom: 40px;
+  top: auto;
+}
+
+#carousel-container .carousel .control-prev.control-arrow:before {
+  position: absolute;
+  left: calc(50vw - 80px );
+
+}
+
+#carousel-container .carousel .control-arrow.control-next:before{
+  position: absolute;
+  right: calc(50vw - 80px );
+  
+}
