@@ -9,7 +9,7 @@ function Page(props) {
         <div style={{backgroundColor: props.properties.background}}>
             <div className="box" >
                 <div className="box_text">
-                    <h1 style={{color: props.properties.colorTitle}}>{props.properties.title}</h1>
+                    <h2 style={{color: props.properties.colorTitle}}>{props.properties.title}</h2>
                     { props.properties.location ? <Location/> : undefined}
                     <p className="description" style={{color: props.properties.colorDescription}}>{props.properties.description}</p>
                     { props.properties.buttons ?  

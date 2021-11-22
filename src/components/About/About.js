@@ -1,10 +1,9 @@
 import React from "react";
-import "./Sobre.css"
 import Page from '../Page/Page'
 import PageReverse from '../PageReverse/PageReverse'
 import Reserve from "../Reserve/Reserve";
 
-function Sobre() {
+function About() {
     const page1 = {
         title: "O que é?",
         location: false,
@@ -36,13 +35,13 @@ function Sobre() {
     };
 
     return (
-        <div class="scrolling-wrapper">
-                <Page properties={page1}/>  
-                <Reserve background="#9F6F63" color="#FCFCFC"/>
-                <PageReverse properties={page2}/> 
-                <Page properties={page3}/>  
+        <div>
+            <Page properties={page1}/>  
+            <PageReverse properties={page2}/> 
+            <Page properties={page3}/> 
+            <Reserve background="#9F6F63" color="#FCFCFC"/> 
         </div>
     );
 }
 
-export default Sobre;
+export default About;

@@ -9,7 +9,7 @@ function PageReverse(props) {
              <div className="box_reverse" >
                 <img className="image_reverse" src={image_atividade}></img>
                 <div className="box_text_reverse">
-                <h1 style={{color: props.properties.colorTitle}}>{props.properties.title}</h1>
+                <h5 className="box_title_reverse" style={{color: props.properties.colorTitle}}>{props.properties.title}</h5>
                 { props.properties.location ? <Location/> : undefined}
                 <p className="description" style={{color: props.properties.colorDescription}}>{props.properties.description}</p>
                 </div>
