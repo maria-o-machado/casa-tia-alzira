@@ -8,7 +8,6 @@ import Sidebar from './components/Sidebar/Sidebar';
 
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import Activities from "./components/Activities/Activities";
-import Activity from "./components/Atividade/Atividade";
 import Locals from "./components/Locals/Locals";
 import Page from "./components/Page/Page";
 import PageReverse from "./components/PageReverse/PageReverse";
@@ -39,6 +38,8 @@ const atividade = {
 
   return (
     <div className="App">
+      
+
       <Sidebar/>
 
       <BrowserRouter>
