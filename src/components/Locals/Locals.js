@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import "./Locals.css";
 import LocalCard from "../LocalCard/LocalCard";
-import { Carousel } from "react-responsive-carousel";
-import Reserve from "../Reserve/Reserve";
+import { Carousel } from 'react-responsive-carousel';
 import ArrowLink from "../ArrowLink/ArrowLink";
 
 function Locals({
