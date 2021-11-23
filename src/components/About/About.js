@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Page from '../Page/Page'
 import PageReverse from '../PageReverse/PageReverse'
 import Reserve from "../Reserve/Reserve";
 import HorizontalScroll from 'react-scroll-horizontal'
 import "./About.css"
 
-function About() {
+function About({passColorNavbar}) {
     const page1 = {
         title: "O que é?",
         location: false,
@@ -36,13 +36,16 @@ function About() {
         buttons: true
     };
 
+    useEffect(() => {
+        passColorNavbar("#9F6F63");
+    });
+
     return (
         <div className="about-content">
             <HorizontalScroll reverseScroll = { true }>
                 <Page properties={page1}/>  
                 <PageReverse properties={page2}/> 
                 <Page properties={page3}/> 
-                <Reserve background="#9F6F63" color="#FCFCFC"/> 
             </HorizontalScroll>
         </div>
     );

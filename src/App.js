@@ -1,9 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-import Hero from "./components/Hero/Hero";
 import Gallery from "./components/Gallery/Gallery";
-import ReactDOM from "react-dom";
 import Sidebar from './components/Sidebar/Sidebar';
 
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
@@ -12,8 +10,10 @@ import Locals from "./components/Locals/Locals";
 import Page from "./components/Page/Page";
 import PageReverse from "./components/PageReverse/PageReverse";
 import About from "./components/About/About";
+import Reserve from "./components/Reserve/Reserve";
 import Contact from "./components/Contact/Contact";
 import HomePage from "./components/HomePage/HomePage";
+import React, { useState } from "react";
 
 
 function App() {
@@ -37,29 +37,45 @@ const atividade = {
   buttons: false
 };
 
+const [colorNavbar, setColorNavbar] = useState("#FCFCFC");
+const [backgroundButton, setBackgroundButton] = useState("#9F6F63");
+const [colorButton, setColorButton] = useState("#FCFCFC");
+
+
+const passColorNavbar = (value) => {
+  setColorNavbar(value);
+}
+
+const passColorButton = (value) => {
+  setColorButton(value);
+}
+
+const passBackgroundButton = (value) => {
+  setBackgroundButton(value);
+}
+
+
+  
+  
+  
   return (
     <div className="App">
-      
-
-      <Sidebar/>
-
+      <Sidebar color={colorNavbar}/>
       <BrowserRouter>
-       
         <div>
-          <Routes>
-            <Route exact path="/" element={<HomePage/>}/>
-            <Route path="/gallery" element={<Gallery/>} />
-            <Route path="/activities" element={<Activities/>} />
-            <Route path="/locals" element={<Locals/>} />           
-            <Route path="/about" element={<About/>} />
-            <Route path="/activity" element={<Page properties={atividade}/>} />
-            <Route path="/local" element={<PageReverse properties={local}/> } />
-            <Route path="/contact" element={<Contact/> } />
-            
+            <Routes>
+              <Route path="/" exact element={<HomePage passColorNavbar={passColorNavbar} passColorButton={passColorButton} passBackgroundButton={passBackgroundButton}/>}/>
+              <Route path="/gallery" element={<Gallery passColorNavbar={passColorNavbar}/>}/>
+              <Route path="/activities" element={<Activities passColorNavbar={passColorNavbar}/>} />
+              <Route path="/locals" element={<Locals passColorNavbar={passColorNavbar} passColorButton={passColorButton} passBackgroundButton={passBackgroundButton}/>} />           
+              <Route path="/about"  element={<About passColorNavbar={passColorNavbar}/>} />
+              <Route path="/activity" element={<Page properties={atividade}/>} />
+              <Route path="/local" element={<PageReverse properties={local}/> } />
+            <Route path="/contact" element={<Contact passColorNavbar={passColorNavbar}/> } />
           </Routes>
         </div>
       </BrowserRouter>
-      
+      <Reserve background={backgroundButton} color={colorButton}/> 
     </div>
   );
 }

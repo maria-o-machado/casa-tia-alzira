@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ActivityCard from "../ActivityCard/ActivityCard";
 import "./Activities.css";
 import LocomotiveScroll from "locomotive-scroll";
 import $ from "jquery";
-function Activities() {
+
+function Activities({passColorNavbar}) {
     window.addEventListener('DOMContentLoaded', (event) => {
 let direction="horizontal";
     const element = document.querySelector(".activities-container");
@@ -51,6 +52,10 @@ let direction="horizontal";
     
    
     });
+
+  useEffect(() => {
+      passColorNavbar("#9F6F63");
+  });
 
   return (
     <div className="activities-container" data-scroll-container  >

@@ -2,8 +2,10 @@ import logo from "./logo.svg";
 import fb from "./fb.svg";
 import insta from "./inst.svg";
 import { slide as Menu } from "react-burger-menu";
-import  css from "./Sidebar.css";
-function Sidebar() {
+import css from "./Sidebar.css";
+
+
+function Sidebar({color}) {
   function showSettings(event) {
     event.preventDefault();
   }
@@ -17,7 +19,7 @@ function Sidebar() {
       top: "44px",
     },
     bmBurgerBars: {
-      background: "#FCFCFC",
+      background: color,
       height: "4px",
     },
     bmBurgerBarsHover: {
