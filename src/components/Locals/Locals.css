@@ -1,6 +1,11 @@
-.locals-container {
-    padding: 120px 120px 0px 120px; /* devia ser 100*/
+.locals-page {
     height: 100vh;
+    width: 100vw;
+}
+
+.locals-container {
+    padding: 120px 110px 0px 110px; /* devia ser 100*/
+    height: 100%;
     background: #9F6F63;
 }
 .locals-content {
@@ -10,9 +15,83 @@
     justify-content: space-between;
     background: #9F6F63;
     padding-top: 30px;
+    height: 100%;
 }
 
 .title-locals {
     margin: 0px;
     color: #E0D0C1;
 }
+
+
+
+#carousel-container-locals {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-root {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#carousel-container-locals .carousel .control-prev.control-arrow:before {
+    content: url('LeftArrow.svg') !important;
+    border-right: none;
+}
+
+#carousel-container-locals .carousel .control-next.control-arrow:before {
+    content: url('RightArrow.svg') !important;
+    border-left: none;
+}
+
+
+
+#carousel-container-locals .carousel.carousel-slider .control-arrow{
+    height: fit-content;
+}
+  
+#carousel-container-locals .carousel .control-next.control-arrow {
+position: absolute;
+left: 88px;
+}
+
+#carousel-container-locals .carousel .control-prev.control-arrow:before {
+position: absolute;
+left: 0px;
+top: 530px;
+color: #000 !important;
+}
+
+#carousel-container-locals .carousel .control-arrow.control-next:before{
+position: absolute;
+left: 0px !important;
+top: 530px;
+color: #E0D0C1;
+}
+
+/*
+#carousel-container-locals .carousel.carousel-slider .control-arrow:hover {
+     background: none;
+}
+#carousel-container-locals .carousel.carousel-slider .control-arrow {
+    height: 100vh;
+}
+
+#carousel-container-locals .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+    opacity: 1;
+}
+#carousel-container-locals .carousel .control-arrow, .carousel.carousel-slider .control-arrow:hover {
+    opacity: 0.4;
+}
+
+#carousel-container-locals .carousel .control-dots {
+    bottom:48px;
+}*/
