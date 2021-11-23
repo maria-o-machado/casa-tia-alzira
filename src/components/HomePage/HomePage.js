@@ -21,7 +21,8 @@ function HomePage({passColorNavbar, passBackgroundButton, passColorButton}) {
         background: "#FFF",
         colorTitle: "#07504D",
         colorDescription: "#2A2D34",
-        buttons: false
+        buttons: false,
+        homePage: true
     };
 
     return (

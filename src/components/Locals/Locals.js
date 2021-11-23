@@ -3,6 +3,7 @@ import "./Locals.css"
 import LocalCard from "../LocalCard/LocalCard";
 import { Carousel } from 'react-responsive-carousel';
 import Reserve from "../Reserve/Reserve";
+import ArrowLink from "../ArrowLink/ArrowLink";
 
 function Locals({passColorNavbar, passBackgroundButton, passColorButton, homePage}) {
     useEffect(() => {
@@ -16,8 +17,13 @@ function Locals({passColorNavbar, passBackgroundButton, passColorButton, homePag
             <div className="locals-container">
                 <h2 className="title-locals">Que locais posso visitar nas proximidades?</h2>
                 { homePage ? 
-                <div className="locals-content">
-                    <LocalCard/>
+                <div className="locals-content" id="locals-container-fix">
+                    <div>
+                        <LocalCard/>
+                        <div id="local-know-more">
+                            <ArrowLink  text="Ver mais" color="#E0D0C1" link={"/locals"}/>
+                        </div>
+                    </div>
                     <LocalCard/>
                     <LocalCard/>
                 </div> 
