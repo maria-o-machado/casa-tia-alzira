@@ -66,8 +66,8 @@ const passBackgroundButton = (value) => {
             <Routes>
               <Route path="/" exact element={<HomePage passColorNavbar={passColorNavbar} passColorButton={passColorButton} passBackgroundButton={passBackgroundButton}/>}/>
               <Route path="/gallery" element={<Gallery passColorNavbar={passColorNavbar}/>}/>
-              <Route path="/activities" element={<Activities passColorNavbar={passColorNavbar}/>} />
-              <Route path="/locals" element={<Locals passColorNavbar={passColorNavbar} passColorButton={passColorButton} passBackgroundButton={passBackgroundButton} HomePage={false}/>} />           
+              <Route path="/locals" element={<Locals passColorNavbar={passColorNavbar} passColorButton={passColorButton} passBackgroundButton={passBackgroundButton} homePage={false}/>} />           
+              <Route path="/activities" element={<Activities passColorNavbar={passColorNavbar} homePage={false}/>} />
               <Route path="/about"  element={<About passColorNavbar={passColorNavbar}/>} />
               <Route path="/activity" element={<Page properties={atividade}/>} />
               <Route path="/local" element={<PageReverse properties={local}/> } />
