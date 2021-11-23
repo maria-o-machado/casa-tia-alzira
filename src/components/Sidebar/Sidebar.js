@@ -38,6 +38,7 @@ function Sidebar({color}) {
     },
     bmMenuWrap: {
       position: "fixed",
+      width: "372px",
       height: "100%",
     },
     bmMenu: {
