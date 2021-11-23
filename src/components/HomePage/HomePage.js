@@ -29,7 +29,7 @@ function HomePage({passColorNavbar, passBackgroundButton, passColorButton}) {
             <HorizontalScroll reverseScroll = { true }>
                 <Hero/>  
                 <Page properties={about}/>   
-                <Locals passColorNavbar={passColorNavbar} passColorButton={passColorButton} passBackgroundButton={passBackgroundButton}/>   
+                <Locals passColorNavbar={passColorNavbar} passColorButton={passColorButton} passBackgroundButton={passBackgroundButton} homePage={true}/>   
                 <Activities passColorNavbar={passColorNavbar}/>  
                 <Contact passColorNavbar={passColorNavbar}/> 
             </HorizontalScroll>
