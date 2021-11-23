@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HorizontalScroll from 'react-scroll-horizontal'
 import Hero from "../../components/Hero/Hero";
 import Page from "../../components/Page/Page";
@@ -7,7 +7,13 @@ import Contact from "../Contact/Contact";
 import Locals from "../Locals/Locals";
 import './HomePage.css'
 
-function HomePage() {
+function HomePage({passColorNavbar, passBackgroundButton, passColorButton}) {
+    useEffect(() => {
+        passColorNavbar("#FCFCFC");
+        passBackgroundButton("#9F6F63");
+        passColorButton("#FCFCFC");
+    });
+
     const about = {
         title: "O que é?",
         location: false,
@@ -21,12 +27,12 @@ function HomePage() {
     return (
         <div className="homepage-content">
             <HorizontalScroll reverseScroll = { true }>
-                    <Hero/>  
-                    <Page properties={about}/>   
-                    <Locals/>   
-                    <Activities/>  
-                    <Contact/> 
-                </HorizontalScroll>
+                <Hero/>  
+                <Page properties={about}/>   
+                <Locals passColorNavbar={passColorNavbar} passColorButton={passColorButton} passBackgroundButton={passBackgroundButton}/>   
+                <Activities passColorNavbar={passColorNavbar}/>  
+                <Contact passColorNavbar={passColorNavbar}/> 
+            </HorizontalScroll>
         </div>
         );
     }

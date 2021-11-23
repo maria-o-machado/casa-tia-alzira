@@ -3,7 +3,7 @@ import fb from "./fb.svg";
 import insta from "./inst.svg";
 import { slide as Menu } from "react-burger-menu";
 import "./Sidebar.css";
-function Sidebar() {
+function Sidebar({color}) {
   function showSettings(event) {
     event.preventDefault();
   }
@@ -17,7 +17,7 @@ function Sidebar() {
       top: "44px",
     },
     bmBurgerBars: {
-      background: "#FCFCFC",
+      background: color,
       height: "4px",
     },
     bmBurgerBarsHover: {

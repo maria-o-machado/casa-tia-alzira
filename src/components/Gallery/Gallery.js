@@ -4,13 +4,19 @@ import '../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.
 import "./Gallery.css";
 import { Carousel } from 'react-responsive-carousel';
 import image from "./example.png";
+import { useEffect } from 'react';
 
 const slideImages = [
   'Test.png',
   'Test.png',
   'Test.png'
 ];
-function Gallery() {
+function Gallery({passColorNavbar}) {
+    useEffect(() => {
+        passColorNavbar("#FCFCFC");
+    });
+
+
     return (
         <div className="GalleryContainer">
 
