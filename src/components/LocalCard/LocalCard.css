@@ -1,9 +1,10 @@
 .card-local{
     background: #FCFCFC;
-    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
     width: 361px;
     Height: 480px;
+    margin: 0px 10px 0px 10px;
 }
 
 .local-content {
@@ -14,9 +15,28 @@
     margin-top: 14px;
 }
 
+.local-content > h3 {
+    text-align: start !important;
+}
+
+.local-content > h4 {
+    text-align: start !important;
+}
+
 .local-image {
+    width: 361px !important;
+    height: 306px !important;
+    object-fit: cover !important;
+    justify-self: end !important;
+}
+
+/*
+.carousel .slide img {
     width: 361px;
     height: 306px;
-    object-fit: cover;
     justify-self: end;
 }
+
+.carousel .slide {
+    text-align: start;
+}*/
