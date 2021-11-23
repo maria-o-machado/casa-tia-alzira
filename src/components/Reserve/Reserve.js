@@ -4,7 +4,7 @@ import "./Reserve.css"
 function Reserve(props) {
     return (
         <div>
-            <button className="button-reserve" style={{backgroundColor: props.background, color: props.color}}>Reserve</button>
+            <button className="button-reserve" style={{ backgroundColor: props.background, color: props.color }}>Reserve</button>
         </div>
     );
 }
