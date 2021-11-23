@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./PageReverse.css"
 import image_atividade from '../../assets/Atividade/atividade.png'
 import Location from '../Location/Location'
+import ArrowLink from "../ArrowLink/ArrowLink";
 
 function PageReverse({properties, passColorNavbar}) {
     useEffect(() => {
@@ -18,6 +19,11 @@ function PageReverse({properties, passColorNavbar}) {
                 <p className="description" style={{color: properties.colorDescription}}>{properties.description}</p>
                 </div>
             </div>
+            { properties.homePage ? 
+                <div id="about-know-more">
+                    <ArrowLink  text="Saber mais" color="#E0D0C1" link={"/about"}/> 
+                </div>    
+                : undefined }
         </div> 
     );
 }
