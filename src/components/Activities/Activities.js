@@ -3,6 +3,7 @@ import ActivityCard from "../ActivityCard/ActivityCard";
 import "./Activities.css";
 import LocomotiveScroll from "locomotive-scroll";
 import $ from "jquery";
+import ArrowLink from "../ArrowLink/ArrowLink";
 
 function Activities({ passColorNavbar, homePage }) {
   window.addEventListener("DOMContentLoaded", (event) => {
@@ -75,7 +76,10 @@ function Activities({ passColorNavbar, homePage }) {
               order={0}
             />
           </div>
-        </div>
+          <div id="activities-know-more">
+                <ArrowLink  text="Ver mais" color="#9F6F63" link={"/activities"}/> 
+            </div> 
+          </div>
       ) : (
         <div className="activities-container" data-scroll-container>
           <h2>Que atividades posso realizar?</h2>
