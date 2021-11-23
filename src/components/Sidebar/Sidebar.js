@@ -5,7 +5,7 @@ import { slide as Menu } from "react-burger-menu";
 import css from "./Sidebar.css";
 
 
-function Sidebar({color}) {
+function Sidebar({ color }) {
   function showSettings(event) {
     event.preventDefault();
   }
@@ -26,13 +26,13 @@ function Sidebar({color}) {
       background: "#a90000",
     },
     bmCrossButton: {
-        left:"40px",
-        height: "32px",
-        width: "32px",
-        top:"36px"
+      left: "40px",
+      height: "32px",
+      width: "32px",
+      top: "36px"
     },
     bmCross: {
-        height: "32px",
+      height: "32px",
 
       background: "#FCFCFC",
     },
@@ -54,7 +54,7 @@ function Sidebar({color}) {
       height: "100%",
     },
     bmItem: {
-        height: "100%",
+      height: "100%",
 
       display: "flex",
       flexDirection: "column",
@@ -94,13 +94,13 @@ function Sidebar({color}) {
             Reservar
           </a>
           <div id="social-icons">
-          <a id="facebook" href="">
-               <img  src={fb} />
-               </a> 
+            <a id="facebook" href="">
+              <img src={fb} />
+            </a>
 
-           <a  href="">
+            <a href="">
 
-            <img src={insta} />
+              <img src={insta} />
             </a>
           </div>
         </div>
