@@ -30,12 +30,12 @@
     width: 100%;
 }
 
-.carousel-root {
+#carousel-container-locals .carousel-root {
     height: 100%;
     width: 100%;
 }
 
-.carousel {
+#carousel-container-locals .carousel {
     height: 100%;
     width: 100%;
 }
@@ -51,8 +51,6 @@
     content: url('RightArrow.svg') !important;
     border-left: none;
 }
-
-
 
 #carousel-container-locals .carousel.carousel-slider .control-arrow{
     height: fit-content;
