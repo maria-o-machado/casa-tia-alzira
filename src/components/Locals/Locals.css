@@ -8,6 +8,11 @@
     height: 100%;
     background: #9F6F63;
 }
+
+#locals-container-fix .card-local {
+    margin: 0;
+}
+
 .locals-content {
     display: flex;
     flex-direction: row;
@@ -22,7 +27,11 @@
     color: #E0D0C1;
 }
 
-
+#local-know-more > .activity-link {
+    font-size: 24px;
+    position: absolute;
+    bottom: calc(55px / 2 + 48px - 29px / 2);
+}
 
 #carousel-container-locals {
     height: 100%;
