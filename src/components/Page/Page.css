@@ -22,7 +22,7 @@
     height: 611px;
     object-fit: cover;
     justify-self: end;
-    
+
 }
 
 .box-button {
@@ -33,7 +33,7 @@
     padding-top: 21px;
 }
 
-#about-know-more > .activity-link {
+#about-know-more>.activity-link {
     font-size: 24px;
     position: absolute;
     bottom: calc(55px / 2 + 48px - 29px / 2);

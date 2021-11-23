@@ -1,18 +1,17 @@
-.GalleryContainer{
+.GalleryContainer {
     position: relative;
-    
-  width: 100vw;
-  height: 100vh;
-}
 
-.each-slide{
+    width: 100vw;
     height: 100vh;
 }
 
- .carousel .slide img
-    {
-height: 100vh;
-object-fit: cover;
+.each-slide {
+    height: 100vh;
+}
+
+.carousel .slide img {
+    height: 100vh;
+    object-fit: cover;
 
 }
 
@@ -24,11 +23,13 @@ object-fit: cover;
 .carousel .control-next.control-arrow:before {
     content: url('RightArrow.svg') !important;
     border-left: none;
-    
+
 }
+
 .carousel.carousel-slider .control-arrow:hover {
-     background: none;
+    background: none;
 }
+
 .carousel.carousel-slider .control-arrow {
     height: 100vh;
 }
@@ -36,12 +37,13 @@ object-fit: cover;
 .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
     opacity: 1;
 }
+
 .carousel .control-arrow, .carousel.carousel-slider .control-arrow:hover {
     opacity: 0.4;
 }
 
 .carousel .control-dots {
-    bottom:48px;
+    bottom: 48px;
 }
 
 .carousel .control-dots .dot {
@@ -54,7 +56,5 @@ object-fit: cover;
     height: 14px;
     cursor: pointer;
     display: inline-block;
-    margin: 0 8
-px
-;
+    margin: 0 8 px;
 }

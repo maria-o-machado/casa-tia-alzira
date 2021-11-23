@@ -1,15 +1,16 @@
-.bm-item-list{
+.bm-item-list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#nav-links{
+#nav-links {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
-.menu-item{
+
+.menu-item {
     margin-bottom: 3vh;
     text-align: center;
     text-decoration: none;
@@ -18,49 +19,54 @@
     font-weight: 500;
     font-size: 24px;
 }
-.logo{
+
+.logo {
     margin-bottom: 10vh;
 }
-#social-links{
+
+#social-links {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
 }
-#social-icons{
+
+#social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#facebook{
-margin-right: 20px;
+#facebook {
+    margin-right: 20px;
 }
 
 
-.bm-cross-button:nth-child(2){
+.bm-cross-button:nth-child(2) {
     height: 40px;
 }
-#book{
+
+#book {
     text-decoration-line: underline;
     text-underline-offset: 4px;
 }
-.bm-menu,.bm-menu-wrap.sidebar-container{
+
+.bm-menu, .bm-menu-wrap.sidebar-container {
     width: 372px;
     height: 100vh;
-    
+
 }
 
-.bm-item{
+.bm-item {
     padding: 15vh 0 8vh 0;
 }
 
 
-.bm-cross-button{
-    left:40px;
-        height: 32px;
-        width: 32px;
-        top:36px;
+.bm-cross-button {
+    left: 40px;
+    height: 32px;
+    width: 32px;
+    top: 36px;
 }
 
 
@@ -71,20 +77,21 @@ margin-right: 20px;
 
 
 @media screen and (max-width: 380px) {
-  .bm-menu, .bm-menu-wrap.sidebar-container{
-width: 100vw;
-}    
-.bm-item{
-    padding: 10vh 0 5vh 0;
-}
+    .bm-menu, .bm-menu-wrap.sidebar-container {
+        width: 100vw;
+    }
 
-.bm-cross-button{
-    left: 24px;
-    top:24px;
-}
+    .bm-item {
+        padding: 10vh 0 5vh 0;
+    }
+
+    .bm-cross-button {
+        left: 24px;
+        top: 24px;
+    }
 
 
-.logo{
-    margin-bottom: 8vh;
-}
+    .logo {
+        margin-bottom: 8vh;
+    }
 }

@@ -1,20 +1,21 @@
-.activity-link{
+.activity-link {
     display: flex;
     justify-items: center;
-    margin:0;
+    margin: 0;
     text-decoration: none;
 
     align-items: center;
 }
 
-p{
+p {
     margin: 0;
     margin-right: 10px;
-    font-family: "Alegreya Sans" ;
-    font-weight:600;
+    font-family: "Alegreya Sans";
+    font-weight: 600;
 
 
 }
-.arrow-link{
+
+.arrow-link {
     margin-top: 2px;
 }

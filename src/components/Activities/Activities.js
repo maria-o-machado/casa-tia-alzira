@@ -77,9 +77,9 @@ function Activities({ passColorNavbar, homePage }) {
             />
           </div>
           <div id="activities-know-more">
-                <ArrowLink  text="Ver mais" color="#9F6F63" link={"/activities"}/> 
-            </div> 
+            <ArrowLink text="Ver mais" color="#9F6F63" link={"/activities"} />
           </div>
+        </div>
       ) : (
         <div className="activities-container" data-scroll-container>
           <h2>Que atividades posso realizar?</h2>

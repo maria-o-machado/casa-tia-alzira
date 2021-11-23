@@ -14,7 +14,7 @@ body {
 .contact-content {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;   
+    grid-template-rows: 100%;
     align-items: center;
     margin-left: 120px;
     margin-right: 120px;
@@ -31,7 +31,7 @@ body {
     height: 611px;
     object-fit: cover;
     justify-self: end;
-    
+
 }
 
 .contacts {
@@ -44,7 +44,7 @@ body {
     color: #FCFCFC;
 }
 
-.contact > p {
+.contact>p {
     font-weight: normal;
     text-align: start;
     padding: 5px 0px;

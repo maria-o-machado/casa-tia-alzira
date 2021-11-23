@@ -1,66 +1,68 @@
-.card-inner, .card{
+.card-inner, .card {
     width: 1014px;
     background-color: #FCFCFC;
     border-radius: 8px;
     display: flex;
-flex-direction: row;
-overflow: hidden;
-margin-bottom: 20px;
-align-self: right;
-transform-origin: center-left;
-will-change: transform;
-/*transform: scale(1.1);
+    flex-direction: row;
+    overflow: hidden;
+    margin-bottom: 20px;
+    align-self: right;
+    transform-origin: center-left;
+    will-change: transform;
+    /*transform: scale(1.1);
 transition: transform 2s cubic-bezier(0.77,0,0.175,1);*/
 
 }
 
-.activity-image{
+.activity-image {
     height: 256px;
 }
-.card-item{
+
+.card-item {
     grid-column: span 6;
 }
 
-.card-item:nth-of-type(4)
-{
+.card-item:nth-of-type(4) {
     grid-column: 2 / span 6;
 
 }
 
-.activity-content{
+.activity-content {
     flex-direction: column;
-    padding:36px 68px;
+    padding: 36px 68px;
 }
 
-h3{
-    
-font-family: "Kadwa";
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 48px;
-margin:0;
+h3 {
 
-/* verde */
+    font-family: "Kadwa";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 48px;
+    margin: 0;
 
-color: #07504D;
+    /* verde */
+
+    color: #07504D;
 }
 
-h4{
+h4 {
     font-family: "Alegreya Sans";
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 22px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
 
 }
-h4.text-content    {
+
+h4.text-content {
     color: #2A2D34;
     margin-top: 10px;
     margin-bottom: 16px;
 }
 
 @media screen and (max-width: 1090px) {
-    .bm-menu, .bm-menu-wrap.sidebar-container{
-  width: 100vw;
-  }    }
+    .bm-menu, .bm-menu-wrap.sidebar-container {
+        width: 100vw;
+    }
+}
