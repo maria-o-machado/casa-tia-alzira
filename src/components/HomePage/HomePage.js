@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import HorizontalScroll from 'react-scroll-horizontal'
 import Hero from "../../components/Hero/Hero";
-import Page from "../../components/Page/Page";
 import Activities from "../Activities/Activities";
 import Contact from "../Contact/Contact";
 import Locals from "../Locals/Locals";

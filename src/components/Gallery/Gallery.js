@@ -1,5 +1,3 @@
-import LeftArrow from './LeftArrow.svg';
-import RightArrow from './RightArrow.svg';
 import '../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.css'
 import "./Gallery.css";
 import { Carousel } from 'react-responsive-carousel';
