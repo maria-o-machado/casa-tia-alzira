@@ -14,7 +14,7 @@ function ActivityCard({ title, text, order }) {
               <div className="activity-content">
                 <h3>{title}</h3>
                 <h4 className="text-content">{text}</h4>
-                <ArrowLink text="Saber mais" color="#9F6F63" />
+                <ArrowLink text="Saber mais" color="#9F6F63" link={"/activity"}/>
               </div>
             </div>
           </div>
@@ -24,7 +24,7 @@ function ActivityCard({ title, text, order }) {
           <div className="activity-content">
             <h3>{title}</h3>
             <h4 className="text-content">{text}</h4>
-            <ArrowLink text="Saber mais" color="#9F6F63" />
+            <ArrowLink text="Saber mais" color="#9F6F63"  link={"/activity"} />
           </div>
           <img className="activity-image" src={example} />
         </div>
