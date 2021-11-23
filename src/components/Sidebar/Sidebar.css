@@ -5,12 +5,12 @@
 }
 
 #nav-links{
-    padding-top: 10vh; 
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 .menu-item{
-    margin-bottom: 22px;
+    margin-bottom: 3vh;
     text-align: center;
     text-decoration: none;
     color: #FCFCFC;
@@ -18,7 +18,9 @@
     font-weight: 500;
     font-size: 24px;
 }
-
+.logo{
+    margin-bottom: 10vh;
+}
 #social-links{
     display: flex;
     flex-direction: column;
@@ -42,4 +44,47 @@ margin-right: 20px;
 #book{
     text-decoration-line: underline;
     text-underline-offset: 4px;
+}
+.bm-menu,.bm-menu-wrap.sidebar-container{
+    width: 372px;
+    height: 100vh;
+    
+}
+
+.bm-item{
+    padding: 15vh 0 8vh 0;
+}
+
+
+.bm-cross-button{
+    left:40px;
+        height: 32px;
+        width: 32px;
+        top:36px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 380px) {
+  .bm-menu, .bm-menu-wrap.sidebar-container{
+width: 100vw;
+}    
+.bm-item{
+    padding: 10vh 0 5vh 0;
+}
+
+.bm-cross-button{
+    left: 24px;
+    top:24px;
+}
+
+
+.logo{
+    margin-bottom: 8vh;
+}
 }

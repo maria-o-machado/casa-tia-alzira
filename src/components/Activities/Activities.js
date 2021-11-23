@@ -2,25 +2,53 @@ import React from "react";
 import ActivityCard from "../ActivityCard/ActivityCard";
 import "./Activities.css";
 import LocomotiveScroll from "locomotive-scroll";
-
+import $ from "jquery";
 function Activities() {
     window.addEventListener('DOMContentLoaded', (event) => {
-
+let direction="horizontal";
     const element = document.querySelector(".activities-container");
+    if ($(window).width() < 1090 && direction !=="vertical") {
+        direction="vertical";
+    }
+    else if ($(window).width() > 1090 && direction ==="vertical") {
+        //alert('More than 960')
+        direction="horizontal";
+        
+    }
+
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
        
-            direction: 'horizontal',
+            direction: direction,
             smooth: true,
             lerp: 0.02,
             tablet: {
+                direction: "vertical",
+                lerp: 1,
                 smooth: true
             },
             smartphone: {
+                direction:  "vertical",
+                lerp: 1,
                 smooth: true
             }
       });
 
+    $(window).resize(function() {
+        //resize just happened, pixels changed
+        if ($(window).width() < 1090 && direction !=="vertical") {
+             direction="vertical";
+            scroll.init();
+           
+        }
+        else if ($(window).width() > 1090 && direction ==="vertical") {
+            //alert('More than 960')
+             direction="horizontal";
+            scroll.destroy();
+                }
+                scroll.update();
+    });
+    
    
     });
 

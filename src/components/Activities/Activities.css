@@ -44,8 +44,20 @@ html.has-scroll-dragging * {
   user-select: none;
 }
 .has-scroll-smooth body {
-  overflow: hidden;
+    overflow: hidden;
 }
+
+@media screen and (max-width: 1090px) {
+    .activities{
+        grid-template-columns: repeat(3,300px);
+    grid-template-rows: repeat(4, auto)  ;
+    }
+
+    .activities-container{
+      overflow-y: scroll ;
+
+    }
+     }
 
 /*
 .c-scrollbar {
@@ -83,3 +95,4 @@ html.has-scroll-dragging * {
   cursor: grabbing;
 }
 */
+

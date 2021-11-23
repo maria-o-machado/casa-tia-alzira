@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import fb from "./fb.svg";
 import insta from "./inst.svg";
 import { slide as Menu } from "react-burger-menu";
-import "./Sidebar.css";
+import  css from "./Sidebar.css";
 function Sidebar() {
   function showSettings(event) {
     event.preventDefault();
@@ -55,7 +55,6 @@ function Sidebar() {
 
       display: "flex",
       flexDirection: "column",
-      padding: "15vh 100px 8vh 100px",
 
     },
     bmOverlay: {
@@ -64,7 +63,7 @@ function Sidebar() {
   };
 
   return (
-    <Menu className="sidebar-container" width={"372px"} styles={styles}>
+    <Menu className="sidebar-container" styles={styles} theme={css}>
       <div>
         <a id="home" className="menu-item" href="/">
           <img src={logo} />
