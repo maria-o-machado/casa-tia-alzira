@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Page.css"
 import image_atividade from '../../assets/Atividade/atividade.png'
 import Location from '../Location/Location'
 import ArrowLink from '../ArrowLink/ArrowLink'
 
-function Page(props) {
+function Page({properties, passColorNavbar}) {
+    useEffect(() => {
+        passColorNavbar("#07504D");
+    });
+
     return (
-        <div className="page-content" style={{backgroundColor: props.properties.background}}>
+        <div className="page-content" style={{backgroundColor: properties.background}}>
             <div className="box" >
                 <div className="box_text">
-                    <h2 style={{color: props.properties.colorTitle}}>{props.properties.title}</h2>
-                    { props.properties.location ? <Location/> : undefined}
-                    <p className="description" style={{color: props.properties.colorDescription}}>{props.properties.description}</p>
-                    { props.properties.buttons ?  
+                    <h2 style={{color: properties.colorTitle}}>{properties.title}</h2>
+                    { properties.location ? <Location/> : undefined}
+                    <p className="description" style={{color: properties.colorDescription}}>{properties.description}</p>
+                    { properties.buttons ?  
                         <div>
                             <div className="box-button">
                                 <ArrowLink text="Locais próximos" color="#07504D" link={"/locals"}/>
@@ -22,7 +26,7 @@ function Page(props) {
                             </div>
                         </div>
                     : undefined}
-                    { props.properties.homePage ? 
+                    { properties.homePage ? 
                     <div id="about-know-more">
                         <ArrowLink  text="Saber mais" color="#07504D" link={"/about"}/> 
                     </div>    
