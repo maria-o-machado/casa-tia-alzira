@@ -6,14 +6,19 @@ body {
     color: #E0D0C1;
 }
 
+.contact-container {
+    height: 100vh;
+    width: 100vw;
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    height: 100vh;
+    grid-template-rows: 100%;   
     align-items: center;
     margin-left: 120px;
     margin-right: 120px;
+    height: 100%;
 }
 
 .contact-info {

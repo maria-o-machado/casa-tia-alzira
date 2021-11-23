@@ -1,6 +1,7 @@
 .activities-container{
    padding: 5vh 100px 74px 120px; /* devia ser 100*/
    height: 100vh;
+   width: 100vw;
    background: #E0D0C1;
 }
 

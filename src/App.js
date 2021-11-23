@@ -13,6 +13,7 @@ import Page from "./components/Page/Page";
 import PageReverse from "./components/PageReverse/PageReverse";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import HomePage from "./components/HomePage/HomePage";
 
 
 function App() {
@@ -46,7 +47,7 @@ const atividade = {
        
         <div>
           <Routes>
-            <Route exact path="/" element={<Hero/>}/>
+            <Route exact path="/" element={<HomePage/>}/>
             <Route path="/gallery" element={<Gallery/>} />
             <Route path="/activities" element={<Activities/>} />
             <Route path="/locals" element={<Locals/>} />           
