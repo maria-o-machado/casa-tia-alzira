@@ -79,7 +79,7 @@ function Sidebar() {
           <a id="gallery" className="menu-item" href="/gallery">
             Galeria
           </a>
-          <a id="places" className="menu-item" href="/places">
+          <a id="places" className="menu-item" href="/locals">
             Locais a visitar
           </a>
           <a id="contact" className="menu-item" href="/contact">

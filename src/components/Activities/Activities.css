@@ -1,7 +1,13 @@
 
 .activities-container{
+<<<<<<< HEAD
    padding: 5vh 120px 74px 120px; /* devia ser 100*/
    height: calc(100vh - 5vh - 74px);
+=======
+   padding: 5vh 100px 74px 120px; /* devia ser 100*/
+   height: 100vh;
+   width: 100vw;
+>>>>>>> f8932e5859c734a299ddb48565a2ecbaa63df6cb
    background: #E0D0C1;
    width: 1800px;
    overflow: hidden;

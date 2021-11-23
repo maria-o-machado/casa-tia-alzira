@@ -1,10 +1,11 @@
 import React from "react";
-import "./Sobre.css"
 import Page from '../Page/Page'
 import PageReverse from '../PageReverse/PageReverse'
 import Reserve from "../Reserve/Reserve";
+import HorizontalScroll from 'react-scroll-horizontal'
+import "./About.css"
 
-function Sobre() {
+function About() {
     const page1 = {
         title: "O que é?",
         location: false,
@@ -36,13 +37,15 @@ function Sobre() {
     };
 
     return (
-        <div class="scrolling-wrapper">
+        <div className="about-content">
+            <HorizontalScroll reverseScroll = { true }>
                 <Page properties={page1}/>  
-                <Reserve background="#9F6F63" color="#FCFCFC"/>
                 <PageReverse properties={page2}/> 
-                <Page properties={page3}/>  
+                <Page properties={page3}/> 
+                <Reserve background="#9F6F63" color="#FCFCFC"/> 
+            </HorizontalScroll>
         </div>
     );
 }
 
-export default Sobre;
+export default About;

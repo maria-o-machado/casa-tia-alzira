@@ -1,3 +1,8 @@
+.page-content {
+    height: 100vh;
+    width: 100vw;
+}
+
 .box_reverse {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -7,7 +12,7 @@
     margin-right: 120px;
 }
 
-h1 {
+.box_title_reverse {
     margin: 0;
 }
 

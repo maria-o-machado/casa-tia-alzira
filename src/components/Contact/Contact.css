@@ -1,27 +1,32 @@
 body {
-    background-color: #07504D;
+    background-color: #07504D !important;
 }
 
-.title {
+.contact-title {
     color: #E0D0C1;
 }
 
-.box {
+.contact-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.contact-content {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    height: 100vh;
+    grid-template-rows: 100%;   
     align-items: center;
     margin-left: 120px;
     margin-right: 120px;
+    height: 100%;
 }
 
-.box_text {
+.contact-info {
     justify-self: start;
     width: 507px;
 }
 
-.image {
+.contact-image {
     width: 507px;
     height: 611px;
     object-fit: cover;
@@ -29,18 +34,17 @@ body {
     
 }
 
-.box_enderecos {
+.contacts {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
 }
 
-.description {
-    padding-bottom: 18px;
+.contact-description {
     color: #FCFCFC;
 }
 
-.box_contactos > p {
+.contact > p {
     font-weight: normal;
     text-align: start;
     padding: 5px 0px;
