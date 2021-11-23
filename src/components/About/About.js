@@ -2,6 +2,8 @@ import React from "react";
 import Page from '../Page/Page'
 import PageReverse from '../PageReverse/PageReverse'
 import Reserve from "../Reserve/Reserve";
+import HorizontalScroll from 'react-scroll-horizontal'
+import "./About.css"
 
 function About() {
     const page1 = {
@@ -35,11 +37,13 @@ function About() {
     };
 
     return (
-        <div>
-            <Page properties={page1}/>  
-            <PageReverse properties={page2}/> 
-            <Page properties={page3}/> 
-            <Reserve background="#9F6F63" color="#FCFCFC"/> 
+        <div className="about-content">
+            <HorizontalScroll reverseScroll = { true }>
+                <Page properties={page1}/>  
+                <PageReverse properties={page2}/> 
+                <Page properties={page3}/> 
+                <Reserve background="#9F6F63" color="#FCFCFC"/> 
+            </HorizontalScroll>
         </div>
     );
 }

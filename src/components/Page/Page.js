@@ -6,7 +6,7 @@ import ArrowLink from '../ArrowLink/ArrowLink'
 
 function Page(props) {
     return (
-        <div style={{backgroundColor: props.properties.background}}>
+        <div className="page-content" style={{backgroundColor: props.properties.background}}>
             <div className="box" >
                 <div className="box_text">
                     <h2 style={{color: props.properties.colorTitle}}>{props.properties.title}</h2>

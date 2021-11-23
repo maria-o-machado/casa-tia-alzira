@@ -5,7 +5,7 @@ import Location from '../Location/Location'
 
 function PageReverse(props) {
     return (
-        <div style={{backgroundColor: props.properties.background}}>
+        <div className="page-content" style={{backgroundColor: props.properties.background}}>
              <div className="box_reverse" >
                 <img className="image_reverse" src={image_atividade}></img>
                 <div className="box_text_reverse">
