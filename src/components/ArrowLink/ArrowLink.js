@@ -1,4 +1,3 @@
-import arrow from "./arrow.svg";
 import "./ArrowLink.css"
 
 function ArrowLink({text, color, link}) {
