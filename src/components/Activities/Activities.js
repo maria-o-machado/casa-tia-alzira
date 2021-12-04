@@ -16,8 +16,12 @@ function Activities({ passColorNavbar, homePage }) {
   document.addEventListener("DOMContentLoaded", function(event) {
     const scrollContainer = document.querySelector(".activities-grid-container");
   
-  document.addEventListener("wheel", (evt) => {
-      scrollContainer.scrollLeft += evt.deltaY;
+    document.addEventListener("wheel", (evt) => {
+      event.preventDefault();
+      if (scrollContainer!=null){
+        scrollContainer.scrollLeft += evt.deltaY;
+
+      }
   });
 
   });  
@@ -32,7 +36,7 @@ function Activities({ passColorNavbar, homePage }) {
       
       // retrieve the jquery ref to the div
       
-      var scrollTo = $scroller.scrollLeft() + 400;                 
+      var scrollTo = $scroller.scrollLeft() + 800;                 
       console.log(scrollTo);
       // simply update the scroll of the scroller
       // $('.scroller').scrollLeft(scrollTo); 
@@ -46,7 +50,7 @@ function Activities({ passColorNavbar, homePage }) {
     
     // retrieve the jquery ref to the div
     
-    var scrollTo = $scroller.scrollLeft() - 400;                 
+    var scrollTo = $scroller.scrollLeft() - 800;                 
     console.log(scrollTo);
     // simply update the scroll of the scroller
     // $('.scroller').scrollLeft(scrollTo); 
