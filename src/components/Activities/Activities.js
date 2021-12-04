@@ -1,20 +1,29 @@
 import React, { useEffect } from "react";
 import ActivityCard from "../ActivityCard/ActivityCard";
 import "./Activities.css";
-import LocomotiveScroll from "locomotive-scroll";
+//import LocomotiveScroll from "locomotive-scroll";
 import $ from "jquery";
 import ArrowLink from "../ArrowLink/ArrowLink";
 
 function Activities({ passColorNavbar, homePage }) {
-  window.addEventListener("DOMContentLoaded", (event) => {
-    let direction = "horizontal";
+  $( document ).ready(function() {
+ /*   let direction = "horizontal";
     const element = document.querySelector(".activities-container");
     if (homePage == false) {
-      if ($(window).width() < 1090 && direction !== "vertical") {
+      if ($(window).width() <= 1090 && direction !== "vertical") {
         direction = "vertical";
+        $(".activities").attr("data-scroll-direction", "vertical");
+        $(".activities").attr("data-scroll-section", "false");
+
+
       } else if ($(window).width() > 1090 && direction === "vertical") {
         //alert('More than 960')
         direction = "horizontal";
+        $(".activities").attr("data-scroll-direction", "horizontal");
+        $(".activities").attr("data-scroll-section", "true");
+
+
+
       }
 
       const scroll = new LocomotiveScroll({
@@ -38,16 +47,25 @@ function Activities({ passColorNavbar, homePage }) {
       $(window).resize(function () {
         //resize just happened, pixels changed
         if ($(window).width() < 1090 && direction !== "vertical") {
+          $(".activities").attr("data-scroll-direction", "vertical");
+
+          $(".activities").attr("data-scroll-section", "false");
           direction = "vertical";
-          scroll.init();
+          scroll.destroy();
+          
         } else if ($(window).width() > 1090 && direction === "vertical") {
           //alert('More than 960')
           direction = "horizontal";
-          scroll.destroy();
+          $(".activities").attr("data-scroll-direction", "horizontal");
+          $(".activities").attr("data-scroll-section", "true");
+
+
+
+          scroll.init();
         }
         scroll.update();
       });
-    }
+    }*/
   });
 
   useEffect(() => {
@@ -81,13 +99,12 @@ function Activities({ passColorNavbar, homePage }) {
           </div>
         </div>
       ) : (
-        <div className="activities-container" data-scroll-container>
+        <div className="activities-container" >
           <h2>Que atividades posso realizar?</h2>
-
+<div className ="activities-grid-container">
           <div
             className="activities"
-            data-scroll-section
-            data-scroll-direction="horizontal"
+            
           >
             <ActivityCard
               title={"Nome da atividade"}
@@ -134,6 +151,7 @@ function Activities({ passColorNavbar, homePage }) {
               order={0}
             />
           </div>
+        </div>
         </div>
       )}
     </div>
