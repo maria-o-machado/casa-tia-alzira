@@ -14,8 +14,14 @@ function PageReverse({ properties, passColorNavbar }) {
             <div className="box_reverse" >
                 <img className="image_reverse" src={image_atividade}></img>
                 <div className="box_text_reverse">
-                    <h5 className="box_title_reverse" style={{ color: properties.colorTitle }}>{properties.title}</h5>
-                    {properties.location ? <Location /> : undefined}
+                    {properties.location ?
+                        <div>
+                            <h2 className="box_title_reverse page_title box_title_location" style={{ color: properties.colorTitle }}>{properties.title}</h2>
+                            <Location />
+                        </div>
+                         : 
+                         <h2 className="box_title_reverse page_title" style={{ color: properties.colorTitle }}>{properties.title}</h2>
+                        }
                     <p className="description" style={{ color: properties.colorDescription }}>{properties.description}</p>
                 </div>
             </div>

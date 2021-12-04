@@ -18,10 +18,10 @@ function Locals({
 
   return (
     <div className="locals-page">
-      <div className="locals-container">
-        <h2 className="title-locals">
+      <h2 className="title-locals">
           Que locais posso visitar nas proximidades?
-        </h2>
+      </h2>
+      <div className="locals-container">
         {homePage ? (
           <div className="locals-content" id="locals-container-fix">
             <div>

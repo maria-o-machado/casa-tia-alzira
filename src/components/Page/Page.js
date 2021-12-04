@@ -13,7 +13,7 @@ function Page({ properties, passColorNavbar }) {
         <div className="page-content" style={{ backgroundColor: properties.background }}>
             <div className="box" >
                 <div className="box_text">
-                    <h2 style={{ color: properties.colorTitle }}>{properties.title}</h2>
+                    <h2 className="page_title" style={{ color: properties.colorTitle }}>{properties.title}</h2>
                     {properties.location ? <Location /> : undefined}
                     <p className="description" style={{ color: properties.colorDescription }}>{properties.description}</p>
                     {properties.buttons ?
