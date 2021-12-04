@@ -63,18 +63,24 @@
 
 
 .bm-cross-button {
-    left: 40px;
+    left: 48px;
     height: 32px;
     width: 32px;
-    top: 36px;
+    margin-top: 20px;
 }
 
 
 
-
-
-
-
+.bm-burger-button {
+    position: fixed;
+    width: 32px;
+    height: 20px;
+    left: 48px;
+    top: 44px;
+  }
+  .bm-burger-bars {
+    height: 4px;
+  }
 
 @media screen and (max-width: 380px) {
     .bm-menu, .bm-menu-wrap{
@@ -94,4 +100,40 @@
     .logo {
         margin-bottom: 8vh;
     }
+
 }
+
+@media screen and (max-width: 600px) {
+
+
+.bm-burger-button {
+    width: 32px;
+    height: 20px;
+    left: 28px;
+    top: 28px;
+  }
+
+  .bm-cross-button {
+   margin-top: 10px;
+   left: 32px;
+}
+
+
+
+  }
+  @media screen and (max-width: 460px) {
+
+
+    .bm-burger-button {
+        width: 28px;
+        height: 15px;
+        left: 28px;
+        top: 28px;
+      }
+
+      .bm-burger-bars {
+        height: 2.5px;
+      }
+    
+      }
+    

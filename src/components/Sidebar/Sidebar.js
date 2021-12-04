@@ -3,34 +3,22 @@ import fb from "./fb.svg";
 import insta from "./inst.svg";
 import { slide as Menu } from "react-burger-menu";
 import css from "./Sidebar.css";
+import $ from "jquery";
 
 
 function Sidebar({ color }) {
-  function showSettings(event) {
-    event.preventDefault();
-  }
-
+  
+    
   var styles = {
-    bmBurgerButton: {
-      position: "fixed",
-      width: "32px",
-      height: "20px",
-      left: "48px",
-      top: "44px",
-    },
+   
     bmBurgerBars: {
       background: color,
-      height: "4px",
+      height: "3px",
     },
     bmBurgerBarsHover: {
       background: "#a90000",
     },
-    bmCrossButton: {
-      left: "40px",
-      height: "32px",
-      width: "32px",
-      top: "36px"
-    },
+   
     bmCross: {
       height: "32px",
 
@@ -66,7 +54,7 @@ function Sidebar({ color }) {
   };
 
   return (
-    <Menu className="sidebar-container" styles={styles} theme={css}>
+    <Menu className="sidebar-container" theme={css}styles={styles} >
       <div>
         <a id="home" className="menu-item" href="/">
           <img src={logo} />
