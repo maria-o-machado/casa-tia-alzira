@@ -88,7 +88,7 @@
     }
 
     .bm-item {
-        padding: 10vh 0 5vh 0;
+        padding: 15vh 0 5vh 0;
     }
 
     .bm-cross-button {
@@ -97,10 +97,22 @@
     }
 
 
-    .logo {
-        margin-bottom: 8vh;
+    
+
+}
+@media screen and (max-width: 460px) {
+    .menu-item {
+        margin-bottom: 2vh;
+        
+        font-size: 20px;
     }
 
+    #home img{
+        height: 70px;
+    }
+    #home{
+        margin-bottom: 9vh;
+    }
 }
 
 @media screen and (max-width: 600px) {

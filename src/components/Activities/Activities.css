@@ -97,6 +97,10 @@ button{
 }
 
 @media screen and (max-width: 800px) {
+
+  .activities-container .arrows{
+    display: none;
+  }
   .activities {
     display: flex;
     flex-direction: column;

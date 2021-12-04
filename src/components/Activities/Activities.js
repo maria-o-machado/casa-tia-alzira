@@ -13,6 +13,17 @@ function Activities({ passColorNavbar, homePage }) {
   useEffect(() => {
     passColorNavbar("#9F6F63");
   });
+  document.addEventListener("DOMContentLoaded", function(event) {
+    const scrollContainer = document.querySelector(".activities-grid-container");
+  
+  document.addEventListener("wheel", (evt) => {
+      scrollContainer.scrollLeft += evt.deltaY;
+  });
+
+  });  
+
+
+
   var $scroller = $('.activities-grid-container');
   // assign click handler
   $('.right-button').on('click', function () {       

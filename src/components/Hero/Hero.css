@@ -80,3 +80,36 @@ h1 {
   right: calc(50vw - 80px);
 
 }
+
+@media screen and (max-width: 800px) {
+
+.arrows{
+left:48px;
+bottom: 32px;  
+
+
+
+}}
+
+
+@media screen and (max-width: 460px) {
+
+  .arrows{
+  left:48px;
+  bottom: 20px; 
+
+}
+
+h1 {
+  
+  font-size: 60px;
+  line-height: 71px;
+  /* or 96% */
+
+  text-align: center;
+  letter-spacing: 0.025em;
+  z-index: 3;
+
+}
+
+}
