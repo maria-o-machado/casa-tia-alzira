@@ -88,6 +88,10 @@
         width: 100%;
         height: 400px;
     }
+
+    #about-know-more>.activity-link {
+        margin-left: 50px !important;
+    }
 }
 
 @media screen and (max-width: 600px) {
