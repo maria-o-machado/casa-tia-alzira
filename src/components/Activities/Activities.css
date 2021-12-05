@@ -14,6 +14,8 @@
 
 .activities-container.home {
   width: calc(100vw);
+  height: fit-content;
+  padding-bottom: 120px;
 }
 
 .activities-title {
@@ -57,6 +59,7 @@ body {
 .activities.home {
   transform: none;
   display: flex;
+  height: fit-content;
   flex-direction: column;
   padding:0 120px;
   margin-top: 0;
@@ -194,6 +197,7 @@ button{
   .activities-title{
     font-size: 30px !important;
     line-height: 44px !important;
+    margin-bottom: 24px;
   }
 }
 

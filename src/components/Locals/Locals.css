@@ -68,6 +68,7 @@ body {
     grid-column: span 1;
     max-width: 361px !important;  
     transform: none;
+    margin-right: 60px;
 }
 
 
@@ -209,6 +210,8 @@ body {
     .title-locals{
         font-size: 30px !important;
         line-height: 44px !important;
+        margin-bottom: 24px;
+
     }
   }
   
