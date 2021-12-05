@@ -94,6 +94,11 @@ body {
     margin-right: 120px;
 }
 
+.locals .card-item:last-of-type {
+  margin-right: 120px;
+}
+
+
 .locals.home   .activity-content {
     padding: 36px;
 }
