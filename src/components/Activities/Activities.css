@@ -1,17 +1,15 @@
 .activities-container {
   /* devia ser 100*/
-  height: calc(100vh );
-  padding-bottom: 74px ;
+  min-height: 100vh ;
   background: #E0D0C1;
   width: 100vw;
-  overflow: hidden;
+  overflow-y: scroll;
   position: relative;
 }
 
-.arrows{
-  position: absolute;
-  bottom: 48px;
-  left: 100px;
+.activity-arrows{
+  margin-top: 7vh;
+  margin-left: 100px;
 }
 
 .activities-container.home {
@@ -35,7 +33,8 @@ body {
 }
 
 .activities-grid-container {
-  height: 600px ;
+  margin-top: 5vh;
+  height: fit-content;
   overflow-x: auto;
   overflow-y: hidden;
   /*transform:rotate(-90deg) translateY(-100vw);
@@ -46,8 +45,8 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: repeat(21, 180px);
-  grid-template-rows: 256px 256px;
-  row-gap: 36px;
+  grid-template-rows: 233px 233px;
+  row-gap: 6vh;
   /*transform: rotate(90deg);
   padding-left: 100vw ;
   margin-top: 120px;
@@ -66,6 +65,8 @@ body {
 
 .activities.home>.card-item{
   width: fit-content;
+  height: 233px;
+
 }
 
 .activities.home>.card-item:nth-of-type(2){
@@ -85,14 +86,14 @@ button{
   cursor: pointer;
 }
 @media screen and (max-width: 1200px) {
-  .activity-image {
+  .activities.home .activity-image {
     height: 306px !important;
   }
 
 
   .activities-container.home{
     height: auto;
-  
+    padding-bottom: 100px;
   }
   
   .activities.home{
@@ -115,6 +116,7 @@ button{
 
   .activities.home>.card-item {
         grid-column: span 1;
+        height: fit-content;
       max-width: 361px;   
       transform: none;
     }
@@ -143,7 +145,11 @@ button{
 
 }
 @media screen and (max-width: 800px) {
-  .activities-container .arrows{
+
+  .activity-image {
+    height: 306px !important;
+  }
+  .activities-container .activity-arrows{
     display: none;
   }
 .card-item:last-of-type {

@@ -135,7 +135,7 @@ function Activities({ passColorNavbar, homePage }) {
             </div>
           </div>
 
-          <div className="arrows">
+          <div className="activity-arrows">
           <button className="left-button">
               
               <LeftArrow color={"#9F6F63"}/>

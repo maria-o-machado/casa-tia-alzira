@@ -66,10 +66,10 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
-
+/*
     .App, #root {
         overflow: scroll !important;
-    }
+    }*/
 }
 
 @media screen and (max-width: 800px){
@@ -79,7 +79,7 @@
     }
 
     .page_title {
-        text-align: start;
+        text-align: center;
     }
 
     .image_reverse {
