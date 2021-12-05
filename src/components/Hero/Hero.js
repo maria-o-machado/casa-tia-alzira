@@ -13,12 +13,14 @@ function Hero() {
     }
 
   }
-  var $scroller = $('.HeroContainer');
-  $('.right-button').on('click', function () {       
+  $(document).ready(function () {
 
-      
-  });
-
+    $(".down-arrow").click(function () {
+      $('html, body').animate({
+        scrollTop: $( window ).height()
+      }, 1000);
+    });
+    });
 
   return (
     <div styles={styles} className="HeroContainer">
@@ -39,9 +41,9 @@ function Hero() {
         <h1>Casa da <br /> Ti'Alzira</h1>
       </div>
 
-      <div className="arrows hero">
+      <div className="arrows-hero">
           
-            <button className="right-button">
+            <button className ="down-arrow">
               
               <RightArrow color={"#ffffff"}/>
 

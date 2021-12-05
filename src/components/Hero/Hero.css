@@ -18,7 +18,8 @@ body {
 
 }
 
-.arrows.hero{
+.arrows-hero{
+  position: absolute;
   left: 50%;
   right: 50%;
   bottom: 84px;  
@@ -91,7 +92,7 @@ h1 {
 
 @media screen and (max-width: 800px) {
 
-  .arrows.hero{
+  .arrows-hero{
 bottom: 72px;  
 
 
@@ -101,7 +102,7 @@ bottom: 72px;
 
 @media screen and (max-width: 460px) {
 
-  .arrows.hero{
+  .arrows-hero{
 
   bottom: 65px; 
 
