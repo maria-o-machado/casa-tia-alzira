@@ -99,9 +99,24 @@ function Locals({
             <h2 className="title-locals">Que locais posso visitar nas proximidades?</h2>
             {cardType ?
               <div className="locals home">
-                  <LocalCard />
-                  <LocalCard />
-                  <LocalCard />
+                  <ActivityCard
+                title={"Nome do Local"}
+                text={
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
+                order={1}
+              />
+              <ActivityCard
+                title={"Nome do Local"}
+                text={
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
+                order={1}
+              />
+              <ActivityCard
+                title={"Nome do Local"}
+                text={
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
+                order={1}
+              />
               </div>
               : 
               <div className="locals home">

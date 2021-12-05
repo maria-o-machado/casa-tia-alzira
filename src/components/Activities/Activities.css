@@ -83,7 +83,9 @@ button{
   cursor: pointer;
 }
 @media screen and (max-width: 1200px) {
-
+  .activity-image {
+    height: 306px !important;
+  }
 
 
   .activities-container.home{
@@ -111,7 +113,8 @@ button{
 
   .activities.home>.card-item {
         grid-column: span 1;
-max-width: 440px;        transform: none;
+      max-width: 361px;   
+      transform: none;
     }
 
 
