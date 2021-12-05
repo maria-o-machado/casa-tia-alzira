@@ -78,6 +78,10 @@
         margin-right: 50px;
     }
 
+    #about-know-more>.activity-link {
+        margin-left: 50px !important;
+    }
+
     .page_title {
         text-align: center;
     }

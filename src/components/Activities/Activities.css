@@ -184,6 +184,10 @@ button{
   text-align: center;
   padding-left: 0;
   }
+
+  #activities-know-more>.activity-link {
+    margin-left: 50px !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
