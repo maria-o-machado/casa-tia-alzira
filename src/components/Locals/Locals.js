@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Locals.css";
 import ActivityCard from "../ActivityCard/ActivityCard";
 import LocalCard from "../LocalCard/LocalCard";
@@ -13,10 +13,18 @@ function Locals({
   passColorButton,
   homePage,
 }) {
+  const [cardType, setCardType] = useState(true);
+
   useEffect(() => {
     passColorNavbar("#FCFCFC");
     passBackgroundButton("#E0D0C1");
     passColorButton("#9F6F63");
+    if(window.innerWidth < 1355){
+      setCardType(false);
+    }
+    else {
+      setCardType(true);
+    }
   });
 
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -26,11 +34,33 @@ function Locals({
       event.preventDefault();
       if (scrollContainer!=null){
         scrollContainer.scrollLeft += evt.deltaY;
-
       }
   });
 
   });  
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeThrottler, false);
+
+    var resizeTimeout;
+    function resizeThrottler() {
+      // ignore resize events as long as an actualResizeHandler execution is in the queue
+      if ( !resizeTimeout ) {
+        resizeTimeout = setTimeout(function() {
+          resizeTimeout = null;
+          if(window.innerWidth < 1355){
+            setCardType(false);
+          }
+          else {
+            setCardType(true);
+          }
+
+        // The actualResizeHandler will execute at a rate of 15fps
+        }, 66);
+      }
+    }
+  });
+
 
   var $scroller = $('.locals-grid-container');
   // assign click handler
@@ -67,11 +97,37 @@ function Locals({
         {homePage ? (
           <div className="locals-container home">
             <h2 className="title-locals">Que locais posso visitar nas proximidades?</h2>
-            <div className="locals home">
-              <LocalCard />
-              <LocalCard />
-              <LocalCard />
-            </div>
+            {cardType ?
+              <div className="locals home">
+                  <LocalCard />
+                  <LocalCard />
+                  <LocalCard />
+              </div>
+              : 
+              <div className="locals home">
+                <ActivityCard
+                title={"Nome do Local"}
+                text={
+                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                }
+                order={1}
+              />
+              <ActivityCard
+                title={"Nome do Local"}
+                text={
+                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                }
+                order={1}
+              />
+              <ActivityCard
+                title={"Nome do Local"}
+                text={
+                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                }
+                order={1}
+              />
+              </div>
+              } 
             <div id="locals-know-more">
                   <ArrowLink text="Ver mais" color="#E0D0C1" link={"/locals"} />
                 </div>
