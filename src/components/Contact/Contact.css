@@ -100,7 +100,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .page_title {
+    .contact-title {
       font-size: 30px !important;
       line-height: 44px !important;
     }
@@ -108,8 +108,12 @@ body {
 
 
 @media screen and (max-width: 460px) {
-    .page-title {
-     font-size: 20px !important;
-     line-height: 24px !important;
-   }
+    .contact-title {
+        font-size: 20px !important;
+        line-height: 24px !important;
+    }
+    
+    .contact > p{
+        font-size: 14px !important;
+    }
 }

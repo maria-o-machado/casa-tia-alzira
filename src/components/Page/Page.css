@@ -99,8 +99,20 @@
 
 
 @media screen and (max-width: 460px) {
-    .page-title {
+    .page_title {
      font-size: 20px !important;
      line-height: 24px !important;
    }
+
+   .location_pin {
+        width: 13px;
+   }
+
+   .location_text {
+    font-size: 14px !important;  
+   }
+
+   .description {
+    font-size: 14px !important;
+    }
 }

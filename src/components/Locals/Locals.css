@@ -196,10 +196,6 @@ body {
     .locals .card-item:last-of-type {
         margin-right: 0px;
     }
-
-    
-
-
   }
   
   @media screen and (max-width: 600px) {
@@ -218,8 +214,7 @@ body {
       font-size: 14px;
     }
 
-  
-    .page-title {
+    .title-locals {
         font-size: 20px !important;
         line-height: 24px !important;
    }
