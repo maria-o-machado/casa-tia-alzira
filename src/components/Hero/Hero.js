@@ -39,7 +39,7 @@ function Hero() {
         <h1>Casa da <br /> Ti'Alzira</h1>
       </div>
 
-      <div className="arrows">
+      <div className="arrows hero">
           
             <button className="right-button">
               

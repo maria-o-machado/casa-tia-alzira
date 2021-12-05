@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Kadwa&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap');
 
-.App, #root {
+.App, #root,body,html {
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
+
 }

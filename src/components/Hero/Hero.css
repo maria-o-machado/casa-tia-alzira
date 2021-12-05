@@ -18,6 +18,14 @@ body {
 
 }
 
+.arrows.hero{
+  left: 50%;
+  right: 50%;
+  bottom: 84px;  
+  transform: rotate(90deg);
+  
+  
+  }
 h1 {
   margin: 0;
   color: #fff;
@@ -83,9 +91,8 @@ h1 {
 
 @media screen and (max-width: 800px) {
 
-.arrows{
-left:48px;
-bottom: 32px;  
+  .arrows.hero{
+bottom: 72px;  
 
 
 
@@ -94,9 +101,9 @@ bottom: 32px;
 
 @media screen and (max-width: 460px) {
 
-  .arrows{
-  left:48px;
-  bottom: 20px; 
+  .arrows.hero{
+
+  bottom: 65px; 
 
 }
 

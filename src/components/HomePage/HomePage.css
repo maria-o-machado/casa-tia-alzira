@@ -1,4 +1,12 @@
 .homepage-content {
-    height: 100%;
+    height: 100vh;
     width: 100vw;
+    scroll-snap-type: y proximity;
+    overflow: scroll;
+
+}
+
+.homepage-content>div{
+    scroll-snap-align: start;
+
 }
