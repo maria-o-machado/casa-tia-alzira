@@ -9,11 +9,23 @@
     align-self: right;
     transform-origin: center-left;
     will-change: transform;
-    /*transform: scale(1.1);
-transition: transform 2s cubic-bezier(0.77,0,0.175,1);*/
+    
+}
+.card-content{
+    border-radius: 8px;
 
+    transition: transform 200ms ease-out ,
+    box-shadow 0.3s ease-in-out;
+    width: fit-content;
+    height: fit-content;
 }
 
+.card-content:hover {
+
+    transform: scale(1.05);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+
+}
 .activity-image {
     width: 361px !important;
     object-fit: cover !important;

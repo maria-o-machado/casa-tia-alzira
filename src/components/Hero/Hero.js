@@ -13,14 +13,7 @@ function Hero() {
     }
 
   }
-  $(document).ready(function () {
-
-    $(".down-arrow").click(function () {
-      $('html, body').animate({
-        scrollTop: $( window ).height()
-      }, 1000);
-    });
-    });
+ 
 
   return (
     <div styles={styles} className="HeroContainer">

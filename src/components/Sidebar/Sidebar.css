@@ -8,6 +8,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    align-items: center;
+
 }
 
 .menu-item {
@@ -18,7 +20,42 @@
     font-family: "Alegreya Sans";
     font-weight: 500;
     font-size: 24px;
+    
 }
+
+.menu-item.main{
+    
+    width: fit-content;
+    pointer-events: auto;
+    position: relative;
+    transition: opacity 200ms;
+    
+}
+
+
+
+.menu-item.main::before {
+    content: "";
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 5px;
+    left: -10%;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border-bottom: 2px solid #FCFCFC;
+    transform: scale(0);
+    transition: transform 200ms ease-out;
+    transform-origin: bottom;
+    box-sizing: border-box;
+}
+
+.menu-item.main:hover::before {
+    transform: scale(1);
+    box-sizing: border-box;
+}
+
 
 #home {
     margin-bottom:8vh;
@@ -39,18 +76,35 @@
 
 #facebook {
     margin-right: 20px;
+    transition: transform 200ms ease-out;
+    
 }
+#instagram{
+    transition: transform 200ms ease-out;
+    
 
+}
+#facebook:hover, #instagram:hover {
+    transform: scale(1.1);
+   
+}
 
 .bm-cross-button:nth-child(2) {
     height: 40px;
 }
 
+#book:hover {
+    transform: scale(1.1);
+
+}
+
 #book {
     text-decoration-line: underline;
     text-underline-offset: 4px;
+    transition: transform 200ms ease-out;
 }
 
+    
 .bm-menu, .bm-menu-wrap.sidebar-container {
     width: 372px;
     height: 100vh;

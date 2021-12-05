@@ -1,6 +1,5 @@
 .locals-container {
     min-height: calc(100vh );
-    padding-bottom: 74px ;
     background: #9F6F63;
     width: 100vw;
     overflow: hidden;
@@ -28,6 +27,7 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 72px;
+    margin-bottom: 0;
 }
 
 body {
@@ -48,6 +48,7 @@ body {
     flex-direction: row;
     padding-left: 120px;
     width: fit-content;
+    margin-top: 32px;
 }
 
 .locals.home {
@@ -119,12 +120,11 @@ body {
 
       .locals.home{
         padding: 0;
-        margin-top: 25px;
         width: 100vw;
         display: flex;
         flex-direction: column;
         transform: none;
-        margin: 0 0;
+        margin: 32px 0 120px;
         padding-left: 0px;
         justify-content: center;
     
@@ -165,14 +165,16 @@ body {
       flex-direction: column;
       width: fit-content;
       transform: none;
-      margin: 0 0;
+      margin: 32px 0;
       padding-left: 0px;
-      margin-top: 0px;
+      row-gap: 20px;
     }
   
     .locals-container {
       overflow-y: scroll;
-      overflow-x: hidden;  
+      overflow-x: hidden; 
+        padding-bottom: 74px ;
+    
     }
     
     .locals-grid-container {
@@ -188,6 +190,11 @@ body {
     .title-locals {
     text-align: center;
     padding-left: 0;
+    }
+    .locals.home{
+     
+      margin: 32px 0 74px;
+      
     }
 
     .locals .card-item {

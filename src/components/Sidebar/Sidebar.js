@@ -60,19 +60,19 @@ function Sidebar({ color }) {
           <img src={logo} />
         </a>
         <div id="nav-links">
-          <a id="about" className="menu-item" href="/about">
+          <a id="about" className="menu-item main" href="/about">
             Sobre
           </a>
-          <a id="activities" className="menu-item" href="/activities">
+          <a id="activities" className="menu-item main" href="/activities">
             Atividades
           </a>
-          <a id="gallery" className="menu-item" href="/gallery">
+          <a id="gallery" className="menu-item main" href="/gallery">
             Galeria
           </a>
-          <a id="places" className="menu-item" href="/locals">
+          <a id="places" className="menu-item main" href="/locals">
             Locais a visitar
           </a>
-          <a id="contact" className="menu-item" href="/contact">
+          <a id="contact" className="menu-item main" href="/contact">
             Contacto
           </a>
         </div>
@@ -86,7 +86,7 @@ function Sidebar({ color }) {
               <img src={fb} />
             </a>
 
-            <a href="">
+            <a id ="instagram" href="">
 
               <img src={insta} />
             </a>
