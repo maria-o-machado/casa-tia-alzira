@@ -17,7 +17,7 @@
   width: calc(100vw);
 }
 
-h2 {
+.activities-title {
   padding-top: 5vh ;
   padding-left: 120px ;
   font-family: "Kadwa";
@@ -169,14 +169,14 @@ max-width: 440px;        transform: none;
     transform:none;
   }
   
-  h2{
+  .activities-title{
   text-align: center;
   padding-left: 0;
   }
 }
 
 @media screen and (max-width: 600px) {
-  h2{
+  .activities-title{
     font-size: 30px !important;
     line-height: 44px !important;
   }
@@ -195,7 +195,7 @@ max-width: 440px;        transform: none;
     row-gap: 14px;
   }
 
-  h2{
+  .activities-title{
    font-size: 20px !important;
    line-height: 24px !important;
  }

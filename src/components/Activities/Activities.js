@@ -61,7 +61,7 @@ function Activities({ passColorNavbar, homePage }) {
     <div>
       {homePage ? (
         <div className="activities-container home">
-          <h2>Que atividades posso realizar?</h2>
+          <h2 className="activities-title">Que atividades posso realizar?</h2>
 
           <div className="activities home">
             <ActivityCard
@@ -85,7 +85,7 @@ function Activities({ passColorNavbar, homePage }) {
         </div>
       ) : (
         <div className="activities-container">
-          <h2>Que atividades posso realizar?</h2>
+          <h2 className="activities-title">Que atividades posso realizar?</h2>
           <div className="activities-grid-container" id="scroll-container">
             <div className="activities">
               <ActivityCard

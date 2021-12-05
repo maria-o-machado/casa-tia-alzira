@@ -4,11 +4,6 @@
     border-radius: 4px;
     width: 361px;
     Height: 480px;
-    margin-right:  66px;
-}
-
-.card-local:last-of-type {
-    margin-right: 120px;
 }
 
 .local-content {
@@ -32,13 +27,6 @@
     height: 306px !important;
     object-fit: cover !important;
     justify-self: end !important;
-}
-
-@media screen and (max-width: 800px) {
-.card-local {
-    margin-right:  0px;
-    margin-bottom: 36px;
-    }
 }
 
 /*

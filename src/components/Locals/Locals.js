@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Locals.css";
+import ActivityCard from "../ActivityCard/ActivityCard";
 import LocalCard from "../LocalCard/LocalCard";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import RightArrow from "../RightArrow/RightArrow";
@@ -80,12 +81,48 @@ function Locals({
             <h2 className="title-locals">Que locais posso visitar nas proximidades?</h2>
             <div className="locals-grid-container" id="scroll-container">
               <div className="locals">
-                <LocalCard />
-                <LocalCard />
-                <LocalCard />
-                <LocalCard />
-                <LocalCard />
-                <LocalCard />
+                <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  }
+                  order={1}
+                />
+                <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  }
+                  order={1}
+                />
+                <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  }
+                  order={1}
+                />
+                <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  }
+                  order={1}
+                />
+                <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  }
+                  order={1}
+                />
+                <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  }
+                  order={1}
+                />
               </div>
             </div>
             <div className="arrows">

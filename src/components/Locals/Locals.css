@@ -1,9 +1,11 @@
 .locals-container {
-    height: calc(100vh );
+    min-height: calc(100vh );
     padding-bottom: 74px ;
     background: #9F6F63;
     width: 100vw;
     overflow: hidden;
+    width: calc(100vw);
+    height: auto;
 }
 
 .arrows{
@@ -18,6 +20,13 @@
 
 .title-locals {
     color: #E0D0C1;
+    padding-left: 120px;
+    padding-top: 5vh;
+    font-family: "Kadwa";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 72px;
 }
 
 body {
@@ -44,14 +53,59 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 120px ;
-    padding-right: 120px ;
+    padding: 0px;
   }
 
 #locals-know-more>.activity-link {
     font-size: 24px;
     position: absolute;
     padding-left: 120px;
+}
+
+.locals .card-item {
+    grid-column: span 1;
+    max-width: 440px;        
+    transform: none;
+}
+
+
+.locals .card-inner, .card {
+    flex-direction: column;
+    width: fit-content;
+    transform: none;
+}
+
+.locals.home {
+    width: 100vw;
+}
+
+.locals.home .card-item {
+    margin: 0px;
+}
+
+.locals.home .card-local:first-of-type {
+    margin-left: 120px;
+}
+
+.locals.home .card-local:last-of-type {
+    margin-right: 120px;
+}
+
+
+@media screen and (max-width: 1353px) {
+    .locals.home {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .locals.home .card-local:first-of-type {
+        margin-left: 0px;
+    }
+    
+    .locals.home .card-local:last-of-type {
+        margin-right: 0px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -84,16 +138,28 @@ body {
       transform:none;
     }
     
-    h2 {
+    .title-locals {
     text-align: center;
     padding-left: 0;
     }
+
+    .locals .card-item {
+        margin: 0px;
+    }
+    
+    .locals .card-item:last-of-type {
+        margin-right: 0px;
+    }
+
+    
+
+
   }
   
   @media screen and (max-width: 600px) {
-    h2{
-      font-size: 30px;
-      line-height: 44px;;
+    .title-locals{
+        font-size: 30px !important;
+        line-height: 44px !important;
     }
   }
   
@@ -105,13 +171,10 @@ body {
     h4{
       font-size: 14px;
     }
+
   
-    .locals {
-      row-gap: 14px;
-    }
-  
-    h2{
-     font-size: 20px;
-     line-height: 24px;;
+    .page-title {
+        font-size: 20px !important;
+        line-height: 24px !important;
    }
   }
