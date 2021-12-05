@@ -87,7 +87,23 @@ button{
   .activities-container .arrows{
     display: none;
   }
+.activities-container.home{
+  height: auto;
 
+}
+
+.activities.home{
+  padding: 0;
+  margin-top: 25px;
+  width: 100vw;
+}
+.activities.home>.card-item, .activities.home>.card-item:nth-of-type(2){
+  align-self: center;
+  
+}
+.card-item:last-of-type {
+  margin-right: 0px;
+}
   .activities {
     display: flex;
     flex-direction: column;
@@ -103,7 +119,7 @@ button{
     overflow-x: hidden;  
   }
   
-  .activities-grid-container {
+  .activities-grid-container{
     width: 100vw;
     height: auto;
     overflow-x: auto;
@@ -121,18 +137,18 @@ button{
 
 @media screen and (max-width: 600px) {
   h2{
-    font-size: 30px;
-    line-height: 44px;;
+    font-size: 30px !important;
+    line-height: 44px !important;
   }
 }
 
 @media screen and (max-width: 460px) {
   h3{
-    font-size: 16px;
+    font-size: 16px !important;
   }
   
   h4{
-    font-size: 14px;
+    font-size: 14px !important;
   }
 
   .activities {
@@ -140,8 +156,8 @@ button{
   }
 
   h2{
-   font-size: 20px;
-   line-height: 24px;;
+   font-size: 20px !important;
+   line-height: 24px !important;
  }
 }
 

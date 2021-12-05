@@ -58,3 +58,18 @@
     display: inline-block;
     margin: 0 8 px;
 }
+
+@media screen and (max-width: 460px) {
+    .carousel .control-dots .dot {
+        
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
+        
+    }
+
+    .carousel .control-dots {
+        bottom: 32px;
+    }
+    
+}
