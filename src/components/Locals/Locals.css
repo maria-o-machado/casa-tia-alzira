@@ -1,105 +1,117 @@
-.locals-page {
-    height: 100vh;
+.locals-container {
+    height: calc(100vh );
+    padding-bottom: 74px ;
+    background: #9F6F63;
     width: 100vw;
     overflow: hidden;
-    background: #9F6F63;
 }
 
-.locals-container {
-    padding: 0px 110px 0px 110px;
-    /* devia ser 100*/
-    height: 100%;
-    
+.arrows{
+    position: absolute;
+    bottom: 48px;
+    left: 100px;
 }
 
-#locals-container-fix .card-local {
-    margin: 0;
-}
-
-.locals-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: #9F6F63;
-    padding-top: 30px;
-    height: 100%;
+.locals-container.home {
+    width: calc(100vw);
 }
 
 .title-locals {
     color: #E0D0C1;
 }
 
-#local-know-more>.activity-link {
+body {
+    overflow: hidden;
+}
+
+.locals-grid-container {
+    height: 600px ;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /*transform:rotate(-90deg) translateY(-100vw);
+    transform-origin: right top;*/
+  }
+
+.locals {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-left: 120px ;
+}
+
+.locals.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 120px ;
+    padding-right: 120px ;
+  }
+
+#locals-know-more>.activity-link {
     font-size: 24px;
     position: absolute;
     bottom: calc(55px / 2 + 48px - 29px / 2);
+    padding-left: 120px;
 }
 
-#carousel-container-locals {
-    height: 100%;
-    width: 100%;
-}
-
-#carousel-container-locals .carousel-root {
-    height: 100%;
-    width: 100%;
-}
-
-#carousel-container-locals .carousel {
-    height: 100%;
-    width: 100%;
-}
-
-
-
-#carousel-container-locals .carousel .control-prev.control-arrow:before {
-    content: url('LeftArrow.svg') !important;
-    border-right: none;
-}
-
-#carousel-container-locals .carousel .control-next.control-arrow:before {
-    content: url('RightArrow.svg') !important;
-    border-left: none;
-}
-
-#carousel-container-locals .carousel.carousel-slider .control-arrow {
-    height: fit-content;
-}
-
-#carousel-container-locals .carousel .control-next.control-arrow {
-    position: absolute;
-    left: 88px;
-}
-
-#carousel-container-locals .carousel .control-prev.control-arrow:before {
-    position: absolute;
-    left: 0px;
-    top: 530px;
-    color: #000 !important;
-}
-
-#carousel-container-locals .carousel .control-arrow.control-next:before {
-    position: absolute;
-    left: 0px !important;
-    top: 530px;
-    color: #E0D0C1;
-}
-
-/*
-#carousel-container-locals .carousel.carousel-slider .control-arrow:hover {
-     background: none;
-}
-#carousel-container-locals .carousel.carousel-slider .control-arrow {
-    height: 100vh;
-}
-
-#carousel-container-locals .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
-    opacity: 1;
-}
-#carousel-container-locals .carousel .control-arrow, .carousel.carousel-slider .control-arrow:hover {
-    opacity: 0.4;
-}
-
-#carousel-container-locals .carousel .control-dots {
-    bottom:48px;
-}*/
+@media screen and (max-width: 800px) {
+    .locals-container .arrows{
+      display: none;
+    }
+  
+    .locals {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      transform: none;
+      margin: 0 0;
+      padding-left: 0px;
+      margin-top: 0px;
+    }
+  
+    .locals-container {
+      overflow-y: scroll;
+      overflow-x: hidden;  
+    }
+    
+    .locals-grid-container {
+      width: 100vw;
+      height: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
+      display: flex;
+      justify-content: center;
+      transform:none;
+    }
+    
+    h2 {
+    text-align: center;
+    padding-left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    h2{
+      font-size: 30px;
+      line-height: 44px;;
+    }
+  }
+  
+  @media screen and (max-width: 460px) {
+    h3{
+      font-size: 16px;
+    }
+    
+    h4{
+      font-size: 14px;
+    }
+  
+    .locals {
+      row-gap: 14px;
+    }
+  
+    h2{
+     font-size: 20px;
+     line-height: 24px;;
+   }
+  }

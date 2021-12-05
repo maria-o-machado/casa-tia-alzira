@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import ActivityCard from "../ActivityCard/ActivityCard";
-import ArrowRight from "../RightArrow/RightArrow";
-import ArrowLeft from "../LeftArrow/LeftArrow";
 import "./Activities.css";
-//import LocomotiveScroll from "locomotive-scroll";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import RightArrow from "../RightArrow/RightArrow";
 import LeftArrow from "../LeftArrow/LeftArrow";
@@ -30,7 +27,7 @@ function Activities({ passColorNavbar, homePage }) {
 
   var $scroller = $('.activities-grid-container');
   // assign click handler
-  $('.right-button').on('click', function () {       
+  $('.right-button').on('click', function () {     
       // get the partial id of the div to scroll to
       var divIdx = 1;         
       
@@ -141,7 +138,7 @@ function Activities({ passColorNavbar, homePage }) {
           <div className="arrows">
           <button className="left-button">
               
-              <LeftArrow/>
+              <LeftArrow color={"#9F6F63"}/>
 
             </button>
             <button className="right-button">

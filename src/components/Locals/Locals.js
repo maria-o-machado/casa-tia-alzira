@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import "./Locals.css";
 import LocalCard from "../LocalCard/LocalCard";
-import { Carousel } from 'react-responsive-carousel';
 import ArrowLink from "../ArrowLink/ArrowLink";
+import RightArrow from "../RightArrow/RightArrow";
+import LeftArrow from "../LeftArrow/LeftArrow";
+import $ from "jquery";
 
 function Locals({
   passColorNavbar,
@@ -16,46 +18,86 @@ function Locals({
     passColorButton("#9F6F63");
   });
 
+  document.addEventListener("DOMContentLoaded", function(event) {
+    const scrollContainer = document.querySelector(".locals-grid-container");
+  
+    document.addEventListener("wheel", (evt) => {
+      event.preventDefault();
+      if (scrollContainer!=null){
+        scrollContainer.scrollLeft += evt.deltaY;
+
+      }
+  });
+
+  });  
+
+  var $scroller = $('.locals-grid-container');
+  // assign click handler
+  $('.right-button').on('click', function () {       
+      // get the partial id of the div to scroll to
+      var divIdx = 1;         
+      // retrieve the jquery ref to the div
+      
+      var scrollTo = $scroller.scrollLeft() + 800;                 
+      console.log(scrollTo);
+      // simply update the scroll of the scroller
+      // $('.scroller').scrollLeft(scrollTo); 
+      // use an animation to scroll to the destination
+      $scroller
+        .animate({'scrollLeft': scrollTo}, 500);    
+  });
+  $('.left-button').on('click', function () {       
+    // get the partial id of the div to scroll to
+    var divIdx = 1;         
+    
+    // retrieve the jquery ref to the div
+    
+    var scrollTo = $scroller.scrollLeft() - 800;                 
+    console.log(scrollTo);
+    // simply update the scroll of the scroller
+    // $('.scroller').scrollLeft(scrollTo); 
+    // use an animation to scroll to the destination
+    $scroller
+      .animate({'scrollLeft': scrollTo}, 500);    
+});
+
   return (
-    <div className="locals-page">
-      <h2 className="title-locals">
-          Que locais posso visitar nas proximidades?
-      </h2>
-      <div className="locals-container">
+    <div>
         {homePage ? (
-          <div className="locals-content" id="locals-container-fix">
-            <div>
+          <div className="locals-container home">
+            <h2 className="title-locals">Que locais posso visitar nas proximidades?</h2>
+            <div className="locals home">
               <LocalCard />
-              <div id="local-know-more">
-                <ArrowLink text="Ver mais" color="#E0D0C1" link={"/locals"} />
-              </div>
+              <LocalCard />
+              <LocalCard />
             </div>
-            <LocalCard />
-            <LocalCard />
+            <div id="locals-know-more">
+                  <ArrowLink text="Ver mais" color="#E0D0C1" link={"/locals"} />
+                </div>
           </div>
         ) : (
-          <div id="carousel-container-locals">
-            <Carousel
-              infiniteLoop
-              transitionTime={1000}
-              showThumbs={false}
-              showStatus={false}
-              renderIndicator={false}
-            >
-              <div className="locals-content">
+          <div className="locals-container">
+            <h2 className="title-locals">Que locais posso visitar nas proximidades?</h2>
+            <div className="locals-grid-container" id="scroll-container">
+              <div className="locals">
+                <LocalCard />
+                <LocalCard />
+                <LocalCard />
                 <LocalCard />
                 <LocalCard />
                 <LocalCard />
               </div>
-              <div className="locals-content">
-                <LocalCard />
-                <LocalCard />
-                <LocalCard />
+            </div>
+            <div className="arrows">
+                <button className="left-button">
+                    <LeftArrow color={"#E0D0C1"}/>
+                  </button>
+                  <button className="right-button"> 
+                    <RightArrow color={"#E0D0C1"}/>
+                </button>
               </div>
-            </Carousel>
           </div>
         )}
-      </div>
     </div>
   );
 }

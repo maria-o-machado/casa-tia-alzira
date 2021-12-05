@@ -6,15 +6,15 @@
   width: 100vw;
   overflow: hidden;
 }
-.arrows{
 
+.arrows{
   position: absolute;
   bottom: 48px;
   left: 100px;
 }
+
 .activities-container.home {
   width: calc(100vw);
-  
 }
 
 h2 {
@@ -25,11 +25,8 @@ h2 {
   font-weight: bold;
   font-size: 36px;
   line-height: 72px;
-
   /* castanho */
-
   color: #9F6F63;
-
 }
 
 body {
@@ -42,8 +39,6 @@ body {
   overflow-y: hidden;
   /*transform:rotate(-90deg) translateY(-100vw);
   transform-origin: right top;*/
-
-  
 }
 
 .activities {
@@ -66,20 +61,14 @@ body {
   padding:0 120px;
   margin-top: 0;
   width: calc(100vw - 2 * 120px);
-
-
 }
+
 .activities.home>.card-item{
-width: fit-content;
-
+  width: fit-content;
 }
+
 .activities.home>.card-item:nth-of-type(2){
   align-self: flex-end;}
-
-
-
-
-
 
 #activities-know-more>.activity-link {
   font-size: 24px;
@@ -87,7 +76,6 @@ width: fit-content;
   bottom: calc(55px / 2 + 48px - 29px / 2);
   margin-left: 120px;
 }
-
 
 button{
   color: transparent;
@@ -97,10 +85,10 @@ button{
 }
 
 @media screen and (max-width: 800px) {
-
   .activities-container .arrows{
     display: none;
   }
+
   .activities {
     display: flex;
     flex-direction: column;
@@ -109,16 +97,11 @@ button{
     margin: 0 0;
     padding-left: 0px;
     margin-top: 0px;
-
   }
-
-  
-  
 
   .activities-container {
     overflow-y: scroll;
-    overflow-x: hidden;
-    
+    overflow-x: hidden;  
   }
   
   .activities-grid-container {
@@ -129,11 +112,7 @@ button{
     display: flex;
     justify-content: center;
     transform:none;
-    
-    
-    
   }
-
   
   h2{
   text-align: center;
@@ -142,17 +121,13 @@ button{
 }
 
 @media screen and (max-width: 600px) {
-
   h2{
     font-size: 30px;
     line-height: 44px;;
   }
-
 }
+
 @media screen and (max-width: 460px) {
-  
-  
-  
   h3{
     font-size: 16px;
   }
@@ -161,16 +136,16 @@ button{
     font-size: 14px;
   }
 
-
   .activities {
     row-gap: 14px;
   }
- h2{
+
+  h2{
    font-size: 20px;
    line-height: 24px;;
-
  }
 }
+
 /*
 .c-scrollbar {
   position: absolute;
