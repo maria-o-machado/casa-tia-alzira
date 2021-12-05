@@ -1,6 +1,7 @@
 .page-content {
     height: auto;
     width: 100vw;
+    position: relative;
 }
 
 .box_reverse {
@@ -29,6 +30,7 @@
     font-size: 24px;
     position: absolute;
     margin-left: 120px;
+    bottom: calc(55px / 2 + 48px - 29px / 2);
 }
 
 .page_title {

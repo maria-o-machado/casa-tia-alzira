@@ -6,6 +6,7 @@
     overflow: hidden;
     width: calc(100vw);
     height: auto;
+    position: relative;
 }
 
 .arrows{
@@ -60,6 +61,7 @@ body {
     font-size: 24px;
     position: absolute;
     padding-left: 120px;
+    bottom: calc(55px / 2 + 48px - 29px / 2);
 }
 
 .locals .card-item {
