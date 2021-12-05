@@ -10,8 +10,7 @@ function LocalCard() {
       <div className="local-content">
         <h3>Local</h3>
         <h4 className="text-content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia
         </h4>
         <ArrowLink text="Saber mais" color="#9F6F63" link={"/local"} />
       </div>
