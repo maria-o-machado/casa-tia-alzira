@@ -45,11 +45,9 @@ function About({ passColorNavbar }) {
 
   return (
     <div className="about-content" >
-      <HorizontalScroll reverseScroll={true}>
         <Page properties={page1} passColorNavbar={passColorNavbar} />
         <PageReverse properties={page2} passColorNavbar={passColorNavbar} />
         <Page properties={page3} passColorNavbar={passColorNavbar} />
-      </HorizontalScroll>
     </div>
   );
 }

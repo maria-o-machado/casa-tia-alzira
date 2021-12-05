@@ -36,7 +36,6 @@
 #about-know-more>.activity-link {
     font-size: 24px;
     position: absolute;
-    bottom: calc(55px / 2 + 48px - 29px / 2);
 }
 
 .page_title {

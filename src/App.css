@@ -4,7 +4,6 @@
 
 .App, #root {
   height: 100vh;
-  overflow-y: hidden;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }

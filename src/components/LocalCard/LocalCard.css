@@ -7,6 +7,10 @@
     margin-right:  66px;
 }
 
+.card-local:last-of-type {
+    margin-right: 120px;
+}
+
 .local-content {
     padding: 10px 36px;
 }

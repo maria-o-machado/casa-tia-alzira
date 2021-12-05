@@ -36,7 +36,8 @@ body {
     position: relative;
     display: flex;
     flex-direction: row;
-    padding-left: 120px ;
+    padding-left: 120px;
+    width: fit-content;
 }
 
 .locals.home {
@@ -50,7 +51,6 @@ body {
 #locals-know-more>.activity-link {
     font-size: 24px;
     position: absolute;
-    bottom: calc(55px / 2 + 48px - 29px / 2);
     padding-left: 120px;
 }
 

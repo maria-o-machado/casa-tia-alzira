@@ -28,7 +28,6 @@ function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
 
   return (
     <div className="homepage-content">
-      <HorizontalScroll id="homepage-scroll" reverseScroll={true}>
         <Hero />
         <PageReverse properties={about} passColorNavbar={passColorNavbar} />
         <Activities passColorNavbar={passColorNavbar} homePage={true} />
@@ -39,7 +38,6 @@ function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
           homePage={true}
         />
         <Contact passColorNavbar={passColorNavbar} />
-      </HorizontalScroll>
     </div>
   );
 }
