@@ -61,7 +61,6 @@ h4.text-content {
     margin-top: 10px;
     margin-bottom: 16px;
 }
-
 @media screen and (max-width: 800px) {
     .bm-menu, .bm-menu-wrap.sidebar-container {
         width: 100vw;
