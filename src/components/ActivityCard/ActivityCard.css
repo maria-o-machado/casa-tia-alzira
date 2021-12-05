@@ -64,9 +64,6 @@ h4.text-content {
     margin-bottom: 16px;
 }
 @media screen and (max-width: 800px) {
-    .activity-image {
-        height: 306px !important;
-    }
 
     .bm-menu, .bm-menu-wrap.sidebar-container {
         width: 100vw;
