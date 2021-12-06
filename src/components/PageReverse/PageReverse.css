@@ -76,6 +76,9 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
+    #about-know-more>.activity-link {
+        margin-bottom: 20px;
+    }
 /*
     .App, #root {
         overflow: scroll !important;

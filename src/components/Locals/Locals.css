@@ -129,7 +129,7 @@ body {
         display: flex;
         flex-direction: column;
         transform: none;
-        margin: 32px 0 120px;
+        margin: 32px 0 40px;
         padding-left: 0px;
         justify-content: center;
     
@@ -212,7 +212,7 @@ body {
   }
   .locals.home{
    
-    margin: 32px 0 74px;
+    margin: 32px 0 40px;
     
   }
 
@@ -264,7 +264,7 @@ body {
     
     .locals.home{
      
-      margin: 32px 0 74px;
+      margin: 32px 0 40px;
       
     }
 
@@ -278,6 +278,7 @@ body {
 
     #locals-know-more>.activity-link {
         font-size: 24px;
+        margin-bottom: 40px ;
     }
   }
   

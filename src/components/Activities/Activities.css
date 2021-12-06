@@ -146,8 +146,12 @@ padding-left: 0;
 
 #activities-know-more>.activity-link {
   margin-left: 50px !important;
+  
 }
-
+#activities-know-more{
+  display: flex;
+  justify-content:  center;
+}
 }
 
 
@@ -223,8 +227,13 @@ padding-left: 0;
     margin-left: 0px !important;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
   }
+  #activities-know-more{
+    display: flex;
+    justify-content:  center;
     
+  }
 
 }
 

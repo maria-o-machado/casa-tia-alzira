@@ -93,17 +93,23 @@
 
     #about-know-more {
         display: flex;
+        margin-top: 40px;
         justify-content: center;
     }
-/*
-    .App, #root {
-        overflow: scroll !important;
-    }\*/
+
+
+    #about-know-more>.activity-link {
+        margin-bottom: 40px;
+    }
+
 }
 
 
 
 @media screen and (max-width: 800px){
+
+    #about-know-more {
+    }
     .box {
         margin-left: 50px;
         margin-right: 50px;
