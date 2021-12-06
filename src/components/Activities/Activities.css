@@ -159,7 +159,7 @@ button{
     
 
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
 
   .activity-image {
     height: 306px !important;
