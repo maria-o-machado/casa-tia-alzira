@@ -7,7 +7,7 @@
 .box_reverse {
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     margin-left: 120px;
     margin-right: 120px;
@@ -26,12 +26,10 @@
 
 }
 
-#about-know-more>.activity-link {
-    font-size: 24px;
-    position: absolute;
-    margin-left: 120px;
-    bottom: calc(55px / 2 + 48px - 29px / 2);
+.content_location {
+    padding-top: 50px;
 }
+    
 
 .page_title {
     padding-left: 0px;
@@ -45,6 +43,12 @@
 
 .box_title_location {
     margin-bottom: 0;
+}
+
+#about-know-more>.activity-link {
+    font-size: 24px;
+    margin-top: calc(50px - 29px);
+    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1320px) { 
@@ -76,10 +80,6 @@
     .box_reverse {
         margin-left: 50px;
         margin-right: 50px;
-    }
-
-    #about-know-more>.activity-link {
-        margin-left: 50px !important;
     }
 
     .page_title {

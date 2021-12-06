@@ -97,53 +97,55 @@ function Locals({
         {homePage ? (
           <div className="locals-container home">
             <h2 className="title-locals">Que locais posso visitar nas proximidades?</h2>
-            {cardType ?
-              <div className="locals home">
-                  <ActivityCard
-                title={"Nome do Local"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
-                order={1}
-              />
-              <ActivityCard
-                title={"Nome do Local"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
-                order={1}
-              />
-              <ActivityCard
-                title={"Nome do Local"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
-                order={1}
-              />
-              </div>
-              : 
-              <div className="locals home">
+            <div className="locals-content-home">
+              {cardType ?
+                <div className="locals home">
+                    <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
+                  order={1}
+                />
                 <ActivityCard
-                title={"Nome do Local"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
-                order={1}
-              />
-              <ActivityCard
-                title={"Nome do Local"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
-                order={1}
-              />
-              <ActivityCard
-                title={"Nome do Local"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
-                order={1}
-              />
-              </div>
-              } 
-            <div id="locals-know-more">
-                  <ArrowLink text="Ver mais" color="#E0D0C1" link={"/locals"} />
+                  title={"Nome do Local"}
+                  text={
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
+                  order={1}
+                />
+                <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
+                  order={1}
+                />
                 </div>
-          </div>
+                : 
+                <div className="locals home">
+                  <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
+                  order={1}
+                />
+                <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
+                  order={1}
+                />
+                <ActivityCard
+                  title={"Nome do Local"}
+                  text={
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
+                  order={1}
+                />
+                </div>
+                } 
+              <div id="locals-know-more">
+                    <ArrowLink text="Ver mais" color="#E0D0C1" link={"/locals"} />
+                  </div>
+              </div>
+            </div>
         ) : (
           <div className="locals-container">
             <h2 className="title-locals">Que locais posso visitar nas proximidades?</h2>
