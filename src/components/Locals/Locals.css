@@ -159,10 +159,13 @@ body {
       transform: none;
         }
 
-        #locals-know-more>.activity-link {
-          padding-left: 0px !important;
+        #locals-know-more {
           display: flex;
           justify-content: center;
+        }
+
+        #locals-know-more>.activity-link {
+          padding-left: 0px !important;
         }
 
         .title-locals {
