@@ -72,9 +72,9 @@ overflow-y: visible;
   transform: none;
   display: flex;
   height: fit-content;
+  margin-top: 32px;
   flex-direction: column;
   padding:0 120px;
-  margin-top: 0;
   width: calc(100vw - 2 * 120px);
 }
 
