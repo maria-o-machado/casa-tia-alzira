@@ -2,6 +2,9 @@ import "../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.
 import "./Gallery.css";
 import { Carousel } from "react-responsive-carousel";
 import image from "./example.png";
+import image2 from "./home-1.jpeg";
+import image3 from "./home-2.jpeg";
+import image4 from "./home-3.jpeg";
 import { useEffect } from "react";
 
 function Gallery({ passColorNavbar }) {
@@ -22,13 +25,16 @@ function Gallery({ passColorNavbar }) {
         showStatus={false}
       >
         <div>
-          <img src={image} />
+          <img src={image2} />
         </div>
         <div>
           <img src={image} />
         </div>
         <div>
-          <img src={image} />
+          <img src={image3} />
+        </div>
+        <div>
+          <img src={image4} />
         </div>
       </Carousel>
     </div>

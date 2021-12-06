@@ -4,6 +4,12 @@ import "./Activities.css";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import RightArrow from "../RightArrow/RightArrow";
 import LeftArrow from "../LeftArrow/LeftArrow";
+import image from "./example.png";
+import image1 from "./photo-1.jpeg";
+import image2 from "./photo-2.jpeg";
+import image3 from "./photo-3.jpeg";
+import image4 from "./photo-4.webp";
+import image5 from "./photo-5.jpeg";
 import $ from "jquery";
 
 function Activities({ passColorNavbar, homePage }) {
@@ -70,6 +76,7 @@ function Activities({ passColorNavbar, homePage }) {
                     "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                   }
                   order={1}
+                  image ={image}
                 />
                 <ActivityCard
                   title={"Nome da atividade"}
@@ -77,6 +84,8 @@ function Activities({ passColorNavbar, homePage }) {
                     "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                   }
                   order={0}
+                  image ={image1}
+
                 />
               </div>
               <div id="activities-know-more">
@@ -95,6 +104,8 @@ function Activities({ passColorNavbar, homePage }) {
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
                 order={1}
+                image ={image}
+
               />
               <ActivityCard
                 title={"Nome da atividade"}
@@ -102,6 +113,8 @@ function Activities({ passColorNavbar, homePage }) {
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
                 order={0}
+                image ={image1}
+
               />
 
               <ActivityCard
@@ -110,6 +123,8 @@ function Activities({ passColorNavbar, homePage }) {
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
                 order={1}
+                image ={image2}
+
               />
               <ActivityCard
                 title={"Nome da atividade"}
@@ -117,6 +132,7 @@ function Activities({ passColorNavbar, homePage }) {
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
                 order={0}
+                image ={image3}
               />
 
               <ActivityCard
@@ -125,6 +141,8 @@ function Activities({ passColorNavbar, homePage }) {
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
                 order={1}
+                image ={image4}
+
               />
               <ActivityCard
                 title={"Nome da atividade"}
@@ -132,6 +150,9 @@ function Activities({ passColorNavbar, homePage }) {
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
                 order={0}
+                image ={image5}
+
+
               />
             </div>
           </div>

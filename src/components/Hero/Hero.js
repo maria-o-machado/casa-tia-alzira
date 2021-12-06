@@ -2,8 +2,9 @@
 import "./Hero.css";
 import { Carousel } from 'react-responsive-carousel';
 import image from "./hero-background.png";
+import image2 from "./photo-1.jpeg";
+import image3 from "./photo-2.jpg";
 import RightArrow from "../RightArrow/RightArrow";
-import $ from "jquery";
 
 
 function Hero() {
@@ -23,10 +24,10 @@ function Hero() {
             <img src={image} />
           </div>
           <div>
-            <img src={image} />
+            <img src={image2} />
           </div>
           <div>
-            <img src={image} />
+            <img src={image3} />
           </div>
         </Carousel>
       </div>

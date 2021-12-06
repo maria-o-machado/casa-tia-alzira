@@ -6,9 +6,12 @@
   overflow-y: scroll;
   position: relative;
 }
-
+ html {
+    
+  overflow-y: hidden;
+}
 .activity-arrows{
-  margin-top: 7vh;
+  margin-top: 4vh;
   margin-left: 100px;
 }
 
@@ -100,7 +103,62 @@ button{
   border: none;
   cursor: pointer;
 }
+
+
+@media screen and (max-height: 800px) and (min-width: 1045px) {
+  
+
+
+.activities-container .activity-arrows{
+  display: none;
+}
+.card-item:last-of-type {
+margin-right: 0px;
+}
+.activities {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  transform: none;
+  margin: 32px 0;
+  padding-left: 0px;
+}
+
+.activities-container {
+  overflow-y: scroll;
+  overflow-x: hidden;  
+}
+
+.activities-grid-container{
+  width: 100vw;
+  height: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  transform:none;
+}
+
+.activities-title{
+text-align: center;
+padding-left: 0;
+}
+
+#activities-know-more>.activity-link {
+  margin-left: 50px !important;
+}
+
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 1200px) {
+  
+
   .activities.home .activity-image {
     height: 306px !important;
   }
@@ -153,17 +211,70 @@ button{
   }
 
 
+
   .activities.home .activity-content{
     padding: 36px ;
 }
     
 
 }
+
+
+
+@media screen and (max-height: 800px) and (max-width: 1045px) {
+  
+
+.activities-container .activity-arrows{
+  display: none;
+}
+.card-item:last-of-type {
+margin-right: 0px;
+}
+.activities {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  transform: none;
+  margin: 32px 0;
+  padding-left: 0px;
+}
+
+.activities-container {
+  overflow-y: scroll;
+  overflow-x: hidden;  
+}
+
+.activities-grid-container{
+  width: 100vw;
+  height: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  transform:none;
+}
+
+.activities-title{
+text-align: center;
+padding-left: 0;
+}
+
+#activities-know-more>.activity-link {
+  margin-left: 50px !important;
+}
+
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 800px) {
 
-  .activity-image {
-    height: 306px !important;
-  }
+ 
   .activities-container .activity-arrows{
     display: none;
   }

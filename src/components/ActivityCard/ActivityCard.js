@@ -1,9 +1,9 @@
 import ArrowLink from "../ArrowLink/ArrowLink";
 import css from "./ActivityCard.css";
-import example from "./example.png";
+
 import $ from "jquery";
 
-function ActivityCard({ title, text, order }) {
+function ActivityCard({ title, text, order, image }) {
   $( document ).ready(function() {
     /*
     var card = document.getElementsByClassName("card-item");
@@ -45,7 +45,7 @@ function ActivityCard({ title, text, order }) {
         {order ? (
           <div className="card-content">
             <div className="card-inner">
-              <img className="activity-image" src={example} />
+              <img className="activity-image" src={image} />
               <div className="activity-content">
                 <h3>{title}</h3>
                 <h4 className="text-content">{text}</h4>
@@ -69,7 +69,7 @@ function ActivityCard({ title, text, order }) {
                   link={"/activity"}
                 />
               </div>
-              <img className="activity-image" src={example} />
+              <img className="activity-image" src={image} />
             </div>
           </div>
         )}
