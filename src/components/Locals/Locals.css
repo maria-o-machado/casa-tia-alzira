@@ -160,7 +160,7 @@ body {
         }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
     .locals-container .arrows{
       display: none;
     }
