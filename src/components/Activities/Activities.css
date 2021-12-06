@@ -89,9 +89,9 @@ overflow-y: visible;
 
 #activities-know-more>.activity-link {
   font-size: 24px;
-  position: absolute;
   margin-left: 120px;
-  bottom: calc(55px / 2 + 48px - 29px / 2);
+  margin-top: calc(50px - 29px);
+  margin-bottom: 100px;
 }
 
 button{
