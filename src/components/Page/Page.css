@@ -66,10 +66,34 @@
         padding-bottom: 100px;
     }
 
+    .box {
+        align-items: center !important;
+        justify-content: none !important;
+    }
+
     .box_text {
         width: 100%;
         padding-top: 40px;
         padding-bottom: 40px;
+    }
+
+    .box_text {
+        width: 100%;
+        justify-self: none;
+        padding-right: 0% !important;
+    }
+
+    .page_title {
+        text-align: center;
+    }
+
+    .description {
+        margin-right: 0 !important;
+    }
+
+    #about-know-more {
+        display: flex;
+        justify-content: center;
     }
 /*
     .App, #root {
