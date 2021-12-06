@@ -158,6 +158,20 @@ body {
           width: fit-content;
       transform: none;
         }
+
+        #locals-know-more {
+          display: flex;
+          justify-content: center;
+        }
+
+        #locals-know-more>.activity-link {
+          padding-left: 0px !important;
+        }
+
+        .title-locals {
+          text-align: center;
+          padding-left: 0;
+          }
 }
 
 @media screen and (max-height: 840px) and (max-width: 900px) {
@@ -248,10 +262,6 @@ body {
       transform:none;
     }
     
-    .title-locals {
-    text-align: center;
-    padding-left: 0;
-    }
     .locals.home{
      
       margin: 32px 0 74px;
@@ -268,7 +278,6 @@ body {
 
     #locals-know-more>.activity-link {
         font-size: 24px;
-        padding-left: 50px !important;
     }
   }
   

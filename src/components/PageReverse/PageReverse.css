@@ -59,10 +59,16 @@
     .box_reverse {
         display: flex;
         flex-direction: column-reverse;
-        justify-content: flex-end;
-        align-items: start;
+        justify-content: none !important;
+        align-items: center !important;
         height: 100% !important;
         padding-bottom: 100px;
+    }
+
+    .box_text_reverse {
+        width: 100%;
+        justify-self: none;
+        padding-right: 0% !important;
     }
 
     .box_text_reverse {

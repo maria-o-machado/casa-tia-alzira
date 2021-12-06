@@ -67,7 +67,7 @@ body {
     .contact-content {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: center;
         height: 100% !important;
         padding-bottom: 100px;
     }
@@ -76,7 +76,15 @@ body {
         width: 100%;
         padding-top: 40px;
         padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 507px;
     }
+
+    .contact-title {
+        text-align: center;
+    }
+
 /*
     .App, #root {
         overflow: scroll !important;
@@ -89,9 +97,7 @@ body {
         margin-right: 50px;
     }
 
-    .contact-title {
-        text-align: center;
-    }
+    
 
     .contact-image {
         width: 100%;
@@ -103,6 +109,12 @@ body {
     .contact-title {
       font-size: 30px !important;
       line-height: 44px !important;
+    }
+
+    .contact-text {
+        display: block;
+        flex-direction: none;
+        width: auto;
     }
 }
 

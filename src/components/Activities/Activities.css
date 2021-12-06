@@ -157,8 +157,11 @@ padding-left: 0;
 
 
 @media screen and (max-width: 1200px) {
-  
-
+  .activities-title{
+    text-align: center;
+    padding-left: 0;
+    }
+    
   .activities.home .activity-image {
     height: 306px !important;
   }
@@ -215,6 +218,12 @@ padding-left: 0;
   .activities.home .activity-content{
     padding: 36px ;
 }
+
+  #activities-know-more>.activity-link {
+    margin-left: 0px !important;
+    display: flex;
+    justify-content: center;
+  }
     
 
 }
@@ -303,15 +312,6 @@ padding-left: 0;
     display: flex;
     justify-content: center;
     transform:none;
-  }
-  
-  .activities-title{
-  text-align: center;
-  padding-left: 0;
-  }
-
-  #activities-know-more>.activity-link {
-    margin-left: 50px !important;
   }
 }
 
