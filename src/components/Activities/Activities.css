@@ -164,7 +164,7 @@ padding-left: 0;
 
 
 @media screen and (max-width: 1200px) {
-  .activities-title,  .activities-title.home{
+    .activities-title.home{
     text-align: center;
     padding-left: 0;
     }
@@ -299,7 +299,13 @@ padding-left: 0;
 
 @media screen and (max-width: 800px) {
 
- 
+  .activities-title{
+    font-size: 30px !important;
+    line-height: 44px !important;
+    padding-left: 0;
+    text-align: center;
+  }
+  
   .activities-container .activity-arrows{
     display: none;
   }
@@ -337,6 +343,8 @@ padding-left: 0;
   .activities-title{
     font-size: 30px !important;
     line-height: 44px !important;
+    padding-left: 0;
+    text-align: center;
   }
 }
 
