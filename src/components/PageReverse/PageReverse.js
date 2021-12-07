@@ -14,13 +14,13 @@ function PageReverse({ properties, passColorNavbar }) {
             <div className="box_reverse" >
                 {properties.homePage ?
                 <div className="content_location">
-                    <img className="image_reverse" src={image_atividade}></img>
+                    <img className="image_reverse" src={properties.image}></img>
                     <div id="about-know-more">
                         <ArrowLink text="Saber mais" color="#E0D0C1" link={"/about"} />
                     </div>
                 </div>
                     : 
-                <img className="image_reverse" src={image_atividade}></img>
+                <img className="image_reverse" src={properties.image}></img>
                 }
                 <div className="box_text_reverse">
                     {properties.location ?

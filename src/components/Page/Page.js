@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Page.css"
-import image_atividade from '../../assets/Atividade/atividade.png'
 import Location from '../Location/Location'
 import ArrowLink from '../ArrowLink/ArrowLink'
 
 function Page({ properties, passColorNavbar }) {
+
     useEffect(() => {
         passColorNavbar("#07504D");
     });
@@ -32,7 +32,7 @@ function Page({ properties, passColorNavbar }) {
                         </div>
                         : undefined}
                 </div>
-                <img className="image" src={image_atividade}></img>
+                <img className="image" src={properties.image}></img>
             </div>
         </div>
     );

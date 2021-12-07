@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import Page from "../Page/Page";
 import PageReverse from "../PageReverse/PageReverse";
-import Reserve from "../Reserve/Reserve";
-import HorizontalScroll from "react-scroll-horizontal";
 import "./About.css";
+import image from "../../assets/About/house.jpeg";
+import image1 from "../../assets/About/location.jpeg";
+import image2 from "../../assets/About/local.png";
 
 function About({ passColorNavbar }) {
   const page1 = {
@@ -15,6 +16,7 @@ function About({ passColorNavbar }) {
     colorTitle: "#07504D",
     colorDescription: "#2A2D34",
     buttons: false,
+    image: image
   };
 
   const page2 = {
@@ -26,6 +28,7 @@ function About({ passColorNavbar }) {
     colorTitle: "#E0D0C1",
     colorDescription: "#FCFCFC",
     buttons: false,
+    image: image1
   };
 
   const page3 = {
@@ -37,6 +40,7 @@ function About({ passColorNavbar }) {
     colorTitle: "#07504D",
     colorDescription: "#2A2D34",
     buttons: true,
+    image: image2
   };
 
   useEffect(() => {

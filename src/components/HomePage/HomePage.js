@@ -5,6 +5,7 @@ import Activities from "../Activities/Activities";
 import Contact from "../Contact/Contact";
 import Locals from "../Locals/Locals";
 import PageReverse from "../PageReverse/PageReverse";
+import image from "../../assets/About/house.jpeg";
 import "./HomePage.css";
 
 function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
@@ -24,6 +25,7 @@ function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
     colorDescription: "#FCFCFC",
     buttons: false,
     homePage: true,
+    image: image
   };
 
   return (

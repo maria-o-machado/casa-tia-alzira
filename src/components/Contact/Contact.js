@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./Contact.css";
 import image_atividade from "../../assets/Atividade/atividade.png";
+import image from "../../assets/Contact/contact.png";
 
 function Contact({ passColorNavbar }) {
   useEffect(() => {
@@ -32,7 +33,7 @@ function Contact({ passColorNavbar }) {
             </div>
           </div>
         </div>
-        <img className="contact-image" src={image_atividade}></img>
+        <img className="contact-image" src={image}></img>
       </div>
     </div>
   );

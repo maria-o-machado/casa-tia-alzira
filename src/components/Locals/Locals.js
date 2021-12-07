@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Locals.css";
 import ActivityCard from "../ActivityCard/ActivityCard";
-import LocalCard from "../LocalCard/LocalCard";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import RightArrow from "../RightArrow/RightArrow";
 import LeftArrow from "../LeftArrow/LeftArrow";
+import image1 from "../../assets/Locais/local1.png";
+import image2 from "../../assets/Locais/local2.png";
+import image3 from "../../assets/Locais/local3.png";
+import image4 from "../../assets/Locais/local4.png";
+import image5 from "../../assets/Locais/local5.png";
+
+
 import $ from "jquery";
 
 function Locals({
@@ -101,43 +107,49 @@ function Locals({
               {cardType ?
                 <div className="locals home">
                     <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Fisgas do Ermelo"}
                   text={
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
+                  image = {image1}
                 />
                 <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Barraguem do Azibo"}
                   text={
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
+                  image = {image2}
                 />
                 <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Chaves"}
                   text={
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
+                  image = {image3}
                 />
                 </div>
                 : 
                 <div className="locals home">
                   <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Fisgas do Ermelo"}
                   text={
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
+                  image = {image1}
                 />
                 <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Barraguem do Azibo"}
                   text={
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
+                  image = {image2}
                 />
                 <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Chaves"}
                   text={
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
+                  image = {image3}
                 />
                 </div>
                 } 
@@ -152,46 +164,44 @@ function Locals({
             <div className="locals-grid-container" id="scroll-container">
               <div className="locals">
                 <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Fisgas do Ermelo"}
                   text={
                     "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                   }
                   order={1}
+                  image = {image1}
                 />
                 <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Barragem do Azibo"}
                   text={
                     "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                   }
                   order={1}
+                  image = {image2}
                 />
                 <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Chaves"}
                   text={
                     "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                   }
                   order={1}
+                  image = {image3}
                 />
                 <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Douro"}
                   text={
                     "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                   }
                   order={1}
+                  image = {image4}
                 />
                 <ActivityCard
-                  title={"Nome do Local"}
+                  title={"Complexo Mineiro Romano"}
                   text={
                     "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                   }
                   order={1}
-                />
-                <ActivityCard
-                  title={"Nome do Local"}
-                  text={
-                    "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
-                  }
-                  order={1}
+                  image = {image5}
                 />
               </div>
             </div>
