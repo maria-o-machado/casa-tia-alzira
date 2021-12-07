@@ -11,6 +11,8 @@ import Reserve from "./components/Reserve/Reserve";
 import Contact from "./components/Contact/Contact";
 import HomePage from "./components/HomePage/HomePage";
 import React, { useState } from "react";
+import image_atividade from "./assets/Atividade/atividade.png";
+import image_local from "./assets/Locais/local4.png";
 
 
 function App() {
@@ -21,7 +23,8 @@ function App() {
     background: "#FFF",
     colorTitle: "#07504D",
     colorDescription: "#2A2D34",
-    buttons: false
+    buttons: false,
+    image: image_local
   };
 
   const atividade = {
@@ -31,7 +34,8 @@ function App() {
     background: "#FFF",
     colorTitle: "#07504D",
     colorDescription: "#2A2D34",
-    buttons: false
+    buttons: false,
+    image: image_atividade
   };
 
   const [colorNavbar, setColorNavbar] = useState("#FCFCFC");

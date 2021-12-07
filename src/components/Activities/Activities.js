@@ -77,6 +77,7 @@ function Activities({ passColorNavbar, homePage }) {
                   }
                   order={1}
                   image ={image}
+                  link = {"/activity"}
                 />
                 <ActivityCard
                   title={"Nome da atividade"}
@@ -85,6 +86,7 @@ function Activities({ passColorNavbar, homePage }) {
                   }
                   order={0}
                   image ={image1}
+                  link = {"/activity"}
 
                 />
               </div>
@@ -105,6 +107,7 @@ function Activities({ passColorNavbar, homePage }) {
                 }
                 order={1}
                 image ={image}
+                link = {"/activity"}
 
               />
               <ActivityCard
@@ -114,6 +117,7 @@ function Activities({ passColorNavbar, homePage }) {
                 }
                 order={0}
                 image ={image1}
+                link = {"/activity"}
 
               />
 
@@ -124,6 +128,7 @@ function Activities({ passColorNavbar, homePage }) {
                 }
                 order={1}
                 image ={image2}
+                link = {"/activity"}
 
               />
               <ActivityCard
@@ -133,6 +138,7 @@ function Activities({ passColorNavbar, homePage }) {
                 }
                 order={0}
                 image ={image3}
+                link = {"/activity"}
               />
 
               <ActivityCard
@@ -142,6 +148,7 @@ function Activities({ passColorNavbar, homePage }) {
                 }
                 order={1}
                 image ={image4}
+                link = {"/activity"}
 
               />
               <ActivityCard
@@ -151,8 +158,7 @@ function Activities({ passColorNavbar, homePage }) {
                 }
                 order={0}
                 image ={image5}
-
-
+                link = {"/activity"}
               />
             </div>
           </div>

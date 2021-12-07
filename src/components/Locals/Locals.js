@@ -112,6 +112,7 @@ function Locals({
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
                   image = {image1}
+                  link = {"/local"}
                 />
                 <ActivityCard
                   title={"Barraguem do Azibo"}
@@ -119,6 +120,7 @@ function Locals({
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
                   image = {image2}
+                  link = {"/local"}
                 />
                 <ActivityCard
                   title={"Chaves"}
@@ -126,6 +128,7 @@ function Locals({
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
                   image = {image3}
+                  link = {"/local"}
                 />
                 </div>
                 : 
@@ -136,6 +139,7 @@ function Locals({
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
                   image = {image1}
+                  link = {"/local"}
                 />
                 <ActivityCard
                   title={"Barraguem do Azibo"}
@@ -143,6 +147,7 @@ function Locals({
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
                   image = {image2}
+                  link = {"/local"}
                 />
                 <ActivityCard
                   title={"Chaves"}
@@ -150,6 +155,7 @@ function Locals({
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"}
                   order={1}
                   image = {image3}
+                  link = {"/local"}
                 />
                 </div>
                 } 
@@ -170,6 +176,7 @@ function Locals({
                   }
                   order={1}
                   image = {image1}
+                  link = {"/local"}
                 />
                 <ActivityCard
                   title={"Barragem do Azibo"}
@@ -178,6 +185,7 @@ function Locals({
                   }
                   order={1}
                   image = {image2}
+                  link = {"/local"}
                 />
                 <ActivityCard
                   title={"Chaves"}
@@ -186,6 +194,7 @@ function Locals({
                   }
                   order={1}
                   image = {image3}
+                  link = {"/local"}
                 />
                 <ActivityCard
                   title={"Douro"}
@@ -194,6 +203,7 @@ function Locals({
                   }
                   order={1}
                   image = {image4}
+                  link = {"/local"}
                 />
                 <ActivityCard
                   title={"Complexo Mineiro Romano"}
@@ -202,6 +212,7 @@ function Locals({
                   }
                   order={1}
                   image = {image5}
+                  link = {"/local"}
                 />
               </div>
             </div>

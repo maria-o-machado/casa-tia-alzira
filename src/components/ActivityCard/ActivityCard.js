@@ -3,7 +3,7 @@ import css from "./ActivityCard.css";
 
 import $ from "jquery";
 
-function ActivityCard({ title, text, order, image }) {
+function ActivityCard({ title, text, order, image, link }) {
   $( document ).ready(function() {
     /*
     var card = document.getElementsByClassName("card-item");
@@ -52,7 +52,7 @@ function ActivityCard({ title, text, order, image }) {
                 <ArrowLink
                   text="Saber mais"
                   color="#9F6F63"
-                  link={"/activity"}
+                  link={link}
                 />
               </div>
             </div>
@@ -66,7 +66,7 @@ function ActivityCard({ title, text, order, image }) {
                 <ArrowLink
                   text="Saber mais"
                   color="#9F6F63"
-                  link={"/activity"}
+                  link={link}
                 />
               </div>
               <img className="activity-image" src={image} />
