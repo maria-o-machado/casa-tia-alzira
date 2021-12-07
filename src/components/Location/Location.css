@@ -14,3 +14,9 @@
     flex-direction: row;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 1320px) {
+    .box_location {
+        justify-content: center;
+    }
+}
