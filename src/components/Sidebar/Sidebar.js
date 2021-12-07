@@ -5,12 +5,8 @@ import { slide as Menu } from "react-burger-menu";
 import css from "./Sidebar.css";
 import $ from "jquery";
 
-
 function Sidebar({ color }) {
-  
-    
   var styles = {
-   
     bmBurgerBars: {
       background: color,
       height: "3px",
@@ -18,7 +14,7 @@ function Sidebar({ color }) {
     bmBurgerBarsHover: {
       background: "#a90000",
     },
-   
+
     bmCross: {
       height: "32px",
 
@@ -46,7 +42,6 @@ function Sidebar({ color }) {
 
       display: "flex",
       flexDirection: "column",
-
     },
     bmOverlay: {
       background: "rgba(0, 0, 0, 0.3)",
@@ -54,7 +49,7 @@ function Sidebar({ color }) {
   };
 
   return (
-    <Menu className="sidebar-container" theme={css}styles={styles} >
+    <Menu className="sidebar-container" theme={css} styles={styles}>
       <div>
         <a id="home" className="menu-item" href="/">
           <img src={logo} />
@@ -86,8 +81,7 @@ function Sidebar({ color }) {
               <img src={fb} />
             </a>
 
-            <a id ="instagram" href="">
-
+            <a id="instagram" href="">
               <img src={insta} />
             </a>
           </div>

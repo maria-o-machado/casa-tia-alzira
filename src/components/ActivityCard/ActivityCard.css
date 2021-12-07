@@ -9,25 +9,29 @@
     align-self: right;
     transform-origin: center-left;
     will-change: transform;
-    
+
 }
-.card-content{
+
+.card-content {
     border-radius: 8px;
 
-    transition: transform 200ms ease-out ,
-    box-shadow 0.3s ease-in-out;
+    transition: transform 200ms ease-out,
+        box-shadow 0.3s ease-in-out;
     width: fit-content;
     height: fit-content;
 }
+
 img {
     filter: grayscale(30%);
-  }
+}
+
 .card-content:hover {
 
     transform: scale(1.05);
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
 
 }
+
 .activity-image {
     width: 361px !important;
     height: 233px;
@@ -39,8 +43,11 @@ img {
 .card-item {
     grid-column: span 6;
 }
-.card-item:last-of-type{
-margin-right: -56px;}
+
+.card-item:last-of-type {
+    margin-right: -56px;
+}
+
 .card-item:nth-of-type(4) {
     grid-column: 2 / span 6;
 
@@ -80,34 +87,36 @@ h4.text-content {
     margin-top: 10px;
     margin-bottom: 16px;
 }
+
 @media screen and (max-height: 800px) and (max-width: 1045px) {
     .activity-image {
         height: 306px !important;
-      }
+    }
+
     .bm-menu, .bm-menu-wrap.sidebar-container {
         width: 100vw;
     }
 
     .card-item {
         grid-column: span 1;
-max-width: 361px;         
-transform: none;
+        max-width: 361px;
+        transform: none;
     }
-    
-    
+
+
     .card-inner, .card {
         flex-direction: column;
 
         width: fit-content;
-    transform: none;
+        transform: none;
 
 
 
     }
 
-   
-    .activity-content{
-        padding: 36px ;
+
+    .activity-content {
+        padding: 36px;
     }
 
 }
@@ -117,57 +126,60 @@ transform: none;
 @media screen and (max-width: 800px) {
     .activity-image {
         height: 306px !important;
-      }
+    }
+
     .bm-menu, .bm-menu-wrap.sidebar-container {
         width: 100vw;
     }
 
     .card-item {
         grid-column: span 1;
-max-width: 361px;         
-transform: none;
+        max-width: 361px;
+        transform: none;
     }
-    
-    
+
+
     .card-inner, .card {
         flex-direction: column;
 
         width: fit-content;
-    transform: none;
+        transform: none;
 
 
 
     }
 
-   
-    .activity-content{
-        padding: 36px ;
+
+    .activity-content {
+        padding: 36px;
     }
-        
+
 }
 
 @media screen and (max-width: 460px) {
-  
-  
-  
-    
-    h4, p{
-      font-size: 14px;
-      line-height: 17px;
+
+
+
+
+    h4, p {
+        font-size: 14px;
+        line-height: 17px;
     }
-  
-    h4.text-content{
+
+    h4.text-content {
         margin-top: 0px;
     }
-    .activity-content{
-padding: 16px 32px 24px 32px;
+
+    .activity-content {
+        padding: 16px 32px 24px 32px;
 
     }
 
-    .card-item, .card-inner{
+    .card-item, .card-inner {
         max-width: 300px;
     }
-    .activity-image{
+
+    .activity-image {
         height: auto;
     }
-  }
+}

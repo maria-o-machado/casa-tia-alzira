@@ -21,29 +21,38 @@ body {
 
 
 @keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(15px, 0px); }
-  100%   { transform: translate(-0px, 0px); }   
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(15px, 0px);
+  }
+
+  100% {
+    transform: translate(-0px, 0px);
+  }
 }
 
-.arrows-hero{
+.arrows-hero {
   position: absolute;
   left: 50%;
   right: 50%;
-  bottom: 84px;  
-  
+  bottom: 84px;
+
   transform: rotate(90deg);
-  
+
 }
 
-.down-arrow{
+.down-arrow {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  
 
-  }
+
+}
+
 h1 {
   margin: 0;
   color: #fff;
@@ -109,32 +118,33 @@ h1 {
 
 @media screen and (max-width: 800px) {
 
-  .arrows-hero{
-bottom: 72px;  
+  .arrows-hero {
+    bottom: 72px;
 
 
 
-}}
+  }
+}
 
 
 @media screen and (max-width: 460px) {
 
-  .arrows-hero{
+  .arrows-hero {
 
-  bottom: 65px; 
+    bottom: 65px;
 
-}
+  }
 
-h1 {
-  
-  font-size: 60px;
-  line-height: 71px;
-  /* or 96% */
+  h1 {
 
-  text-align: center;
-  letter-spacing: 0.025em;
-  z-index: 3;
+    font-size: 60px;
+    line-height: 71px;
+    /* or 96% */
 
-}
+    text-align: center;
+    letter-spacing: 0.025em;
+    z-index: 3;
+
+  }
 
 }

@@ -6,7 +6,7 @@
     text-decoration: none;
 
     align-items: center;
-    transition: transform 200ms ease-out ;
+    transition: transform 200ms ease-out;
 }
 
 p {
@@ -23,7 +23,7 @@ p {
 
 }
 
-.activity-link:hover{
+.activity-link:hover {
     transform: scale(1.1);
 
 }

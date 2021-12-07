@@ -45,7 +45,7 @@
 
 .page_title {
     padding-left: 0px;
-    padding-top: 5vh ;
+    padding-top: 5vh;
     font-family: "Kadwa";
     font-style: normal;
     font-weight: bold;
@@ -53,7 +53,7 @@
     line-height: 72px;
 }
 
-@media screen and (max-width: 1320px) { 
+@media screen and (max-width: 1320px) {
     .page-content {
         min-height: 100vh;
     }
@@ -106,10 +106,10 @@
 
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
 
-    #about-know-more {
-    }
+    #about-know-more {}
+
     .box {
         margin-left: 50px;
         margin-right: 50px;
@@ -127,29 +127,29 @@
 
 @media screen and (max-width: 600px) {
     .page_title {
-      font-size: 30px !important;
-      line-height: 44px !important;
+        font-size: 30px !important;
+        line-height: 44px !important;
     }
 }
 
 
 @media screen and (max-width: 460px) {
     .page_title {
-     font-size: 20px !important;
-     line-height: 24px !important;
-   }
+        font-size: 20px !important;
+        line-height: 24px !important;
+    }
 
-   .location_pin {
+    .location_pin {
         width: 13px;
-   }
+    }
 
-   .location_text {
-    font-size: 14px !important;  
-   }
+    .location_text {
+        font-size: 14px !important;
+    }
 
-   .description {
-    font-size: 14px !important;
-    line-height: 17px;
+    .description {
+        font-size: 14px !important;
+        line-height: 17px;
 
     }
 }

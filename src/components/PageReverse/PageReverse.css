@@ -29,11 +29,11 @@
 .content_location {
     padding-top: 50px;
 }
-    
+
 
 .page_title {
     padding-left: 0px;
-    padding-top: 5vh ;
+    padding-top: 5vh;
     font-family: "Kadwa";
     font-style: normal;
     font-weight: bold;
@@ -51,7 +51,7 @@
     margin-bottom: 100px;
 }
 
-@media screen and (max-width: 1320px) { 
+@media screen and (max-width: 1320px) {
     .page-content {
         min-height: 100vh;
     }
@@ -76,16 +76,18 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
+
     #about-know-more>.activity-link {
         margin-bottom: 20px;
     }
-/*
+
+    /*
     .App, #root {
         overflow: scroll !important;
     }*/
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     .box_reverse {
         margin-left: 50px;
         margin-right: 50px;

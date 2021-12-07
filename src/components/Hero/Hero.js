@@ -1,25 +1,32 @@
-
 import "./Hero.css";
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 import image from "./hero-background.png";
 import image2 from "./photo-1.jpeg";
 import image3 from "./photo-2.jpg";
 import RightArrow from "../RightArrow/RightArrow";
 
-
 function Hero() {
   var styles = {
     bmBurgerBars: {
       background: "#FCFCFC",
-    }
-
-  }
- 
+    },
+  };
 
   return (
     <div styles={styles} className="HeroContainer">
       <div id="carousel-container">
-        <Carousel infiniteLoop autoPlay interval={4000} transitionTime={1000} useKeyboardArrows showArrows={false} showIndicators showThumbs={false} renderIndicator={false} showStatus={false}>
+        <Carousel
+          infiniteLoop
+          autoPlay
+          interval={4000}
+          transitionTime={1000}
+          useKeyboardArrows
+          showArrows={false}
+          showIndicators
+          showThumbs={false}
+          renderIndicator={false}
+          showStatus={false}
+        >
           <div>
             <img src={image} />
           </div>
@@ -32,17 +39,16 @@ function Hero() {
         </Carousel>
       </div>
       <div id="title-container">
-        <h1>Casa da <br /> Ti'Alzira</h1>
+        <h1>
+          Casa da <br /> Ti'Alzira
+        </h1>
       </div>
 
       <div className="arrows-hero">
-          
-            <button className ="down-arrow">
-              
-              <RightArrow color={"#ffffff"}/>
-
-            </button>
-          </div>
+        <button className="down-arrow">
+          <RightArrow color={"#ffffff"} />
+        </button>
+      </div>
     </div>
   );
 }

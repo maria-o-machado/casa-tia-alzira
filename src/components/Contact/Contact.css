@@ -4,7 +4,7 @@ body {
 
 .contact-title {
     color: #E0D0C1;
-    padding-top: 5vh ;
+    padding-top: 5vh;
     font-family: "Kadwa";
     font-style: normal;
     font-weight: bold;
@@ -59,7 +59,7 @@ body {
     line-height: 22px;
 }
 
-@media screen and (max-width: 1320px) { 
+@media screen and (max-width: 1320px) {
     .contact-container {
         min-height: 100vh;
     }
@@ -85,19 +85,19 @@ body {
         text-align: center;
     }
 
-/*
+    /*
     .App, #root {
         overflow: scroll !important;
     }*/
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     .contact-content {
         margin-left: 50px;
         margin-right: 50px;
     }
 
-    
+
 
     .contact-image {
         width: 100%;
@@ -107,8 +107,8 @@ body {
 
 @media screen and (max-width: 600px) {
     .contact-title {
-      font-size: 30px !important;
-      line-height: 44px !important;
+        font-size: 30px !important;
+        line-height: 44px !important;
     }
 
     .contact-text {
@@ -124,8 +124,8 @@ body {
         font-size: 20px !important;
         line-height: 24px !important;
     }
-    
-    .contact > p{
+
+    .contact>p {
         font-size: 14px !important;
     }
 }

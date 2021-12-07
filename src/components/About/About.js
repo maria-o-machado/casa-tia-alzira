@@ -16,7 +16,7 @@ function About({ passColorNavbar }) {
     colorTitle: "#07504D",
     colorDescription: "#2A2D34",
     buttons: false,
-    image: image
+    image: image,
   };
 
   const page2 = {
@@ -28,7 +28,7 @@ function About({ passColorNavbar }) {
     colorTitle: "#E0D0C1",
     colorDescription: "#FCFCFC",
     buttons: false,
-    image: image1
+    image: image1,
   };
 
   const page3 = {
@@ -40,7 +40,7 @@ function About({ passColorNavbar }) {
     colorTitle: "#07504D",
     colorDescription: "#2A2D34",
     buttons: true,
-    image: image2
+    image: image2,
   };
 
   useEffect(() => {
@@ -48,10 +48,10 @@ function About({ passColorNavbar }) {
   });
 
   return (
-    <div className="about-content" >
-        <Page properties={page1} passColorNavbar={passColorNavbar} />
-        <PageReverse properties={page2} passColorNavbar={passColorNavbar} />
-        <Page properties={page3} passColorNavbar={passColorNavbar} />
+    <div className="about-content">
+      <Page properties={page1} passColorNavbar={passColorNavbar} />
+      <PageReverse properties={page2} passColorNavbar={passColorNavbar} />
+      <Page properties={page3} passColorNavbar={passColorNavbar} />
     </div>
   );
 }

@@ -64,11 +64,11 @@
         content: url('LeftArrowSmall.svg') !important;
         border-right: none;
     }
-    
+
     .carousel .control-next.control-arrow:before {
         content: url('RightArrowSmall.svg') !important;
         border-left: none;
-    
+
     }
 
     .carousel.carousel-slider .control-arrow {
@@ -77,18 +77,19 @@
 
 
     .carousel.carousel-slider .control-arrow:before {
-        margin: 0 0;}
+        margin: 0 0;
+    }
 
     .carousel .control-dots .dot {
-        
+
         width: 8px;
         height: 8px;
         margin: 0 3px;
-        
+
     }
 
     .carousel .control-dots {
         bottom: 32px;
     }
-    
+
 }

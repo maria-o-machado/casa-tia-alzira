@@ -25,21 +25,21 @@ function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
     colorDescription: "#FCFCFC",
     buttons: false,
     homePage: true,
-    image: image
+    image: image,
   };
 
   return (
     <div className="homepage-content">
-        <Hero />
-        <PageReverse properties={about} passColorNavbar={passColorNavbar} />
-        <Activities passColorNavbar={passColorNavbar} homePage={true} />
-        <Locals
-          passColorNavbar={passColorNavbar}
-          passColorButton={passColorButton}
-          passBackgroundButton={passBackgroundButton}
-          homePage={true}
-        />
-        <Contact passColorNavbar={passColorNavbar} />
+      <Hero />
+      <PageReverse properties={about} passColorNavbar={passColorNavbar} />
+      <Activities passColorNavbar={passColorNavbar} homePage={true} />
+      <Locals
+        passColorNavbar={passColorNavbar}
+        passColorButton={passColorButton}
+        passBackgroundButton={passBackgroundButton}
+        homePage={true}
+      />
+      <Contact passColorNavbar={passColorNavbar} />
     </div>
   );
 }
