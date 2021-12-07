@@ -102,7 +102,7 @@ function Locals({
     <div>
         {homePage ? (
           <div className="locals-container home">
-            <h2 className="title-locals">Que locais posso visitar nas proximidades?</h2>
+            <h2 className="title-locals home">Que locais posso visitar nas proximidades?</h2>
             <div className="locals-content-home">
               {cardType ?
                 <div className="locals home">

@@ -9,6 +9,8 @@ import PageReverse from "./components/PageReverse/PageReverse";
 import About from "./components/About/About";
 import Reserve from "./components/Reserve/Reserve";
 import Contact from "./components/Contact/Contact";
+import  { useEffect } from 'react'
+
 import HomePage from "./components/HomePage/HomePage";
 import React, { useState } from "react";
 import image_atividade from "./assets/Atividade/atividade.png";
@@ -56,7 +58,9 @@ function App() {
   }
 
 
-
+  useEffect(() => {
+    document.title = "Casa da Ti' Alzira"
+  }, [])
 
 
   return (

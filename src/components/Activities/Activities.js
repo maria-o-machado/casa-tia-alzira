@@ -67,11 +67,11 @@ function Activities({ passColorNavbar, homePage }) {
     <div>
       {homePage ? (
         <div className="activities-container home">
-          <h2 className="activities-title">Que atividades posso realizar?</h2>
+          <h2 className="activities-title home">Que atividades posso realizar?</h2>
           <div className="locals-content-home">
               <div className="activities home">
                 <ActivityCard
-                  title={"Nome da atividade"}
+                  title={"Vindima"}
                   text={
                     "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                   }
@@ -80,7 +80,7 @@ function Activities({ passColorNavbar, homePage }) {
                   link = {"/activity"}
                 />
                 <ActivityCard
-                  title={"Nome da atividade"}
+                  title={"Passeio na vinha"}
                   text={
                     "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                   }
@@ -101,7 +101,7 @@ function Activities({ passColorNavbar, homePage }) {
           <div className="activities-grid-container" id="scroll-container">
             <div className="activities">
               <ActivityCard
-                title={"Nome da atividade"}
+                title={"Vindima"}
                 text={
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
@@ -111,7 +111,7 @@ function Activities({ passColorNavbar, homePage }) {
 
               />
               <ActivityCard
-                title={"Nome da atividade"}
+                title={"Passeio na vinha"}
                 text={
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
@@ -122,7 +122,7 @@ function Activities({ passColorNavbar, homePage }) {
               />
 
               <ActivityCard
-                title={"Nome da atividade"}
+                title={"Correr pelo campo"}
                 text={
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
@@ -132,7 +132,7 @@ function Activities({ passColorNavbar, homePage }) {
 
               />
               <ActivityCard
-                title={"Nome da atividade"}
+                title={"Visitar os girassóis"}
                 text={
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
@@ -142,7 +142,7 @@ function Activities({ passColorNavbar, homePage }) {
               />
 
               <ActivityCard
-                title={"Nome da atividade"}
+                title={"Pisar da uva"}
                 text={
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }
@@ -152,7 +152,7 @@ function Activities({ passColorNavbar, homePage }) {
 
               />
               <ActivityCard
-                title={"Nome da atividade"}
+                title={"Observar a vista panorâmica"}
                 text={
                   "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
                 }

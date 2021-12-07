@@ -9,9 +9,8 @@
 }
 
 .arrows{
-    position: absolute;
-    bottom: 48px;
-    left: 100px;
+  margin-top: 4vh;
+  margin-left: 100px;
 }
 
 .locals-container.home {
@@ -168,13 +167,19 @@ body {
           padding-left: 0px !important;
         }
 
-        .title-locals {
-          text-align: center;
-          padding-left: 0;
+        .title-locals.home {
+          text-align: center !important;
+          padding-left: 0 !important;
           }
 }
+@media screen and (max-height: 800px)  {
+  .arrows{
+    margin-top: 1vh;
+    margin-left: 100px;
+  }
 
-@media screen and (max-height: 840px) and (max-width: 900px) {
+}
+@media screen and (max-height: 780px)  {
   .locals-container .arrows{
     display: none;
   }
@@ -210,6 +215,11 @@ body {
   text-align: center;
   padding-left: 0;
   }
+
+  .title-locals.home {
+    text-align: left;
+    padding-left: 120px;
+}
   .locals.home{
    
     margin: 32px 0 40px;
@@ -224,13 +234,14 @@ body {
       margin-right: 0px;
   }
 
-  #locals-know-more>.activity-link {
-      font-size: 24px;
-      padding-left: 50px !important;
-  }
+ 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
+  .title-locals {
+    text-align: center;
+    padding-left: 0;
+    }
     .locals-container .arrows{
       display: none;
     }
