@@ -34,10 +34,10 @@ body {
 }
 
 .locals-grid-container {
-  height: 600px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  /*transform:rotate(-90deg) translateY(-100vw);
+    height: 580px ;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /*transform:rotate(-90deg) translateY(-100vw);
     transform-origin: right top;*/
 }
 

@@ -175,7 +175,7 @@ function Locals({
               <ActivityCard
                 title={"Fisgas do Ermelo"}
                 text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
                 }
                 order={1}
                 image={image1}
@@ -184,7 +184,7 @@ function Locals({
               <ActivityCard
                 title={"Barragem do Azibo"}
                 text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
                 }
                 order={1}
                 image={image2}
@@ -193,7 +193,7 @@ function Locals({
               <ActivityCard
                 title={"Chaves"}
                 text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
                 }
                 order={1}
                 image={image3}
@@ -202,7 +202,7 @@ function Locals({
               <ActivityCard
                 title={"Douro"}
                 text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
                 }
                 order={1}
                 image={image4}
@@ -211,7 +211,7 @@ function Locals({
               <ActivityCard
                 title={"Complexo Mineiro Romano"}
                 text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
                 }
                 order={1}
                 image={image5}
