@@ -4,7 +4,9 @@
     scroll-behavior: smooth;
 
     scroll-snap-type: y proximity;
-    overflow: scroll;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    scrollbar-color: #87ceeb #ff5621;
 
 }
 
@@ -12,3 +14,27 @@
     scroll-snap-align: start;
 
 }
+/* width */
+.homepage-content::-webkit-scrollbar {
+    width: 8px;
+    z-index: 1;
+  }
+  
+  /* Track */
+  .homepage-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  .homepage-content::-webkit-scrollbar-thumb {
+    background: #888;
+      border-radius: 20px;       /* roundness of the scroll thumb */
+      border: 2px solid transparent; 
+       /* creates padding around scroll thumb */
+
+  }
+  
+  /* Handle on hover */
+  .homepage-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

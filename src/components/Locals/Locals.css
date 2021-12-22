@@ -41,6 +41,30 @@ body {
     transform-origin: right top;*/
 }
 
+
+/* width */
+.locals-grid-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.locals-grid-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.locals-grid-container::-webkit-scrollbar-thumb {
+  background: rgb(224, 208, 193);
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #9F6F63;  /* creates padding around scroll thumb */
+
+}
+
+/* Handle on hover */
+.locals-grid-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(210, 194, 179);
+}
+
 .locals {
   position: relative;
   display: flex;
@@ -198,7 +222,7 @@ body {
   }
 
   .locals-container {
-    overflow-y: scroll;
+    overflow-y: overlay;
     overflow-x: hidden;
     padding-bottom: 74px;
 
@@ -262,7 +286,7 @@ body {
   }
 
   .locals-container {
-    overflow-y: scroll;
+    overflow-y: overlay;
     overflow-x: hidden;
     padding-bottom: 74px;
 

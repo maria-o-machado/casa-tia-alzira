@@ -5,6 +5,34 @@
 .App, #root,body,html {
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  /*overflow-x: hidden;
+  overflow-y: scroll;*/
+  overflow: hidden;
+
+
+  ;
+}
+
+.App{
+  overflow-y: overlay;
+
+}
+
+
+/* width */
+.App::-webkit-scrollbar {
+  width: 8px;
+  z-index: -1;
+}
+
+/* Track */
+.App::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.App::-webkit-scrollbar-thumb {
+  background: #919191;
+    border-radius: 20px;       /* roundness of the scroll thumb */
+
 }

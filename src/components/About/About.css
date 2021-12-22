@@ -3,7 +3,3 @@
     width: 100vw;
 }
 
-.App, #root, body {
-
-    overflow-y: scroll;
-}
