@@ -64,7 +64,7 @@ html {
 
 /* Handle */
 .activities-grid-container::-webkit-scrollbar-thumb {
-  background: #9F6F63;
+  background: rgba(159, 111, 99, 0.68);
   border-radius: 20px;
   /* roundness of the scroll thumb */
   border: 3px solid #E0D0C1;
@@ -74,7 +74,7 @@ html {
 
 /* Handle on hover */
 .activities-grid-container::-webkit-scrollbar-thumb:hover {
-  background: #9F6F63;
+  background: rgba(159, 111, 99, 1);
 }
 
 .activities-title, .activities-title.home {

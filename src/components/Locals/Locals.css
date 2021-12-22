@@ -54,7 +54,7 @@ body {
 
 /* Handle */
 .locals-grid-container::-webkit-scrollbar-thumb {
-  background: rgb(224, 208, 193);
+  background:  rgba(224, 208, 193, 0.68);
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid #9F6F63;  /* creates padding around scroll thumb */
 
@@ -62,7 +62,7 @@ body {
 
 /* Handle on hover */
 .locals-grid-container::-webkit-scrollbar-thumb:hover {
-  background: rgb(210, 194, 179);
+  background:  rgba(224, 208, 193, 1);
 }
 
 .locals {
