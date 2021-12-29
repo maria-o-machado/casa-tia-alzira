@@ -138,10 +138,14 @@ button:hover {
   width: calc(100vw - 2 * 120px);
 }
 
+.card-item {
+  cursor: pointer;
+}
+
+
 .activities.home>.card-item {
   width: fit-content;
   height: 233px;
-
 }
 
 .activities.home>.card-item:nth-of-type(2) {

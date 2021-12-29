@@ -1,5 +1,7 @@
 import ArrowLink from "../ArrowLink/ArrowLink";
+import React, { useCallback } from "react";
 import css from "./ActivityCard.css";
+import { useNavigate } from 'react-router-dom'
 
 import $ from "jquery";
 
@@ -36,8 +38,14 @@ function ActivityCard({ title, text, order, image, link }) {
   */
   });
 
+  const navigate = useNavigate();
+  const onClick = useCallback(() => {
+      const to = link
+      navigate(to);
+  },[navigate])
+
   return (
-    <div className="card-item" theme={css}>
+      <div className="card-item" theme={css} onClick={onClick}>
       {order ? (
         <div className="card-content">
           <div className="card-inner">
