@@ -11,13 +11,15 @@ import Reserve from "./components/Reserve/Reserve";
 import Contact from "./components/Contact/Contact";
 import { useEffect } from "react";
 import { useGetActivities } from "./hooks/useGetActivities";
-import { useGetLocals } from "./hooks/useGetLocals";
 
 import HomePage from "./components/HomePage/HomePage";
 import React, { useState } from "react";
 import image_atividade from "./assets/Atividade/atividade.png";
 import image_local from "./assets/Locais/local4.png";
-import { connectFirestoreEmulator } from "firebase/firestore/lite";
+
+import { useGetLocals } from "./hooks/useGetLocals";
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
 function App() {
   const local = {
@@ -43,6 +45,35 @@ function App() {
     buttons: false,
     image: image_atividade,
   };
+
+  const [locals, setLocals] = useState([]);
+
+  const firebaseConfig = {
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
+    measurementId: process.env.REACT_APP_measurementId,
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const getLocals = async (db) => {
+    const localCol = collection(db, 'Local');
+    const localSnapshot = await getDocs(localCol);
+     const localList = localSnapshot.docs.map(doc => doc.data());
+
+     setLocals(localList);
+  }
+
+  useEffect(() => {
+    getLocals(db);
+  }, [db]);
+
+  
 
   const [colorNavbar, setColorNavbar] = useState("#FCFCFC");
   const [backgroundButton, setBackgroundButton] = useState("#9F6F63");
@@ -118,15 +149,25 @@ function App() {
                 />
               }
             />
-            <Route
-              path="/local"
-              element={
-                <PageReverse
-                  properties={local}
-                  passColorNavbar={passColorNavbar}
-                />
-              }
-            />
+            {
+              locals && locals.map((item,i)=>{
+
+                  console.log(item);
+                  return( 
+                    <Route
+                    path={`/local/${i}`}
+                    element={
+                      <PageReverse
+                        properties={local}
+                        info = {item}
+                        passColorNavbar={passColorNavbar}
+                      />
+                    }
+                    key={i}
+                  />
+                  )
+              })
+            }
             <Route
               path="/contact"
               element={<Contact passColorNavbar={passColorNavbar} />}

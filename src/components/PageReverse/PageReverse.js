@@ -1,13 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./PageReverse.css";
 import image_atividade from "../../assets/Atividade/atividade.png";
 import Location from "../Location/Location";
 import ArrowLink from "../ArrowLink/ArrowLink";
+import { useLocation } from 'react-router';
+import { useParams } from "react-router-dom";
 
-function PageReverse({ properties, passColorNavbar }) {
+
+function PageReverse({ properties, passColorNavbar, info }, props) {
+  
+
+  const { id } = useParams();
+  
+
   useEffect(() => {
     passColorNavbar("#07504D");
+    
   });
+
+  
 
   return (
     <div
@@ -32,7 +43,7 @@ function PageReverse({ properties, passColorNavbar }) {
                 className="box_title_reverse page_title box_title_location"
                 style={{ color: properties.colorTitle }}
               >
-                {properties.title}
+                {info.nome}
               </h2>
               <Location />
             </div>
@@ -41,14 +52,14 @@ function PageReverse({ properties, passColorNavbar }) {
               className="box_title_reverse page_title"
               style={{ color: properties.colorTitle }}
             >
-              {properties.title}
+              {info.nome}
             </h2>
           )}
           <p
             className="description"
             style={{ color: properties.colorDescription }}
           >
-            {properties.description}
+            {info.descricao}
           </p>
         </div>
       </div>

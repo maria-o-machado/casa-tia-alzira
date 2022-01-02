@@ -12,6 +12,7 @@ import image5 from "../../assets/Locais/local5.png";
 import { useGetLocals } from "../../hooks/useGetLocals";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { useHistory } from "react-router-dom";
 
 
 import $ from "jquery";
@@ -147,7 +148,7 @@ function Locals({
                         }
                         order={1}
                         image={image1}
-                        link={"/local"}
+                        link={`/local/${i}`}
                         key={i}
                       />
                       )
@@ -168,7 +169,7 @@ function Locals({
                         }
                         order={1}
                         image={image1}
-                        link={"/local"}
+                        link={`/local/${i}`}
                         key={i}
                       />
                       )
@@ -199,7 +200,7 @@ function Locals({
                       }
                       order={1}
                       image={image1}
-                      link={"/local"}
+                      link={`/local/${i}`}
                       key={i}
                     />
                     )
