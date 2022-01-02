@@ -9,6 +9,10 @@ import image2 from "../../assets/Locais/local2.png";
 import image3 from "../../assets/Locais/local3.png";
 import image4 from "../../assets/Locais/local4.png";
 import image5 from "../../assets/Locais/local5.png";
+import { useGetLocals } from "../../hooks/useGetLocals";
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+
 
 import $ from "jquery";
 
@@ -19,6 +23,37 @@ function Locals({
   homePage,
 }) {
   const [cardType, setCardType] = useState(true);
+  
+  const [locals, setLocals] = useState([]);
+
+  const [numberMax, setNumber] = useState(3);
+
+  const firebaseConfig = {
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
+    measurementId: process.env.REACT_APP_measurementId,
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const getLocals = async (db) => {
+    const localCol = collection(db, 'Local');
+    const localSnapshot = await getDocs(localCol);
+     const localList = localSnapshot.docs.map(doc => doc.data());
+
+     setLocals(localList);
+  }
+
+  useEffect(() => {
+    getLocals(db);
+    console.log(locals)
+  }, [db]);
+
 
   useEffect(() => {
     passColorNavbar("#FCFCFC");
@@ -101,63 +136,45 @@ function Locals({
           <div className="locals-content-home">
             {cardType ? (
               <div className="locals home">
-                <ActivityCard
-                  title={"Fisgas do Ermelo"}
-                  text={
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                  }
-                  order={1}
-                  image={image1}
-                  link={"/local"}
-                />
-                <ActivityCard
-                  title={"Barraguem do Azibo"}
-                  text={
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                  }
-                  order={1}
-                  image={image2}
-                  link={"/local"}
-                />
-                <ActivityCard
-                  title={"Chaves"}
-                  text={
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                  }
-                  order={1}
-                  image={image3}
-                  link={"/local"}
-                />
+                {
+                  locals && locals.map((item,i)=>{
+                    if ( i < numberMax) {
+                      return( 
+                      <ActivityCard
+                        title={item.nome}
+                        text={
+                          item.descricao
+                        }
+                        order={1}
+                        image={image1}
+                        link={"/local"}
+                        key={i}
+                      />
+                      )
+                    }
+                  })
+                }
               </div>
             ) : (
               <div className="locals home">
-                <ActivityCard
-                  title={"Fisgas do Ermelo"}
-                  text={
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                  }
-                  order={1}
-                  image={image1}
-                  link={"/local"}
-                />
-                <ActivityCard
-                  title={"Barraguem do Azibo"}
-                  text={
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                  }
-                  order={1}
-                  image={image2}
-                  link={"/local"}
-                />
-                <ActivityCard
-                  title={"Chaves"}
-                  text={
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                  }
-                  order={1}
-                  image={image3}
-                  link={"/local"}
-                />
+                {
+                  locals && locals.map((item,i)=>{
+                    if ( i < numberMax) {
+                      return( 
+                      <ActivityCard
+                        title={item.nome}
+                        text={
+                          item.descricao
+                        }
+                        order={1}
+                        image={image1}
+                        link={"/local"}
+                        key={i}
+                      />
+                      )
+                    }
+                  })
+                }
               </div>
             )}
             <div id="locals-know-more">
@@ -172,51 +189,22 @@ function Locals({
           </h2>
           <div className="locals-grid-container" id="scroll-container">
             <div className="locals">
-              <ActivityCard
-                title={"Fisgas do Ermelo"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
+            {
+                  locals && locals.map((item,i)=>{
+                    return( 
+                    <ActivityCard
+                      title={item.nome}
+                      text={
+                        item.descricao
+                      }
+                      order={1}
+                      image={image1}
+                      link={"/local"}
+                      key={i}
+                    />
+                    )
+                  })
                 }
-                order={1}
-                image={image1}
-                link={"/local"}
-              />
-              <ActivityCard
-                title={"Barragem do Azibo"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                }
-                order={1}
-                image={image2}
-                link={"/local"}
-              />
-              <ActivityCard
-                title={"Chaves"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                }
-                order={1}
-                image={image3}
-                link={"/local"}
-              />
-              <ActivityCard
-                title={"Douro"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                }
-                order={1}
-                image={image4}
-                link={"/local"}
-              />
-              <ActivityCard
-                title={"Complexo Mineiro Romano"}
-                text={
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximemollitia"
-                }
-                order={1}
-                image={image5}
-                link={"/local"}
-              />
             </div>
           </div>
           <div className="arrows">

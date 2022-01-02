@@ -10,11 +10,14 @@ import About from "./components/About/About";
 import Reserve from "./components/Reserve/Reserve";
 import Contact from "./components/Contact/Contact";
 import { useEffect } from "react";
+import { useGetActivities } from "./hooks/useGetActivities";
+import { useGetLocals } from "./hooks/useGetLocals";
 
 import HomePage from "./components/HomePage/HomePage";
 import React, { useState } from "react";
 import image_atividade from "./assets/Atividade/atividade.png";
 import image_local from "./assets/Locais/local4.png";
+import { connectFirestoreEmulator } from "firebase/firestore/lite";
 
 function App() {
   const local = {
