@@ -9,10 +9,8 @@ import image2 from "../../assets/Locais/local2.png";
 import image3 from "../../assets/Locais/local3.png";
 import image4 from "../../assets/Locais/local4.png";
 import image5 from "../../assets/Locais/local5.png";
-import { useGetLocals } from "../../hooks/useGetLocals";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { useHistory } from "react-router-dom";
 
 
 import $ from "jquery";

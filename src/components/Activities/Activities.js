@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ActivityCard from "../ActivityCard/ActivityCard";
 import "./Activities.css";
 import ArrowLink from "../ArrowLink/ArrowLink";
@@ -10,6 +10,8 @@ import image2 from "./photo-2.jpeg";
 import image3 from "./photo-3.jpeg";
 import image4 from "./photo-4.webp";
 import image5 from "./photo-5.jpeg";
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import $ from "jquery";
 
 function Activities({ passColorNavbar, homePage }) {
@@ -29,6 +31,33 @@ function Activities({ passColorNavbar, homePage }) {
 
   });  
 
+  const [activities, setActivities] = useState([]);
+  const [numberMax, setNumber] = useState(2);
+
+  const firebaseConfig = {
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
+    measurementId: process.env.REACT_APP_measurementId,
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const getActivities = async (db) => {
+    const activityCol = collection(db, 'Atividade');
+    const activitySnapshot = await getDocs(activityCol);
+     const activityList = activitySnapshot.docs.map(doc => doc.data());
+
+     setActivities(activityList);
+  }
+
+  useEffect(() => {
+    getActivities(db);
+  }, [db]);
 
 
   var $scroller = $('.activities-grid-container');
@@ -70,25 +99,24 @@ function Activities({ passColorNavbar, homePage }) {
           <h2 className="activities-title home">Que atividades posso realizar?</h2>
           <div className="locals-content-home">
               <div className="activities home">
-                <ActivityCard
-                  title={"Vindima"}
-                  text={
-                    "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
-                  }
-                  order={1}
-                  image ={image}
-                  link = {"/activity"}
-                />
-                <ActivityCard
-                  title={"Passeio na vinha"}
-                  text={
-                    "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
-                  }
-                  order={0}
-                  image ={image1}
-                  link = {"/activity"}
-
-                />
+              {
+                  activities && activities.map((item,i)=>{
+                    if ( i < numberMax) {
+                      return(
+                        <ActivityCard
+                          title={item.nome}
+                          text={
+                            item.descricao
+                          }
+                          order={i % 2}
+                          image ={image}
+                          link={`/activity/${i}`}
+                          key={i}
+                        />
+                      )
+                    }
+                  })
+                }
               </div>
               <div id="activities-know-more">
                 <ArrowLink text="Ver mais" color="#9F6F63" link={"/activities"} />
@@ -100,66 +128,24 @@ function Activities({ passColorNavbar, homePage }) {
           <h2 className="activities-title">Que atividades posso realizar?</h2>
           <div className="activities-grid-container" id="scroll-container">
             <div className="activities">
-              <ActivityCard
-                title={"Vindima"}
-                text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
+            {
+                  activities && activities.map((item,i)=>{
+                    if ( i < numberMax) {
+                      return(
+                        <ActivityCard
+                          title={item.nome}
+                          text={
+                            item.descricao
+                          }
+                          order={i % 2}
+                          image ={image}
+                          link={`/activity/${i}`}
+                          key={i}
+                        />
+                      )
+                    }
+                  })
                 }
-                order={1}
-                image ={image}
-                link = {"/activity"}
-
-              />
-              <ActivityCard
-                title={"Passeio na vinha"}
-                text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
-                }
-                order={0}
-                image ={image1}
-                link = {"/activity"}
-
-              />
-
-              <ActivityCard
-                title={"Correr pelo campo"}
-                text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
-                }
-                order={1}
-                image ={image2}
-                link = {"/activity"}
-
-              />
-              <ActivityCard
-                title={"Visitar os girassóis"}
-                text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
-                }
-                order={0}
-                image ={image3}
-                link = {"/activity"}
-              />
-
-              <ActivityCard
-                title={"Pisar da uva"}
-                text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
-                }
-                order={1}
-                image ={image4}
-                link = {"/activity"}
-
-              />
-              <ActivityCard
-                title={"Observar a vista panorâmica"}
-                text={
-                  "blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam"
-                }
-                order={0}
-                image ={image5}
-                link = {"/activity"}
-              />
             </div>
           </div>
 

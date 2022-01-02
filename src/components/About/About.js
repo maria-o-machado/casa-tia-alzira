@@ -50,7 +50,7 @@ function About({ passColorNavbar }) {
   return (
     <div className="about-content">
       <Page properties={page1} passColorNavbar={passColorNavbar} />
-      <PageReverse properties={page2} passColorNavbar={passColorNavbar} />
+      <PageReverse properties={page2} passColorNavbar={passColorNavbar} info={null}/>
       <Page properties={page3} passColorNavbar={passColorNavbar} />
     </div>
   );
