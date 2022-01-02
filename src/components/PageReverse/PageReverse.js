@@ -45,7 +45,7 @@ function PageReverse({ properties, passColorNavbar, info }, props) {
               >
                 {info.nome}
               </h2>
-              <Location />
+              <Location localizacao={info.localizacao} coordenadas={info.coordenadas}/>
             </div>
           ) : (
             <h2
