@@ -150,18 +150,8 @@ function App() {
               path="/about"
               element={<About passColorNavbar={passColorNavbar} />}
             />
-            <Route
-              path="/activity"
-              element={
-                <Page
-                  properties={atividade}
-                  passColorNavbar={passColorNavbar}
-                />
-              }
-            />
             {
               activities && activities.map((item,i)=>{
-
                   console.log(item);
                   return( 
                     <Route
@@ -180,7 +170,6 @@ function App() {
             }
             {
               locals && locals.map((item,i)=>{
-
                   console.log(item);
                   return( 
                     <Route

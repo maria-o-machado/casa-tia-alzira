@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import HorizontalScroll from "react-scroll-horizontal";
 import Hero from "../../components/Hero/Hero";
 import Activities from "../Activities/Activities";
@@ -6,7 +6,10 @@ import Contact from "../Contact/Contact";
 import Locals from "../Locals/Locals";
 import PageReverse from "../PageReverse/PageReverse";
 import image from "../../assets/About/house.jpeg";
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import "./HomePage.css";
+import Page from "../Page/Page";
 
 function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
   useEffect(() => {
@@ -15,7 +18,7 @@ function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
     passColorButton("#FCFCFC");
   });
 
-  const about = {
+  const page0 = {
     title: "O que é?",
     location: false,
     description:
@@ -28,10 +31,49 @@ function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
     image: image,
   };
 
+  const [about, setAbout] = useState([]);
+
+  const [numberMax, setNumber] = useState(3);
+
+  const firebaseConfig = {
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
+    measurementId: process.env.REACT_APP_measurementId,
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const getAbout = async (db) => {
+    const aboutCol = collection(db, 'Sobre');
+    const aboutSnapshot = await getDocs(aboutCol);
+     const aboutList = aboutSnapshot.docs.map(doc => doc.data());
+
+     setAbout(aboutList);
+  }
+
+  useEffect(() => {
+    getAbout(db);
+  }, [db]);
+
+
   return (
     <div className="homepage-content">
       <Hero />
-      <PageReverse properties={about} passColorNavbar={passColorNavbar} />
+      {
+        about && about.map((item,i)=>{
+          return( i == 0 ? 
+            <Page properties={page0} passColorNavbar={passColorNavbar} info={item} key={i}/>
+            : 
+            undefined    
+          )
+        })
+      }
+      
       <Activities passColorNavbar={passColorNavbar} homePage={true} />
       <Locals
         passColorNavbar={passColorNavbar}
