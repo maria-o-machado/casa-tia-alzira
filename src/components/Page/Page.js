@@ -3,7 +3,7 @@ import "./Page.css";
 import Location from "../Location/Location";
 import ArrowLink from "../ArrowLink/ArrowLink";
 
-function Page({ properties, passColorNavbar }) {
+function Page({ properties, passColorNavbar, info }) {
   useEffect(() => {
     passColorNavbar("#07504D");
   });
@@ -16,14 +16,14 @@ function Page({ properties, passColorNavbar }) {
       <div className="box">
         <div className="box_text">
           <h2 className="page_title" style={{ color: properties.colorTitle }}>
-            {properties.title}
+            {info.nome}
           </h2>
           {properties.location ? <Location /> : undefined}
           <p
             className="description"
             style={{ color: properties.colorDescription }}
           >
-            {properties.description}
+            {info.descricao}
           </p>
           {properties.buttons ? (
             <div>

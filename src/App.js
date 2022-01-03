@@ -47,6 +47,7 @@ function App() {
   };
 
   const [locals, setLocals] = useState([]);
+  const [activities, setActivities] = useState([]);
 
   const firebaseConfig = {
     apiKey: process.env.REACT_APP_apiKey,
@@ -69,8 +70,17 @@ function App() {
      setLocals(localList);
   }
 
+  const getActivities = async (db) => {
+    const activityCol = collection(db, 'Atividade');
+    const activitySnapshot = await getDocs(activityCol);
+     const activityList = activitySnapshot.docs.map(doc => doc.data());
+
+     setActivities(activityList);
+  }
+
   useEffect(() => {
     getLocals(db);
+    getActivities(db);
   }, [db]);
 
   
@@ -149,6 +159,25 @@ function App() {
                 />
               }
             />
+            {
+              activities && activities.map((item,i)=>{
+
+                  console.log(item);
+                  return( 
+                    <Route
+                    path={`/activity/${i}`}
+                    element={
+                      <Page
+                        properties={atividade}
+                        passColorNavbar={passColorNavbar}
+                        info = {item}
+                      />
+                    }
+                    key={i}
+                  />
+                  )
+              })
+            }
             {
               locals && locals.map((item,i)=>{
 

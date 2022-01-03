@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Page from "../Page/Page";
 import PageReverse from "../PageReverse/PageReverse";
 import "./About.css";
 import image from "../../assets/About/house.jpeg";
 import image1 from "../../assets/About/location.jpeg";
 import image2 from "../../assets/About/local.png";
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+
 
 function About({ passColorNavbar }) {
-  const page1 = {
+  const page0 = {
     title: "O que é?",
     location: false,
     description:
@@ -19,7 +22,7 @@ function About({ passColorNavbar }) {
     image: image,
   };
 
-  const page2 = {
+  const page1 = {
     title: "Onde se localiza?",
     location: false,
     description:
@@ -31,7 +34,7 @@ function About({ passColorNavbar }) {
     image: image1,
   };
 
-  const page3 = {
+  const page2 = {
     title: "O que posso fazer nas proximidades?",
     location: false,
     description:
@@ -43,16 +46,57 @@ function About({ passColorNavbar }) {
     image: image2,
   };
 
+  const [about, setAbout] = useState([]);
+
+  const [numberMax, setNumber] = useState(3);
+
+  const firebaseConfig = {
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
+    measurementId: process.env.REACT_APP_measurementId,
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const getAbout = async (db) => {
+    const aboutCol = collection(db, 'Sobre');
+    const aboutSnapshot = await getDocs(aboutCol);
+     const aboutList = aboutSnapshot.docs.map(doc => doc.data());
+
+     setAbout(aboutList);
+  }
+
+  useEffect(() => {
+    getAbout(db);
+  }, [db]);
+
   useEffect(() => {
     passColorNavbar("#9F6F63");
   });
 
   return (
     <div className="about-content">
-      <Page properties={page1} passColorNavbar={passColorNavbar} />
-      <PageReverse properties={page2} passColorNavbar={passColorNavbar} info={null}/>
-      <Page properties={page3} passColorNavbar={passColorNavbar} />
-    </div>
+      {
+        about && about.map((item,i)=>{
+          return( i == 0 ? 
+            <Page properties={page0} passColorNavbar={passColorNavbar} info={item} key={i}/>
+            : 
+           (
+            i == 1 ? 
+            <PageReverse properties={page1} passColorNavbar={passColorNavbar} info={item} key={i}/>
+            : 
+            <Page properties={page2} passColorNavbar={passColorNavbar} info={item} key={i}/>
+           )       
+          )
+        })
+      }
+      
+      </div>
   );
 }
 
