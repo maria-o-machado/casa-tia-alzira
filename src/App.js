@@ -18,12 +18,12 @@ import image_atividade from "./assets/Atividade/atividade.png";
 import image_local from "./assets/Locais/local4.png";
 
 import { useGetLocals } from "./hooks/useGetLocals";
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import "firebase/auth"
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/storage';
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/storage";
 
 function App() {
   const local = {
@@ -67,20 +67,20 @@ function App() {
   const db = getFirestore(app);
 
   const getLocals = async (db) => {
-    const localCol = collection(db, 'Local');
+    const localCol = collection(db, "Local");
     const localSnapshot = await getDocs(localCol);
-     const localList = localSnapshot.docs.map(doc => doc.data());
+    const localList = localSnapshot.docs.map((doc) => doc.data());
 
-     setLocals(localList);
-  }
+    setLocals(localList);
+  };
 
   const getActivities = async (db) => {
-    const activityCol = collection(db, 'Atividade');
+    const activityCol = collection(db, "Atividade");
     const activitySnapshot = await getDocs(activityCol);
-     const activityList = activitySnapshot.docs.map(doc => doc.data());
+    const activityList = activitySnapshot.docs.map((doc) => doc.data());
 
-     setActivities(activityList);
-  }
+    setActivities(activityList);
+  };
 
   useEffect(() => {
     getLocals(db);
@@ -92,67 +92,60 @@ function App() {
   const storage = firebase.storage();
   var storageRef = storage.ref();
 
-  const [urlsLocals, setFilesLocals ]  = useState([]);
-  const [urlsActivities, setFilesActivities ]  = useState([]);
-  const [urlsContact, setFilesContact]  = useState([]);
+  const [urlsLocals, setFilesLocals] = useState([]);
+  const [urlsActivities, setFilesActivities] = useState([]);
+  const [urlsContact, setFilesContact] = useState([]);
 
   useEffect(() => {
     const fetchImages = async () => {
+      let result = await storageRef.child("locais").listAll();
+      let urlPromises = result.items.map((imageRef) =>
+        imageRef.getDownloadURL()
+      );
 
-    let result = await storageRef.child('locais').listAll();
-        let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+      return Promise.all(urlPromises);
+    };
 
-        
-    
-        return Promise.all(urlPromises);
-
-    }
-    
     const loadImages = async () => {
-        const urlsLocals = await fetchImages();
-        setFilesLocals(urlsLocals);
-    }
+      const urlsLocals = await fetchImages();
+      setFilesLocals(urlsLocals);
+    };
     loadImages();
-    }, []);
+  }, []);
 
-  
-    useEffect(() => {
-      const fetchImagesAct = async () => {
-  
-      let result = await storageRef.child('atividades').listAll();
-          let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
-  
-          
-      
-          return Promise.all(urlPromises);
-  
-      }
-      
-      const loadImages = async () => {
-          const urlsActivities = await fetchImagesAct();
-          setFilesActivities(urlsActivities);
-      }
-      loadImages();
-      }, []);
+  useEffect(() => {
+    const fetchImagesAct = async () => {
+      let result = await storageRef.child("atividades").listAll();
+      let urlPromises = result.items.map((imageRef) =>
+        imageRef.getDownloadURL()
+      );
 
-      useEffect(() => {
-        const fetchImagesCont = async () => {
-    
-        let result = await storageRef.child('contacto').listAll();
-            let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
-    
-            
-        
-            return Promise.all(urlPromises);
-    
-        }
-        
-        const loadImages = async () => {
-            const urlsContact = await fetchImagesCont();
-            setFilesContact(urlsContact);
-        }
-        loadImages();
-        }, []);
+      return Promise.all(urlPromises);
+    };
+
+    const loadImages = async () => {
+      const urlsActivities = await fetchImagesAct();
+      setFilesActivities(urlsActivities);
+    };
+    loadImages();
+  }, []);
+
+  useEffect(() => {
+    const fetchImagesCont = async () => {
+      let result = await storageRef.child("contacto").listAll();
+      let urlPromises = result.items.map((imageRef) =>
+        imageRef.getDownloadURL()
+      );
+
+      return Promise.all(urlPromises);
+    };
+
+    const loadImages = async () => {
+      const urlsContact = await fetchImagesCont();
+      setFilesContact(urlsContact);
+    };
+    loadImages();
+  }, []);
 
   const [colorNavbar, setColorNavbar] = useState("#FCFCFC");
   const [backgroundButton, setBackgroundButton] = useState("#9F6F63");
@@ -219,45 +212,48 @@ function App() {
               path="/about"
               element={<About passColorNavbar={passColorNavbar} />}
             />
-            {
-              activities && activities.map((item,i)=>{
-                  return( 
-                    <Route
+            {activities &&
+              activities.map((item, i) => {
+                return (
+                  <Route
                     path={`/activity/${i}`}
                     element={
                       <Page
                         properties={atividade}
                         passColorNavbar={passColorNavbar}
-                        info = {item}
-                        image = {urlsActivities[i]}
+                        info={item}
+                        image={urlsActivities[i]}
                       />
                     }
                     key={i}
                   />
-                  )
-              })
-            }
-            {
-              locals && locals.map((item,i)=>{
-                  return( 
-                    <Route
+                );
+              })}
+            {locals &&
+              locals.map((item, i) => {
+                return (
+                  <Route
                     path={`/local/${i}`}
                     element={
                       <PageReverse
                         properties={local}
-                        info = {item}
+                        info={item}
                         passColorNavbar={passColorNavbar}
-                        image = {urlsLocals[i]}
+                        image={urlsLocals[i]}
                       />
                     }
                     key={i}
                   />
-                  )
-              })
-            }
+                );
+              })}
             <Route
               path="/contact"
-              element={<Contact passColorNavbar={passColorNavbar} image={urlsContact[0]}/>}
+              element={
+                <Contact
+                  passColorNavbar={passColorNavbar}
+                  image={urlsContact[0]}
+                />
+              }
             />
           </Routes>
         </div>

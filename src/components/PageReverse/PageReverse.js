@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./PageReverse.css";
-import image_atividade from "../../assets/Atividade/atividade.png";
 import Location from "../Location/Location";
 import ArrowLink from "../ArrowLink/ArrowLink";
-import { useLocation } from 'react-router';
 import { useParams } from "react-router-dom";
 
-
 function PageReverse({ properties, passColorNavbar, info, image }, props) {
-  
-
   const { id } = useParams();
-  
 
   useEffect(() => {
     passColorNavbar("#07504D");
-    
   });
-
-  
 
   return (
     <div
@@ -45,7 +36,10 @@ function PageReverse({ properties, passColorNavbar, info, image }, props) {
               >
                 {info.nome}
               </h2>
-              <Location localizacao={info.localizacao} coordenadas={info.coordenadas}/>
+              <Location
+                localizacao={info.localizacao}
+                coordenadas={info.coordenadas}
+              />
             </div>
           ) : (
             <h2

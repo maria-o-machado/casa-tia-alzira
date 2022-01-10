@@ -5,12 +5,12 @@ import "./About.css";
 import image from "../../assets/About/house.jpeg";
 import image1 from "../../assets/About/location.jpeg";
 import image2 from "../../assets/About/local.png";
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import "firebase/auth"
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/storage';
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/storage";
 
 function About({ passColorNavbar }) {
   const page0 = {
@@ -67,18 +67,18 @@ function About({ passColorNavbar }) {
   const db = getFirestore(app);
 
   const getAbout = async (db) => {
-    const aboutCol = collection(db, 'Sobre');
+    const aboutCol = collection(db, "Sobre");
     const aboutSnapshot = await getDocs(aboutCol);
-     const aboutList = aboutSnapshot.docs.map(doc => doc.data());
+    const aboutList = aboutSnapshot.docs.map((doc) => doc.data());
 
-     setAbout(aboutList);
-  }
+    setAbout(aboutList);
+  };
 
   useEffect(() => {
     getAbout(db);
   }, [db]);
 
-  const [urlsAbout, setFilesAbout]  = useState([]);
+  const [urlsAbout, setFilesAbout] = useState([]);
 
   firebase.initializeApp(firebaseConfig);
 
@@ -87,22 +87,20 @@ function About({ passColorNavbar }) {
 
   useEffect(() => {
     const fetchImages = async () => {
+      let result = await storageRef.child("sobre").listAll();
+      let urlPromises = result.items.map((imageRef) =>
+        imageRef.getDownloadURL()
+      );
 
-    let result = await storageRef.child('sobre').listAll();
-        let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+      return Promise.all(urlPromises);
+    };
 
-        
-    
-        return Promise.all(urlPromises);
-
-    }
-    
     const loadImages = async () => {
-        const urlsAbout = await fetchImages();
-        setFilesAbout(urlsAbout);
-    }
+      const urlsAbout = await fetchImages();
+      setFilesAbout(urlsAbout);
+    };
     loadImages();
-    }, []);
+  }, []);
 
   useEffect(() => {
     passColorNavbar("#9F6F63");
@@ -110,22 +108,35 @@ function About({ passColorNavbar }) {
 
   return (
     <div className="about-content">
-      {
-        about && about.map((item,i)=>{
-          return( i == 0 ? 
-            <Page properties={page0} passColorNavbar={passColorNavbar} info={item} image={urlsAbout[0]} key={i}/>
-            : 
-           (
-            i == 1 ? 
-            <PageReverse properties={page1} passColorNavbar={passColorNavbar} info={item} image={urlsAbout[1]}  key={i}/>
-            : 
-            <Page properties={page2} passColorNavbar={passColorNavbar} info={item} image={urlsAbout[2]} key={i}/>
-           )       
-          )
-        })
-      }
-      
-      </div>
+      {about &&
+        about.map((item, i) => {
+          return i == 0 ? (
+            <Page
+              properties={page0}
+              passColorNavbar={passColorNavbar}
+              info={item}
+              image={urlsAbout[0]}
+              key={i}
+            />
+          ) : i == 1 ? (
+            <PageReverse
+              properties={page1}
+              passColorNavbar={passColorNavbar}
+              info={item}
+              image={urlsAbout[1]}
+              key={i}
+            />
+          ) : (
+            <Page
+              properties={page2}
+              passColorNavbar={passColorNavbar}
+              info={item}
+              image={urlsAbout[2]}
+              key={i}
+            />
+          );
+        })}
+    </div>
   );
 }
 

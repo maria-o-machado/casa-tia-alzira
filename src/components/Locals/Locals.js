@@ -4,17 +4,13 @@ import ActivityCard from "../ActivityCard/ActivityCard";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import RightArrow from "../RightArrow/RightArrow";
 import LeftArrow from "../LeftArrow/LeftArrow";
-import image1 from "../../assets/Locais/local1.png";
-import image2 from "../../assets/Locais/local2.png";
-import image3 from "../../assets/Locais/local3.png";
-import image4 from "../../assets/Locais/local4.png";
-import image5 from "../../assets/Locais/local5.png";
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import "firebase/auth"
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/storage';
+
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/storage";
 
 import $ from "jquery";
 
@@ -25,7 +21,7 @@ function Locals({
   homePage,
 }) {
   const [cardType, setCardType] = useState(true);
-  
+
   const [locals, setLocals] = useState([]);
 
   const [numberMax, setNumber] = useState(3);
@@ -47,51 +43,38 @@ function Locals({
   const storage = firebase.storage();
   var storageRef = storage.ref();
 
-  const [urls, setFiles ]  = useState([]);
-
-  /*storageRef.child('local1.png').getDownloadURL().then(function(url) {
-    console.log("Olaaaa");
-    setSpaceRef(url);
-    
-  }).catch(function(error) {
-    // Handle any errors
-  });*/
+  const [urls, setFiles] = useState([]);
 
   useEffect(() => {
     const fetchImages = async () => {
+      let result = await storageRef.child("locais").listAll();
+      let urlPromises = result.items.map((imageRef) =>
+        imageRef.getDownloadURL()
+      );
 
-    let result = await storageRef.child('locais').listAll();
-        let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+      return Promise.all(urlPromises);
+    };
 
-        
-    
-        return Promise.all(urlPromises);
-
-    }
-    
     const loadImages = async () => {
-        const urls = await fetchImages();
-        setFiles(urls);
-    }
+      const urls = await fetchImages();
+      setFiles(urls);
+    };
     loadImages();
-    }, []);
-
-
+  }, []);
 
   const db = getFirestore(app);
 
   const getLocals = async (db) => {
-    const localCol = collection(db, 'Local');
+    const localCol = collection(db, "Local");
     const localSnapshot = await getDocs(localCol);
-     const localList = localSnapshot.docs.map(doc => doc.data());
+    const localList = localSnapshot.docs.map((doc) => doc.data());
 
-     setLocals(localList);
-  }
+    setLocals(localList);
+  };
 
   useEffect(() => {
     getLocals(db);
   }, [db]);
-
 
   useEffect(() => {
     passColorNavbar("#FCFCFC");
@@ -161,7 +144,6 @@ function Locals({
     // use an animation to scroll to the destination
     $scroller.animate({ scrollLeft: scrollTo }, 500);
   });
-  
 
   /*function getImage(i){
     var pathReference = storage.ref('images/stars.jpg');
@@ -179,45 +161,39 @@ function Locals({
           <div className="locals-content-home">
             {cardType ? (
               <div className="locals home">
-                {
-                  locals && locals.map((item,i)=>{
-                    if ( i < numberMax) {
-                      return( 
-                      <ActivityCard
-                        title={item.nome}
-                        text={
-                          item.descricao
-                        }
-                        order={1}
-                        image={urls[i]}
-                        link={`/local/${i}`}
-                        key={i}
-                      />
-                      )
+                {locals &&
+                  locals.map((item, i) => {
+                    if (i < numberMax) {
+                      return (
+                        <ActivityCard
+                          title={item.nome}
+                          text={item.descricao}
+                          order={1}
+                          image={urls[i]}
+                          link={`/local/${i}`}
+                          key={i}
+                        />
+                      );
                     }
-                  })
-                }
+                  })}
               </div>
             ) : (
               <div className="locals home">
-                {
-                  locals && locals.map((item,i)=>{
-                    if ( i < numberMax) {
-                      return( 
-                      <ActivityCard
-                        title={item.nome}
-                        text={
-                          item.descricao
-                        }
-                        order={1}
-                        image={urls[0]}
-                        link={`/local/${i}`}
-                        key={i}
-                      />
-                      )
+                {locals &&
+                  locals.map((item, i) => {
+                    if (i < numberMax) {
+                      return (
+                        <ActivityCard
+                          title={item.nome}
+                          text={item.descricao}
+                          order={1}
+                          image={urls[0]}
+                          link={`/local/${i}`}
+                          key={i}
+                        />
+                      );
                     }
-                  })
-                }
+                  })}
               </div>
             )}
             <div id="locals-know-more">
@@ -232,22 +208,19 @@ function Locals({
           </h2>
           <div className="locals-grid-container" id="scroll-container">
             <div className="locals">
-            {
-                  locals && locals.map((item,i)=>{
-                    return( 
+              {locals &&
+                locals.map((item, i) => {
+                  return (
                     <ActivityCard
                       title={item.nome}
-                      text={
-                        item.descricao
-                      }
+                      text={item.descricao}
                       order={1}
                       image={urls[i]}
                       link={`/local/${i}`}
                       key={i}
                     />
-                    )
-                  })
-                }
+                  );
+                })}
             </div>
           </div>
           <div className="arrows">

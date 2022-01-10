@@ -1,10 +1,7 @@
 import "../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Gallery.css";
 import { Carousel } from "react-responsive-carousel";
-import image from "./example.png";
-import image2 from "./home-1.jpeg";
-import image3 from "./home-2.jpeg";
-import image4 from "./home-3.jpeg";
+
 import React, { useState, useEffect } from "react";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
