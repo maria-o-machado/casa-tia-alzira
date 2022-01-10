@@ -12,6 +12,10 @@ import image4 from "./photo-4.webp";
 import image5 from "./photo-5.jpeg";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import "firebase/auth"
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/storage';
 import $ from "jquery";
 
 function Activities({ passColorNavbar, homePage }) {
@@ -59,6 +63,32 @@ function Activities({ passColorNavbar, homePage }) {
     getActivities(db);
   }, [db]);
 
+  firebase.initializeApp(firebaseConfig);
+
+  const storage = firebase.storage();
+  var storageRef = storage.ref();
+
+  const [urls, setFiles ]  = useState([]);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+
+    let result = await storageRef.child('atividades').listAll();
+        let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+
+        
+    
+        return Promise.all(urlPromises);
+
+    }
+    
+    const loadImages = async () => {
+        const urls = await fetchImages();
+        setFiles(urls);
+    }
+    loadImages();
+    }, []);
+
 
   var $scroller = $('.activities-grid-container');
   // assign click handler
@@ -69,7 +99,6 @@ function Activities({ passColorNavbar, homePage }) {
       // retrieve the jquery ref to the div
       
       var scrollTo = $scroller.scrollLeft() + 800;                 
-      console.log(scrollTo);
       // simply update the scroll of the scroller
       // $('.scroller').scrollLeft(scrollTo); 
       // use an animation to scroll to the destination
@@ -83,7 +112,6 @@ function Activities({ passColorNavbar, homePage }) {
     // retrieve the jquery ref to the div
     
     var scrollTo = $scroller.scrollLeft() - 800;                 
-    console.log(scrollTo);
     // simply update the scroll of the scroller
     // $('.scroller').scrollLeft(scrollTo); 
     // use an animation to scroll to the destination
@@ -109,7 +137,7 @@ function Activities({ passColorNavbar, homePage }) {
                             item.descricao
                           }
                           order={i % 2}
-                          image ={image}
+                          image ={urls[i]}
                           link={`/activity/${i}`}
                           key={i}
                         />
@@ -138,7 +166,7 @@ function Activities({ passColorNavbar, homePage }) {
                             item.descricao
                           }
                           order={i % 2}
-                          image ={image}
+                          image ={urls[i]}
                           link={`/activity/${i}`}
                           key={i}
                         />

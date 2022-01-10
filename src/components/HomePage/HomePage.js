@@ -10,6 +10,10 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import "./HomePage.css";
 import Page from "../Page/Page";
+import "firebase/auth"
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/storage';
 
 function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
   useEffect(() => {
@@ -60,6 +64,58 @@ function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
     getAbout(db);
   }, [db]);
 
+  firebase.initializeApp(firebaseConfig);
+
+  const storage = firebase.storage();
+  var storageRef = storage.ref();
+
+  const [urlsAbout, setFilesAbout]  = useState([]);
+  const [urlsContact, setFilesContact]  = useState([]);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+
+    let result = await storageRef.child('sobre').listAll();
+        let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+
+        
+    
+        return Promise.all(urlPromises);
+
+    }
+    
+    const loadImages = async () => {
+        const urlsAbout = await fetchImages();
+        setFilesAbout(urlsAbout);
+    }
+    loadImages();
+    }, []);
+
+  useEffect(() => {
+    passColorNavbar("#9F6F63");
+  });
+
+  
+  useEffect(() => {
+    const fetchImagesCont = async () => {
+
+    let result = await storageRef.child('contacto').listAll();
+        let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+
+        
+    
+        return Promise.all(urlPromises);
+
+    }
+    
+    const loadImages = async () => {
+        const urlsContact = await fetchImagesCont();
+        setFilesContact(urlsContact);
+    }
+    loadImages();
+    }, []);
+
+
 
   return (
     <div className="homepage-content">
@@ -67,7 +123,7 @@ function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
       {
         about && about.map((item,i)=>{
           return( i == 0 ? 
-            <Page properties={page0} passColorNavbar={passColorNavbar} info={item} key={i}/>
+            <Page properties={page0} passColorNavbar={passColorNavbar} info={item} image={urlsAbout[0]} key={i}/>
             : 
             undefined    
           )
@@ -81,7 +137,7 @@ function HomePage({ passColorNavbar, passBackgroundButton, passColorButton }) {
         passBackgroundButton={passBackgroundButton}
         homePage={true}
       />
-      <Contact passColorNavbar={passColorNavbar} />
+      <Contact passColorNavbar={passColorNavbar} image={urlsContact[0]} />
     </div>
   );
 }

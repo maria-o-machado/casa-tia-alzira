@@ -11,7 +11,10 @@ import image4 from "../../assets/Locais/local4.png";
 import image5 from "../../assets/Locais/local5.png";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-
+import "firebase/auth"
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/storage';
 
 import $ from "jquery";
 
@@ -38,6 +41,43 @@ function Locals({
   };
 
   const app = initializeApp(firebaseConfig);
+
+  firebase.initializeApp(firebaseConfig);
+
+  const storage = firebase.storage();
+  var storageRef = storage.ref();
+
+  const [urls, setFiles ]  = useState([]);
+
+  /*storageRef.child('local1.png').getDownloadURL().then(function(url) {
+    console.log("Olaaaa");
+    setSpaceRef(url);
+    
+  }).catch(function(error) {
+    // Handle any errors
+  });*/
+
+  useEffect(() => {
+    const fetchImages = async () => {
+
+    let result = await storageRef.child('locais').listAll();
+        let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+
+        
+    
+        return Promise.all(urlPromises);
+
+    }
+    
+    const loadImages = async () => {
+        const urls = await fetchImages();
+        setFiles(urls);
+    }
+    loadImages();
+    }, []);
+
+
+
   const db = getFirestore(app);
 
   const getLocals = async (db) => {
@@ -50,7 +90,6 @@ function Locals({
 
   useEffect(() => {
     getLocals(db);
-    console.log(locals)
   }, [db]);
 
 
@@ -105,7 +144,6 @@ function Locals({
     // retrieve the jquery ref to the div
 
     var scrollTo = $scroller.scrollLeft() + 800;
-    console.log(scrollTo);
     // simply update the scroll of the scroller
     // $('.scroller').scrollLeft(scrollTo);
     // use an animation to scroll to the destination
@@ -118,12 +156,18 @@ function Locals({
     // retrieve the jquery ref to the div
 
     var scrollTo = $scroller.scrollLeft() - 800;
-    console.log(scrollTo);
     // simply update the scroll of the scroller
     // $('.scroller').scrollLeft(scrollTo);
     // use an animation to scroll to the destination
     $scroller.animate({ scrollLeft: scrollTo }, 500);
   });
+  
+
+  /*function getImage(i){
+    var pathReference = storage.ref('images/stars.jpg');
+
+    return pathReference;
+  }*/
 
   return (
     <div>
@@ -145,7 +189,7 @@ function Locals({
                           item.descricao
                         }
                         order={1}
-                        image={image1}
+                        image={urls[i]}
                         link={`/local/${i}`}
                         key={i}
                       />
@@ -166,7 +210,7 @@ function Locals({
                           item.descricao
                         }
                         order={1}
-                        image={image1}
+                        image={urls[0]}
                         link={`/local/${i}`}
                         key={i}
                       />
@@ -197,7 +241,7 @@ function Locals({
                         item.descricao
                       }
                       order={1}
-                      image={image1}
+                      image={urls[i]}
                       link={`/local/${i}`}
                       key={i}
                     />

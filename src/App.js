@@ -20,6 +20,10 @@ import image_local from "./assets/Locais/local4.png";
 import { useGetLocals } from "./hooks/useGetLocals";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import "firebase/auth"
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/storage';
 
 function App() {
   const local = {
@@ -83,7 +87,72 @@ function App() {
     getActivities(db);
   }, [db]);
 
+  firebase.initializeApp(firebaseConfig);
+
+  const storage = firebase.storage();
+  var storageRef = storage.ref();
+
+  const [urlsLocals, setFilesLocals ]  = useState([]);
+  const [urlsActivities, setFilesActivities ]  = useState([]);
+  const [urlsContact, setFilesContact]  = useState([]);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+
+    let result = await storageRef.child('locais').listAll();
+        let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+
+        
+    
+        return Promise.all(urlPromises);
+
+    }
+    
+    const loadImages = async () => {
+        const urlsLocals = await fetchImages();
+        setFilesLocals(urlsLocals);
+    }
+    loadImages();
+    }, []);
+
   
+    useEffect(() => {
+      const fetchImagesAct = async () => {
+  
+      let result = await storageRef.child('atividades').listAll();
+          let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+  
+          
+      
+          return Promise.all(urlPromises);
+  
+      }
+      
+      const loadImages = async () => {
+          const urlsActivities = await fetchImagesAct();
+          setFilesActivities(urlsActivities);
+      }
+      loadImages();
+      }, []);
+
+      useEffect(() => {
+        const fetchImagesCont = async () => {
+    
+        let result = await storageRef.child('contacto').listAll();
+            let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+    
+            
+        
+            return Promise.all(urlPromises);
+    
+        }
+        
+        const loadImages = async () => {
+            const urlsContact = await fetchImagesCont();
+            setFilesContact(urlsContact);
+        }
+        loadImages();
+        }, []);
 
   const [colorNavbar, setColorNavbar] = useState("#FCFCFC");
   const [backgroundButton, setBackgroundButton] = useState("#9F6F63");
@@ -152,7 +221,6 @@ function App() {
             />
             {
               activities && activities.map((item,i)=>{
-                  console.log(item);
                   return( 
                     <Route
                     path={`/activity/${i}`}
@@ -161,6 +229,7 @@ function App() {
                         properties={atividade}
                         passColorNavbar={passColorNavbar}
                         info = {item}
+                        image = {urlsActivities[i]}
                       />
                     }
                     key={i}
@@ -170,7 +239,6 @@ function App() {
             }
             {
               locals && locals.map((item,i)=>{
-                  console.log(item);
                   return( 
                     <Route
                     path={`/local/${i}`}
@@ -179,6 +247,7 @@ function App() {
                         properties={local}
                         info = {item}
                         passColorNavbar={passColorNavbar}
+                        image = {urlsLocals[i]}
                       />
                     }
                     key={i}
@@ -188,7 +257,7 @@ function App() {
             }
             <Route
               path="/contact"
-              element={<Contact passColorNavbar={passColorNavbar} />}
+              element={<Contact passColorNavbar={passColorNavbar} image={urlsContact[0]}/>}
             />
           </Routes>
         </div>

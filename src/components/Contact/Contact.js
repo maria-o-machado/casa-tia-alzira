@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "./Contact.css";
-import image_atividade from "../../assets/Atividade/atividade.png";
-import image from "../../assets/Contact/contact.png";
 
-function Contact({ passColorNavbar }) {
+function Contact({ passColorNavbar, image }) {
   useEffect(() => {
     passColorNavbar("#FCFCFC");
   });

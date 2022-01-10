@@ -7,7 +7,7 @@ import { useLocation } from 'react-router';
 import { useParams } from "react-router-dom";
 
 
-function PageReverse({ properties, passColorNavbar, info }, props) {
+function PageReverse({ properties, passColorNavbar, info, image }, props) {
   
 
   const { id } = useParams();
@@ -28,13 +28,13 @@ function PageReverse({ properties, passColorNavbar, info }, props) {
       <div className="box_reverse">
         {properties.homePage ? (
           <div className="content_location">
-            <img className="image_reverse" src={properties.image}></img>
+            <img className="image_reverse" src={image}></img>
             <div id="about-know-more">
               <ArrowLink text="Saber mais" color="#E0D0C1" link={"/about"} />
             </div>
           </div>
         ) : (
-          <img className="image_reverse" src={properties.image}></img>
+          <img className="image_reverse" src={image}></img>
         )}
         <div className="box_text_reverse">
           {properties.location ? (

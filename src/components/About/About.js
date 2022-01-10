@@ -7,7 +7,10 @@ import image1 from "../../assets/About/location.jpeg";
 import image2 from "../../assets/About/local.png";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-
+import "firebase/auth"
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/storage';
 
 function About({ passColorNavbar }) {
   const page0 = {
@@ -75,6 +78,32 @@ function About({ passColorNavbar }) {
     getAbout(db);
   }, [db]);
 
+  const [urlsAbout, setFilesAbout]  = useState([]);
+
+  firebase.initializeApp(firebaseConfig);
+
+  const storage = firebase.storage();
+  var storageRef = storage.ref();
+
+  useEffect(() => {
+    const fetchImages = async () => {
+
+    let result = await storageRef.child('sobre').listAll();
+        let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+
+        
+    
+        return Promise.all(urlPromises);
+
+    }
+    
+    const loadImages = async () => {
+        const urlsAbout = await fetchImages();
+        setFilesAbout(urlsAbout);
+    }
+    loadImages();
+    }, []);
+
   useEffect(() => {
     passColorNavbar("#9F6F63");
   });
@@ -84,13 +113,13 @@ function About({ passColorNavbar }) {
       {
         about && about.map((item,i)=>{
           return( i == 0 ? 
-            <Page properties={page0} passColorNavbar={passColorNavbar} info={item} key={i}/>
+            <Page properties={page0} passColorNavbar={passColorNavbar} info={item} image={urlsAbout[0]} key={i}/>
             : 
            (
             i == 1 ? 
-            <PageReverse properties={page1} passColorNavbar={passColorNavbar} info={item} key={i}/>
+            <PageReverse properties={page1} passColorNavbar={passColorNavbar} info={item} image={urlsAbout[1]}  key={i}/>
             : 
-            <Page properties={page2} passColorNavbar={passColorNavbar} info={item} key={i}/>
+            <Page properties={page2} passColorNavbar={passColorNavbar} info={item} image={urlsAbout[2]} key={i}/>
            )       
           )
         })

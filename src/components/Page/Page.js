@@ -3,7 +3,7 @@ import "./Page.css";
 import Location from "../Location/Location";
 import ArrowLink from "../ArrowLink/ArrowLink";
 
-function Page({ properties, passColorNavbar, info }) {
+function Page({ properties, passColorNavbar, info, image }) {
   useEffect(() => {
     passColorNavbar("#07504D");
   });
@@ -49,7 +49,7 @@ function Page({ properties, passColorNavbar, info }) {
             </div>
           ) : undefined}
         </div>
-        <img className="image" src={properties.image}></img>
+        <img className="image" src={image}></img>
       </div>
     </div>
   );
