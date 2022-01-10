@@ -36,7 +36,6 @@ function Activities({ passColorNavbar, homePage }) {
   });  
 
   const [activities, setActivities] = useState([]);
-  const [numberMax, setNumber] = useState(2);
 
   const firebaseConfig = {
     apiKey: process.env.REACT_APP_apiKey,
@@ -129,7 +128,7 @@ function Activities({ passColorNavbar, homePage }) {
               <div className="activities home">
               {
                   activities && activities.map((item,i)=>{
-                    if ( i < numberMax) {
+                    if ( i < 2) {
                       return(
                         <ActivityCard
                           title={item.nome}
@@ -158,7 +157,7 @@ function Activities({ passColorNavbar, homePage }) {
             <div className="activities">
             {
                   activities && activities.map((item,i)=>{
-                    if ( i < numberMax) {
+                    if ( i < activities.length) {
                       return(
                         <ActivityCard
                           title={item.nome}
