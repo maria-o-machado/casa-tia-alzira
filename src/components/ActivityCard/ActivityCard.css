@@ -45,7 +45,7 @@ img {
 }
 
 .card-item:last-of-type {
-    margin-right: -56px;
+    margin-right: -180px;
 }
 
 .card-item:nth-of-type(4) {
@@ -55,7 +55,7 @@ img {
 
 .activity-content {
     max-width: 550px;
-
+    width: 100%;
     flex-direction: column;
     padding: 36px 68px;
 }
@@ -87,7 +87,8 @@ h4 {
 h4.text-content {
     color: #2A2D34;
     margin-top: 10px;
-    max-height: 90px;
+    max-height: 88px;
+    min-height: 88px;
     overflow: hidden;
     margin-bottom: 16px;
 }
@@ -121,6 +122,8 @@ h4.text-content {
 
     .activity-content {
         padding: 36px;
+                width: auto;
+
     }
 
 }
@@ -156,6 +159,7 @@ h4.text-content {
 
     .activity-content {
         padding: 36px;
+        width: auto;
     }
 
 }

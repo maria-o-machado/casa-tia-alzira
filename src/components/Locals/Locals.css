@@ -124,6 +124,8 @@ body {
 
 
 .locals.home .activity-content {
+  width: auto;
+
   padding: 36px;
 }
 
