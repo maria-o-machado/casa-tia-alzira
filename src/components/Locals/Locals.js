@@ -187,7 +187,7 @@ function Locals({
                           title={item.nome}
                           text={item.descricao}
                           order={1}
-                          image={urls[0]}
+                          image={urls[i]}
                           link={`/local/${i}`}
                           key={i}
                         />
