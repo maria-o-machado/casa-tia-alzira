@@ -223,14 +223,6 @@ function Locals({
                 })}
             </div>
           </div>
-          <div className="arrows">
-            <button className="left-button">
-              <LeftArrow color={"#E0D0C1"} />
-            </button>
-            <button className="right-button">
-              <RightArrow color={"#E0D0C1"} />
-            </button>
-          </div>
         </div>
       )}
     </div>

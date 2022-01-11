@@ -160,15 +160,6 @@ function Activities({ passColorNavbar, homePage }) {
                 })}
             </div>
           </div>
-
-          <div className="activity-arrows">
-            <button className="left-button">
-              <LeftArrow color={"#9F6F63"} />
-            </button>
-            <button className="right-button">
-              <RightArrow color={"#9F6F63"} />
-            </button>
-          </div>
         </div>
       )}
     </div>
